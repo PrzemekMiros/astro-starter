@@ -24,3 +24,7 @@
     --border: rgba(148, 163, 184, 0.16);
   }
 }
+
+body {
+  overflow-x: hidden;
+}

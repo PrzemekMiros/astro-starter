@@ -35,12 +35,12 @@ const works = Object.entries(entries)
   .slice(0, 3);
 ---
 
-<section class="relative mt-24">
+<section class="relative mt-24 overflow-hidden sm:overflow-visible">
   <div class="pointer-events-none absolute inset-0 -z-10">
-    <div class="absolute -top-40 left-[-15%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(255,91,73,0.35),transparent_70%)] blur-3xl"></div>
-    <div class="absolute -bottom-44 right-[-12%] h-[40rem] w-[40rem] rounded-full bg-[radial-gradient(circle,rgba(255,91,73,0.25),transparent_70%)] blur-3xl"></div>
+    <div class="absolute -top-28 left-[-6%] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,rgba(255,91,73,0.35),transparent_70%)] blur-3xl sm:-top-40 sm:left-[-15%] sm:h-[36rem] sm:w-[36rem]"></div>
+    <div class="absolute -bottom-32 right-[-6%] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(255,91,73,0.25),transparent_70%)] blur-3xl sm:-bottom-44 sm:right-[-12%] sm:h-[40rem] sm:w-[40rem]"></div>
   </div>
-  <div class="flex items-center justify-between gap-6">
+  <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
     <div class="space-y-3">
       <p class="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--muted)]">Realizacje</p>
       <h2 class="text-4xl font-semibold tracking-tight text-[var(--text)]">Wybrane projekty</h2>
@@ -48,7 +48,7 @@ const works = Object.entries(entries)
         Kilka ostatnich wdrożeń, ktore łączą estetykę z celami biznesowymi.
       </p>
     </div>
-    <a class="hidden inline-flex rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95 sm:inline-flex" href="/realizacje/">
+    <a class="inline-flex w-fit rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95 sm:inline-flex" href="/realizacje/">
       Wszystkie realizacje
     </a>
   </div>

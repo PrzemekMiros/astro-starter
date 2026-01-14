@@ -10,45 +10,56 @@ const resolveContentImage = (path) => {
   return entry?.default ?? null;
 };
 
-const entries = import.meta.glob('../../content/realizacje/*.md', { eager: true });
+const entries = import.meta.glob("../../content/realizacje/*.md", { eager: true });
 const items = Object.entries(entries).map(([file, entry]) => {
-  const slug = file.split('/').pop().replace('.md', '');
+  const slug = file.split("/").pop().replace(".md", "");
   return { slug, ...entry.frontmatter };
 });
 ---
 
 <BaseLayout title="Realizacje">
-  <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">Realizacje</h1>
-  <p class="mt-4 max-w-2xl text-lg text-[var(--muted)]">Galeria realizacji z kolekcji Keystatic. Kliknij karte, aby zobaczyc szczegoly.</p>
-  <section class="mt-10 grid gap-7 lg:grid-cols-2">
-    {items.map((realizacja) => {
-      const image = resolveContentImage(realizacja.tileImage ?? realizacja.thumbnail);
-      return (
-        <a
-          class="group grid gap-4 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 text-[var(--text)] no-underline shadow-[0_18px_40px_-30px_rgba(0,0,0,0.6)] transition hover:-translate-y-1"
-          href={`/realizacje/${realizacja.slug}/`}
-          style={realizacja.tileBg ? `background-color: ${realizacja.tileBg};` : undefined}
-        >
-          {image ? (
-            <Image
-              class="aspect-[4/3] w-full rounded-2xl border border-[var(--border)] object-cover"
-              src={image}
-              alt={realizacja.title ?? realizacja.slug}
-              widths={[320, 480, 768, 960]}
-              sizes="(max-width: 768px) 100vw, 440px"
-              loading="lazy"
-              placeholder="blur"
-            />
-          ) : (
-            <div class="grid aspect-[4/3] place-items-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface-muted)] text-xs uppercase tracking-widest text-[var(--muted)]">Brak zdjecia</div>
-          )}
-          <div class="space-y-2">
-            <h2 class="text-xl font-semibold">{realizacja.title ?? realizacja.slug}</h2>
-            {realizacja.role ? <p class="text-sm text-[var(--muted)]">{realizacja.role}</p> : null}
-            {realizacja.year ? <p class="text-sm text-[var(--muted)]">{realizacja.year}</p> : null}
-          </div>
-        </a>
-      );
-    })}
+  <section class="mt-12">
+    <div class="space-y-3 lg:max-w-3xl">
+      <h1 class="text-4xl font-semibold tracking-tight text-[var(--text)]">Wybrane projekty</h1>
+      <p class="max-w-2xl text-base text-[var(--muted)]">
+        Galeria realizacji z kolekcji Keystatic. Kliknij karte, aby zobaczyc szczegoly.
+      </p>
+    </div>
+    <div class="mt-8 grid gap-6 lg:grid-cols-3">
+      {items.map((realizacja) => {
+        const image = resolveContentImage(
+          realizacja.tileImage ?? realizacja.thumbnail ?? realizacja.imageMain
+        );
+        const tag = Array.isArray(realizacja.category) ? realizacja.category[0] : realizacja.category;
+        const date = realizacja.date ? new Date(realizacja.date) : null;
+        const year = date ? date.getFullYear() : null;
+        return (
+          <a
+            class="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--text)] no-underline shadow-[0_24px_60px_-40px_rgba(0,0,0,0.7)] transition hover:-translate-y-1"
+            href={`/realizacje/${realizacja.slug}/`}
+            style={realizacja.tileBg ? `background-color: ${realizacja.tileBg};` : undefined}
+          >
+            {image ? (
+              <Image
+                class="aspect-[4/4] w-full rounded-2xl border border-[var(--border)] object-cover"
+                src={image}
+                alt={realizacja.title ?? realizacja.slug}
+                widths={[320, 480, 768, 960]}
+                sizes="(max-width: 768px) 100vw, 440px"
+                loading="lazy"
+                placeholder="blur"
+              />
+            ) : (
+              <div class="grid aspect-[4/4] place-items-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface-muted)] text-xs uppercase tracking-widest text-[var(--muted)]">Brak zdjecia</div>
+            )}
+            <div class="space-y-2">
+              {tag ? <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">{tag}</p> : null}
+              <h2 class="text-xl font-semibold text-[var(--text)]">{realizacja.title ?? realizacja.slug}</h2>
+              {year ? <p class="text-sm text-[var(--muted)]">{year}</p> : null}
+            </div>
+          </a>
+        );
+      })}
+    </div>
   </section>
 </BaseLayout>

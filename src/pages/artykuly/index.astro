@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const imageEntries = import.meta.glob("/src/content/artykuly/img/**/*", { eager: true });
+const resolveArticleImage = (path) => {
+  if (!path) return null;
+  let normalized = path;
+  if (normalized.startsWith("/content/posts/img/")) {
+    const filename = normalized.split("/").pop();
+    normalized = `/src/content/artykuly/img/${filename}`;
+  } else if (normalized.startsWith("/content/")) {
+    normalized = `/src${normalized}`;
+  }
+  const entry = imageEntries[normalized];
+  return entry?.default ?? null;
+};
+
+const entries = import.meta.glob('../../content/artykuly/*.md', { eager: true });
+const items = Object.entries(entries).map(([file, entry]) => {
+  const slug = file.split('/').pop().replace('.md', '');
+  return { slug, ...entry.frontmatter };
+});
+---
+
+<BaseLayout title="Artykuly">
+  <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">Artykuly</h1>
+  <p class="mt-3 max-w-2xl text-base text-slate-600">Lista artykulow z kolekcji Keystatic. Kliknij karte, aby zobaczyc szczegoly.</p>
+  <section class="mt-8 grid gap-6 lg:grid-cols-2">
+    {items.map((artykul) => {
+      const image = resolveArticleImage(artykul.tileImage ?? artykul.thumbnail);
+      return (
+        <a
+          class="group grid gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 text-slate-900 no-underline shadow-lg shadow-slate-900/10 transition hover:-translate-y-1 hover:shadow-xl"
+          href={`/artykuly/${artykul.slug}/`}
+          style={artykul.tileBg ? `background-color: ${artykul.tileBg};` : undefined}
+        >
+          {image ? (
+            <Image
+              class="aspect-[4/3] w-full rounded-xl border border-slate-200 object-cover"
+              src={image}
+              alt={artykul.title ?? artykul.slug}
+              widths={[320, 480, 768, 960]}
+              sizes="(max-width: 768px) 100vw, 440px"
+              loading="lazy"
+              placeholder="blur"
+            />
+          ) : (
+            <div class="grid aspect-[4/3] place-items-center rounded-xl border border-dashed border-slate-300 bg-slate-100 text-xs uppercase tracking-widest text-slate-500">Brak zdjecia</div>
+          )}
+          <div class="space-y-1">
+            <h2 class="text-lg font-semibold">{artykul.title ?? artykul.slug}</h2>
+            {artykul.role ? <p class="text-sm text-slate-600">{artykul.role}</p> : null}
+            {artykul.year ? <p class="text-sm text-slate-600">{artykul.year}</p> : null}
+          </div>
+        </a>
+      );
+    })}
+  </section>
+</BaseLayout>

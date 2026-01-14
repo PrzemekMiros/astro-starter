@@ -1,0 +1,46 @@
+---
+const { settings } = Astro.props;
+---
+
+<header class="mb-10">
+	<nav class="flex items-center justify-between gap-4 rounded-full border border-slate-200/80 bg-white/80 px-4 py-2 shadow-lg shadow-slate-900/5 backdrop-blur">
+		<a href="/" class="text-slate-900 no-underline">
+			<svg class="h-8 w-auto" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label={settings.siteTitle}>
+				<rect width="800" height="250" fill="white" />
+
+				<g id="abstract-pattern">
+					<defs>
+						<clipPath id="clip-pattern">
+							<rect x="20" y="30" width="280" height="190" />
+						</clipPath>
+					</defs>
+					<g clip-path="url(#clip-pattern)">
+						<path d="M30 30V220 M42 30V220 M54 30V220 M66 30V220 M78 30V220 M90 30V220 M102 30V220 M114 30V220 M126 30V220 M138 30V220" stroke="black" stroke-width="5" />
+						<path d="M150 30C180 80 120 170 150 220" stroke="black" stroke-width="6" fill="none" />
+						<path d="M165 30C195 80 135 170 165 220" stroke="black" stroke-width="6" fill="none" />
+						<path d="M180 30C210 80 150 170 180 220" stroke="black" stroke-width="7" fill="none" />
+						<path d="M195 30C225 80 165 170 195 220" stroke="black" stroke-width="8" fill="none" />
+						<path d="M210 30C240 80 180 170 210 220" stroke="black" stroke-width="9" fill="none" />
+						<path d="M240 30V220 M255 30V220 M270 30V220 M285 30V220" stroke="black" stroke-width="5" />
+					</g>
+				</g>
+
+				<g id="text-content" font-family="Arial, sans-serif" font-weight="900">
+					<text x="320" y="75" font-size="52" stroke="black" stroke-width="1.5" fill="none" letter-spacing="1">
+						PRZEMEK MIROS
+					</text>
+					<text x="320" y="165" font-size="95" fill="black" letter-spacing="-4">
+						WEB DESIGN
+					</text>
+					<text x="320" y="215" font-size="34" font-weight="400" fill="black" letter-spacing="2">
+						Strony i sklepy internetowe
+					</text>
+				</g>
+			</svg>
+		</a>
+		<div class="flex items-center gap-3 text-sm font-semibold">
+			<a class="rounded-full px-3 py-1 text-slate-600 no-underline transition hover:bg-slate-100 hover:text-slate-900" href="/artykuly/">Artykuly</a>
+			<a class="rounded-full px-3 py-1 text-slate-600 no-underline transition hover:bg-slate-100 hover:text-slate-900" href="/realizacje/">Realizacje</a>
+		</div>
+	</nav>
+</header>

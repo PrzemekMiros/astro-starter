@@ -60,5 +60,38 @@ export default config({
         motto: fields.text({ label: 'Ulubione motto lub cytat' }),
       },
     }),
+    realizacje: collection({
+      label: 'Realizacje',
+      slugField: 'title',
+      path: 'src/content/realizacje/*',
+      format: { data: 'yaml', contentField: 'content' },
+      schema: {
+        title: fields.text({ label: 'Tytul realizacji' }),
+        description: fields.text({ label: 'Opis', multiline: true }),
+        author: fields.text({ label: 'Autor' }),
+        client: fields.text({ label: 'Klient' }),
+        link: fields.url({ label: 'Link (URL)' }),
+        thumbnail: fields.text({ label: 'Miniatura (sciezka)' }),
+        imageMain: fields.text({ label: 'Obraz glowny (sciezka)' }),
+        imageGridOne: fields.text({
+          label: 'Obraz siatki 1 (sciezka)',
+          validation: { isRequired: false },
+        }),
+        imageGridTwo: fields.text({
+          label: 'Obraz siatki 2 (sciezka)',
+          validation: { isRequired: false },
+        }),
+        imageMobile: fields.text({
+          label: 'Obraz mobile (sciezka)',
+          validation: { isRequired: false },
+        }),
+        category: fields.array(fields.text({ label: 'Kategoria' }), {
+          label: 'Kategorie',
+        }),
+        order: fields.integer({ label: 'Kolejnosc na liscie' }),
+        date: fields.datetime({ label: 'Data' }),
+        content: fields.markdoc({ label: 'Tresc', extension: 'md' }),
+      },
+    }),
   },
 });

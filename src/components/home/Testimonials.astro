@@ -67,7 +67,7 @@ const testimonials = Object.values(entries)
             </div>
             <div class="mt-12 flex items-center justify-between">
               <div class="flex items-center space-x-4">
-                <img src="https://via.placeholder.com/48" alt="" class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`} />
+                <img src="https://via.placeholder.com/48" alt={`Zdjecie ${item.name}`} class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`} />
                 <div>
                   <p class="font-bold">{item.name}</p>
                   {item.role ? <p class={`text-sm ${roleClass}`}>{item.role}</p> : null}

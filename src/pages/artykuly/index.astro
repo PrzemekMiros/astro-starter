@@ -28,6 +28,14 @@ const items = Object.entries(entries)
     const dateB = b.date ? new Date(b.date).getTime() : 0;
     return dateB - dateA;
   });
+
+const categories = Array.from(
+  items.reduce((set, item) => {
+    const tags = Array.isArray(item.tags) ? item.tags : item.tags ? [item.tags] : [];
+    tags.forEach((tag) => set.add(tag));
+    return set;
+  }, new Set())
+).sort((a, b) => a.localeCompare(b, "pl-PL"));
 ---
 
 <BaseLayout
@@ -40,8 +48,8 @@ const items = Object.entries(entries)
     lead="Kompleksowo prowadzŽt od strategii, przez design, po wdro‘•enie i wsparcie. Minimalistycznie, szybko i z myślą o wynikach. "
   />
   <section class="mb-24 mt-12">
-      <div class="lg:max-w-4xl">
-        <div class="mt-6 space-y-20 lg:mt-10 lg:space-y-20">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
+        <div class="mt-8 space-y-20 lg:space-y-20">
           {items.map((artykul) => {
             const image = resolveArticleImage(artykul.tileImage ?? artykul.thumbnail);
             const date = artykul.date ? new Date(artykul.date) : null;
@@ -105,8 +113,23 @@ const items = Object.entries(entries)
                 </div>
               </article>
             );
-          })}
+          })} 
         </div>
+        <aside class="sticky mt-8 top-24 self-start rounded-2xl bg-gray-100 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-sm font-semibold uppercase tracking-[0.2em]">Kategorie</h2>
+            <span class="text-[10px] uppercase tracking-[0.3em]">Wpisy</span>
+          </div>
+          {categories.length ? (
+            <ul class="mt-4 space-y-3 text-sm">
+              {categories.map((category) => (
+                <li class="rounded-full bg-white px-4 py-3 backdrop-blur-sm">{category}</li>
+              ))}
+            </ul>
+          ) : (
+            <p class="mt-4 text-sm">Brak kategorii</p>
+          )}
+        </aside>
       </div>
   </section>
 </BaseLayout>

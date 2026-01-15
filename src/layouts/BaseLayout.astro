@@ -17,7 +17,7 @@ const resolveAsset = (path) => {
 
 const { title, description } = Astro.props;
 const { site, url } = Astro;
-const pageTitle = title ? `${settings.siteTitle} - ${title}` : settings.siteTitle;
+const pageTitle = title ? ` ${title} - ${settings.siteTitle}` : settings.siteTitle;
 const metaDescription = description ?? settings.metaDescription;
 const logoAsset = resolveAsset(settings.logo);
 const ogImageUrl = site ? new URL(ogImage.src, site).toString() : ogImage.src;
@@ -36,6 +36,7 @@ const ogImageUrl = site ? new URL(ogImage.src, site).toString() : ogImage.src;
     <meta property="og:type" content="website" />
     <meta property="og:image" content={ogImageUrl} />
     {site ? <meta property="og:url" content={new URL(url.pathname, site).toString()} /> : null}
+    {site ? <link rel="canonical" href={new URL(url.pathname, site).toString()} /> : null}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={metaDescription} />

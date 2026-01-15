@@ -32,7 +32,7 @@ const testimonials = Object.values(entries)
 ---
 
 <section class="relative py-24">
-  <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 rounded-2xl bg-black"></div>
+  <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 rounded-4xl bg-black"></div>
   <div class="relative text-white">
     <div class="mb-12 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
       <div class="max-w-2xl space-y-3">
@@ -55,7 +55,7 @@ const testimonials = Object.values(entries)
       {testimonials.slice(0, 2).map((item, index) => {
         const isAccent = index === 1;
         const cardClass = isAccent ? 'bg-[var(--accent)] text-black' : 'bg-white text-black';
-        const pillClass = isAccent ? 'bg-black text-white' : 'bg-white text-black';
+        const pillClass = isAccent ? 'bg-white text-black' : 'bg-black text-white';
         const dotActive = isAccent ? 'bg-black' : 'bg-white';
         const dotMuted = isAccent ? 'bg-black/20' : 'bg-gray-600';
         const avatarBorder = isAccent ? 'border-white/20' : 'border-gray-700';
@@ -79,9 +79,9 @@ const testimonials = Object.values(entries)
             </div>
             <div class="mt-12 flex items-center justify-between">
               <div class="flex items-center space-x-4">
-                {resolveOpinionImage(item.clientlogo) ? (
+                {resolveOpinionImage(item.clientavatar) ? (
                   <Image
-                    src={resolveOpinionImage(item.clientlogo)}
+                    src={resolveOpinionImage(item.clientavatar)}
                     alt={`Logo ${item.role ?? item.name}`}
                     class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`}
                     widths={[48]}
@@ -92,7 +92,7 @@ const testimonials = Object.values(entries)
                   <Image
                     src={avatarImage}
                     alt={`Zdjecie ${item.name}`}
-                    class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`}
+                    class={`h-12 w-12 rounded-full ${avatarBorder}`}
                     widths={[48]}
                     sizes="48px"
                     loading="lazy"
@@ -108,7 +108,7 @@ const testimonials = Object.values(entries)
                   <Image
                     src={resolveOpinionImage(item.clientlogo)}
                     alt={`Logo ${item.role ?? item.name}`}
-                    class="h-6 w-auto"
+                    class="h-15 w-auto"
                     widths={[120]}
                     sizes="120px"
                     loading="lazy"

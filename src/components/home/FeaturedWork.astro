@@ -45,7 +45,7 @@ const works = Object.entries(entries)
         Kilka ostatnich wdrożeń, ktore łączą estetykę z celami biznesowymi.
       </p>
     </div>
-    <a class="inline-flex w-fit rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95 sm:inline-flex" href="/realizacje/">
+    <a class="inline-flex w-fit rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95 sm:inline-flex" href="/realizacje/" title="Wszystkie realizacje">
       Wszystkie realizacje
     </a>
   </div>
@@ -57,6 +57,7 @@ const works = Object.entries(entries)
         <a
           class="flex flex-col gap-6 rounded-2xl border border-[var(--border)] bg-gray-50 p-6 text-[var(--text)] no-underline transition hover:-translate-y-1"
           href={`/realizacje/${work.slug}/`}
+          title={`Zobacz realizacje: ${work.title}`}
         >
           {image ? (
             <Image

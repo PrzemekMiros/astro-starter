@@ -36,10 +36,11 @@ const items = Object.entries(entries).map(([file, entry]) => {
         const tag = Array.isArray(realizacja.category) ? realizacja.category[0] : realizacja.category;
         const date = realizacja.date ? new Date(realizacja.date) : null;
         const year = date ? date.getFullYear() : null;
-        return (
+          return (
           <a
             class="flex flex-col gap-6 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--text)] no-underline transition hover:-translate-y-1"
             href={`/realizacje/${realizacja.slug}/`}
+            title={`Zobacz realizacje: ${realizacja.title ?? realizacja.slug}`}
             style={realizacja.tileBg ? `background-color: ${realizacja.tileBg};` : undefined}
           >
             {image ? (
@@ -66,4 +67,3 @@ const items = Object.entries(entries).map(([file, entry]) => {
     </div>
   </section>
 </BaseLayout>
-

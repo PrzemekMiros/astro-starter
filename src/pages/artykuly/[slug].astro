@@ -41,7 +41,7 @@ if (!artykul) {
   title={artykul.title ?? artykul.slug}
   description={artykul.description}
 >
-  <a class="mt-36 inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--text)]" href="/artykuly/">&larr; Wroc do listy</a>
+  <a class="mt-36 inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--text)]" href="/artykuly/" title="Wroc do listy artykulow">&larr; Wroc do listy</a>
   <article class="mt-42 space-y-12">
     <header class="space-y-8">
       <div class="mx-auto max-w-3xl space-y-12">
@@ -53,7 +53,7 @@ if (!artykul) {
           {artykul.year ? <p>{artykul.year}</p> : null}
           {artykul.href ? (
             <p>
-              <a class="underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--text)]" href={artykul.href} rel="noopener" target="_blank">
+              <a class="underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--text)]" href={artykul.href} rel="noopener" target="_blank" title={`Otworz strone: ${artykul.href}`}>
                 {artykul.href}
               </a>
             </p>

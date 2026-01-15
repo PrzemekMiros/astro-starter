@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import avatarImage from "../../assets/images/global/avatar.jpg";
+
 const entries = import.meta.glob('../../content/opinie/*.md', { eager: true });
 
 const testimonials = Object.values(entries)
@@ -67,7 +70,14 @@ const testimonials = Object.values(entries)
             </div>
             <div class="mt-12">
               <div class="flex items-center space-x-4">
-                <img src="src/assets/images/global/avatar.jpg" alt={`Zdjecie ${item.name}`} class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`} />
+                <Image
+                  src={avatarImage}
+                  alt={`Zdjecie ${item.name}`}
+                  class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`}
+                  widths={[48]}
+                  sizes="48px"
+                  loading="lazy"
+                />
                 <div>
                   <p class="font-bold">{item.name}</p>
                   {item.role ? <p class={`text-sm ${roleClass}`}>{item.role}</p> : null}

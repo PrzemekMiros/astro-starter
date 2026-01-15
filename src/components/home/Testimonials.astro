@@ -65,18 +65,13 @@ const testimonials = Object.values(entries)
               </div>
               <blockquote class="text-2xl font-semibold leading-snug">"{item.quote}"</blockquote>
             </div>
-            <div class="mt-12 flex items-center justify-between">
+            <div class="mt-12">
               <div class="flex items-center space-x-4">
-                <img src="https://via.placeholder.com/48" alt={`Zdjecie ${item.name}`} class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`} />
+                <img src="src/assets/images/global/avatar.jpg" alt={`Zdjecie ${item.name}`} class={`h-12 w-12 rounded-full border-2 ${avatarBorder}`} />
                 <div>
                   <p class="font-bold">{item.name}</p>
                   {item.role ? <p class={`text-sm ${roleClass}`}>{item.role}</p> : null}
                 </div>
-              </div>
-              <div class="opacity-90">
-                <span class={`text-lg font-bold uppercase tracking-widest ${brandClass}`}>
-                  {item.role ?? 'Klient'}
-                </span>
               </div>
             </div>
           </div>

@@ -71,7 +71,7 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
               <Image
                 src={getImage(first)}
                 alt={first.title ?? first.slug}
-                class="w-full h-[185px] rounded-xl border border-white/10"
+                class="w-full h-[185px] rounded-xl border border-white/10 object-cover"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
@@ -114,7 +114,7 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
               <Image
                 src={getImage(second)}
                 alt={second.title ?? second.slug}
-                class="w-full h-[185px] rounded-xl border border-white/10"
+                class="w-full h-[185px] rounded-xl border border-white/10 object-cover"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
@@ -157,7 +157,7 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
               <Image
                 src={getImage(third)}
                 alt={third.title ?? third.slug}
-                class="w-full h-[185px] rounded-xl border border-white/10"
+                class="w-full h-[185px] rounded-xl border border-white/10 object-cover"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
@@ -180,4 +180,3 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
     </div>
   </div>
 </section>
-

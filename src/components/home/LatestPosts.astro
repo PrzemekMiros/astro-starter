@@ -67,17 +67,17 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
           </div>
 
           <div class="mb-8">
-            {getImage(second) ? (
+            {getImage(first) ? (
               <Image
-                src={getImage(second)}
-                alt={second.title ?? second.slug}
-                class="w-full rounded-xl border border-white/10 shadow-lg"
+                src={getImage(first)}
+                alt={first.title ?? first.slug}
+                class="w-full h-[185px] rounded-xl border border-white/10"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
               />
             ) : (
-              <div class="grid h-[225px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
+              <div class="grid h-[185px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
                 Brak zdjecia
               </div>
             )}
@@ -114,13 +114,13 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
               <Image
                 src={getImage(second)}
                 alt={second.title ?? second.slug}
-                class="w-full rounded-xl border border-white/10 shadow-lg"
+                class="w-full h-[185px] rounded-xl border border-white/10"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
               />
             ) : (
-              <div class="grid h-[225px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
+              <div class="grid h-[185px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
                 Brak zdjecia
               </div>
             )}
@@ -155,15 +155,15 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
           <div class="mb-8">
             {getImage(third) ? (
               <Image
-                src={getImage(second)}
-                alt={second.title ?? second.slug}
-                class="w-full rounded-xl border border-white/10 shadow-lg"
+                src={getImage(third)}
+                alt={third.title ?? third.slug}
+                class="w-full h-[185px] rounded-xl border border-white/10"
                 widths={[320, 480, 768]}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
               />
             ) : (
-              <div class="grid h-[225px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
+              <div class="grid h-[185px] w-full place-items-center rounded-xl border border-white/10 bg-black/20 text-xs uppercase tracking-widest text-white">
                 Brak zdjecia
               </div>
             )}
@@ -180,3 +180,4 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
     </div>
   </div>
 </section>
+

@@ -1,3 +1,11 @@
+---
+import { Image } from "astro:assets";
+
+import mobileImage from "../../assets/images/sections/bento-03-mobile-friendly.png";
+import performanceImage from "../../assets/images/sections/dark-bento-03-performance.png";
+import securityImage from "../../assets/images/sections/dark-bento-03-security.png";
+---
+
 <section class="mt-24">
   <div class="">
     <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
@@ -10,11 +18,18 @@
           </div>
           <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
             <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-[var(--border)] bg-[var(--surface-muted)] outline outline-[var(--border)]">
-              <img src="/src/assets/images/sections/bento-03-mobile-friendly.png" alt="" class="size-full object-cover object-top" />
+              <Image
+                src={mobileImage}
+                alt=""
+                class="size-full object-cover object-top"
+                widths={[320, 480, 768]}
+                sizes="(max-width: 1024px) 100vw, 420px"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-[var(--border)] lg:rounded-l-4xl"></div>
+        <div class="pointer-events-none absolute inset-px rounded-lg outline outline-[var(--border)] lg:rounded-l-4xl"></div>
       </div>
       <div class="relative max-lg:row-start-1">
         <div class="absolute inset-px rounded-lg bg-[var(--surface)] max-lg:rounded-t-4xl"></div>
@@ -24,10 +39,17 @@
             <p class="mt-2 max-w-lg text-sm/6 text-[var(--muted)] max-lg:text-center">Szybkie ładowanie i lekki front, który nie blokuje treści.</p>
           </div>
           <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-            <img src="/src/assets/images/sections/dark-bento-03-performance.png" alt="" class="w-full max-lg:max-w-xs" />
+            <Image
+              src={performanceImage}
+              alt=""
+              class="w-full max-lg:max-w-xs"
+              widths={[320, 480, 768]}
+              sizes="(max-width: 1024px) 100vw, 420px"
+              loading="lazy"
+            />
           </div>
         </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-[var(--border)] max-lg:rounded-t-4xl"></div>
+        <div class="pointer-events-none absolute inset-px rounded-lg outline outline-[var(--border)] max-lg:rounded-t-4xl"></div>
       </div>
       <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
         <div class="absolute inset-px rounded-lg bg-[var(--surface)]"></div>
@@ -37,10 +59,17 @@
             <p class="mt-2 max-w-lg text-sm/6 text-[var(--muted)] max-lg:text-center">Pewne wdrożenie, aktualne zależności i uporządkowane prawa dostępu.</p>
           </div>
           <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-            <img src="/src/assets/images/sections/dark-bento-03-security.png" alt="" class="h-[min(152px,40cqw)] object-cover" />
+            <Image
+              src={securityImage}
+              alt=""
+              class="h-[min(152px,40cqw)] object-cover"
+              widths={[240, 360, 480]}
+              sizes="(max-width: 1024px) 100vw, 300px"
+              loading="lazy"
+            />
           </div>
         </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-[var(--border)]"></div>
+        <div class="pointer-events-none absolute inset-px rounded-lg outline outline-[var(--border)]"></div>
       </div>
       <div class="relative lg:row-span-2">
         <div class="absolute inset-px rounded-lg bg-[var(--surface)] max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
@@ -66,8 +95,9 @@
             </div>
           </div>
         </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-[var(--border)] max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+        <div class="pointer-events-none absolute inset-px rounded-lg outline outline-[var(--border)] max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
       </div>
     </div>
   </div>
 </section>
+

@@ -35,7 +35,7 @@ const items = Object.entries(entries).map(([file, entry]) => {
         const year = date ? date.getFullYear() : null;
         return (
           <a
-            class="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--text)] no-underline shadow-[0_24px_60px_-40px_rgba(0,0,0,0.7)] transition hover:-translate-y-1"
+            class="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--text)] no-underline transition hover:-translate-y-1"
             href={`/realizacje/${realizacja.slug}/`}
             style={realizacja.tileBg ? `background-color: ${realizacja.tileBg};` : undefined}
           >
@@ -63,3 +63,4 @@ const items = Object.entries(entries).map(([file, entry]) => {
     </div>
   </section>
 </BaseLayout>
+

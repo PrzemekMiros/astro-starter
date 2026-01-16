@@ -15,6 +15,7 @@ imageMain: /src/content/realizacje/img/egp-thumb-big.jpg
 imageMobile: /content/realizacje/img/egp-mobile.jpg
 category:
   - Sklep internetowy
+background: "#fef3c7"
 ---
 
 ## Producent nanokoloidów

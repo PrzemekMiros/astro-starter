@@ -14,6 +14,7 @@ imageMain: /src/content/realizacje/img/soul-thumb-big.jpg
 imageMobile: /content/realizacje/img/soul-mobile.jpg
 category:
   - Strona internetowa
+background: "#f5f3ff"
 ---
 
 ## Studio masażu i terapii

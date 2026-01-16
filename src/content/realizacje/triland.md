@@ -12,6 +12,7 @@ title: Doradztwo środowiskowe
 date: 2024-02-27T23:00:00.000Z
 link: https://triland.pl/
 imageMain: /src/content/realizacje/img/triland-thumb-big.jpg
+background: "#f5f3ff"
 ---
 
 ## Doradztwo w ochronie środowiska

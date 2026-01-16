@@ -14,6 +14,7 @@ imageMain: /src/content/realizacje/img/master-thumb-big.jpg
 imageMobile: /content/realizacje/img/master-mobile.jpg
 category:
   - Strona internetowa
+background: "#f1f5f9"
 ---
 
 ## Klub networkingowy

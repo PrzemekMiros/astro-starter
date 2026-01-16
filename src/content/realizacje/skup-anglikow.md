@@ -11,6 +11,7 @@ title: Skup aut z Anglii
 date: 2023-08-02T13:25:45.709Z
 link: https://skup-anglikow.pl/
 imageMain: /src/content/realizacje/img/angliki-thumb-big.jpg
+background: "#ebf5ff"
 ---
 
 ## Skup aut z Anglii

@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+const logoEntries = import.meta.glob("/src/content/klienci/img/*", { eager: true });
+const logos = Object.entries(logoEntries)
+  .map(([path, entry]) => {
+    const src = entry?.default ?? null;
+    if (!src) return null;
+    const label = path.split("/").pop().replace(/\.[^.]+$/, "");
+    return { src, label };
+  })
+  .filter(Boolean)
+  .sort((a, b) => a.label.localeCompare(b.label, "pl-PL"));
+---
+
+<section class="relative overflow-hidden bg-white py-16">
+  <div class="space-y-4">
+    <p class="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--accent)]">Zaufali mi</p>
+    <h2 class="text-3xl font-semibold text-[var(--text)] sm:text-4xl">Firmy, z którymi współpracowałem</h2>
+  </div>
+  <div class="mt-10 grid gap-3 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {logos.map((logo) => (
+      <div class="flex items-center justify-center border border-gray-300 rounded-md p-3">
+        <Image
+          class="max-h-16 w-auto object-contain grayscale opacity-80 transition hover:opacity-100"
+          src={logo.src}
+          alt={logo.label}
+          loading="lazy"
+          width={200}
+          height={64}
+        />
+      </div>
+    ))}
+  </div>
+</section>

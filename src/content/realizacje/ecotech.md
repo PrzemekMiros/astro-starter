@@ -12,6 +12,7 @@ link: https://ecotechgroup.pl/
 category:
   - Strona internetowa 
 order: 2
+background: "#f6f6fb"
 ---
 
 ## Dystrybutor rur stalowych

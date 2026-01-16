@@ -14,6 +14,7 @@ imageMain: /src/content/realizacje/img/cse-thumb-big.jpg
 imageMobile: /content/realizacje/img/cse-mobile.jpg
 category:
   - Strona internetowa
+background: "#ecfeff"
 ---
  
 

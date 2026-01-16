@@ -15,6 +15,7 @@ imageMain: /src/content/realizacje/img/staltom-thumb-big.jpg
 imageMobile: /content/realizacje/img/staltom-mobile.jpg
 category:
   - Strona internetowa
+background: "#f0f6ff"
 ---
 
 ## Producent konstrukcji stalowych

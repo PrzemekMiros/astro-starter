@@ -12,6 +12,7 @@ title: Agencja aktorska
 date: 2023-08-16T06:55:17.673Z
 link: https://agencjacosmos.pl/
 imageMain: /src/content/realizacje/img/cosmos-thumb-big.jpg
+background: "#ecfccb"
 ---
 
 ## Agencja aktorska

@@ -12,6 +12,7 @@ title: Przychodnia zdrowia
 date: 2023-03-06T16:58:00.000Z
 link: https://przychodniagrabow.pl/
 imageMain: /src/content/realizacje/img/przychodnia-thumb-big.jpg
+background: "#fffbeb"
 ---
 
 ## Przychodnia zdrowia

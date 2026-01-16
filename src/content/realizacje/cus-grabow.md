@@ -13,4 +13,5 @@ thumbnail: /src/content/realizacje/img/moc-cus.jpg
 order: 14
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/moc-cus.jpg
+background: "#e0f2fe"
 ---

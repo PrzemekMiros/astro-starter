@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ArticlesHero from "../../layouts/heroes/ArticlesHero.astro";
 
 const imageEntries = import.meta.glob("/src/content/artykuly/img/**/*", { eager: true });
 const resolveArticleImage = (path) => {
@@ -41,12 +40,7 @@ const categories = Array.from(
 <BaseLayout
   title="Porady i ciekawostki"
   description="Praktyczne porady, trendy i ciekawostki o stronach, SEO i marketingu. Przegladaj najnowsze artykuly."
-  showHero={false}
 >
-  <ArticlesHero
-    title="Porady i ciekawostki"
-    lead="Kompleksowo prowadzŽt od strategii, przez design, po wdro‘•enie i wsparcie. Minimalistycznie, szybko i z myślą o wynikach. "
-  />
   <section class="mb-24 mt-12">
       <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div class="mt-8 space-y-20 lg:space-y-20">
@@ -116,10 +110,6 @@ const categories = Array.from(
           })} 
         </div>
         <aside class="sticky mt-8 top-24 self-start rounded-2xl bg-gray-100 p-6">
-          <div class="flex items-center justify-between">
-            <h2 class="text-sm font-semibold uppercase tracking-[0.2em]">Kategorie</h2>
-            <span class="text-[10px] uppercase tracking-[0.3em]">Wpisy</span>
-          </div>
           {categories.length ? (
             <ul class="mt-4 space-y-3 text-sm">
               {categories.map((category) => (

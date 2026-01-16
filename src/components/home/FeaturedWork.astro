@@ -21,6 +21,7 @@ const works = Object.entries(entries)
       date: data.date ? new Date(data.date) : null,
       order: data.order,
       image: data.tileImage ?? data.thumbnail ?? data.imageMain,
+      background: data.background ?? data.tileBg,
     };
   })
   .filter((item) => item.title && item.image)
@@ -58,6 +59,7 @@ const works = Object.entries(entries)
           class="flex flex-col gap-6 rounded-2xl border border-[var(--border)] bg-gray-50 p-6 text-[var(--text)] no-underline transition hover:-translate-y-1"
           href={`/realizacje/${work.slug}/`}
           title={`Zobacz realizacje: ${work.title}`}
+          style={work.background ? `background-color: ${work.background};` : undefined}
         >
           {image ? (
             <Image

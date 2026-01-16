@@ -227,35 +227,36 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
   aria-hidden="true"
   role="dialog"
   aria-modal="true"
+  aria-labelledby="cookieconsent-title"
   tabindex="-1"
 >
   <div class="bg-white rounded-lg shadow-2xl max-w-[600px] w-full overflow-hidden border border-gray-100">
     <div class="p-4 flex border-b border-gray-100">
       <div class="flex flex-col">
-        <span class="text-sm font-bold text-gray-900 leading-tight">Cookieconsent</span>
+        <span id="cookieconsent-title" class="text-sm font-bold text-gray-900 leading-tight">Cookieconsent</span>
       </div>
     </div>
 
-    <div class="flex border-b border-gray-100">
-      <button class="flex-1 py-3 text-[#00a3ff] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[#00a3ff]" type="button" data-cookie-tab="consent" aria-selected="true">
+    <div class="flex border-b border-gray-100" role="tablist" aria-label="Cookie consent">
+      <button class="flex-1 py-3 text-[#00a3ff] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[#00a3ff]" type="button" data-cookie-tab="consent" role="tab" id="cookie-tab-consent" aria-controls="cookie-panel-consent" aria-selected="true">
         Zgoda
       </button>
-      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="details" aria-selected="false">
+      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="details" role="tab" id="cookie-tab-details" aria-controls="cookie-panel-details" aria-selected="false">
         Szczegóły
       </button>
-      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="about" aria-selected="false">
+      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="about" role="tab" id="cookie-tab-about" aria-controls="cookie-panel-about" aria-selected="false">
         O plikach cookie
       </button>
     </div>
 
-    <div class="p-6 md:p-8" data-cookie-panel="consent">
+    <div class="p-6 md:p-8" data-cookie-panel="consent" role="tabpanel" id="cookie-panel-consent" aria-labelledby="cookie-tab-consent">
       <h2 class="text-gray-900 font-bold text-sm mb-3">Ta strona korzysta z plików cookie</h2>
       <p class="text-gray-600 text-[12px] leading-[1.6]">
         Używamy plików cookie, aby personalizować treści i reklamy, udostępniać funkcje mediów społecznościowych i analizować nasz ruch. Udostępniamy również informacje o tym, jak korzystasz z naszej witryny, naszym partnerom społecznościowym, reklamowym i analitycznym. Partnerzy mogą włączyć te informacje z innymi danymi otrzymanymi od Ciebie lub uzyskanymi podczas korzystania z ich usług.
       </p>
     </div>
 
-    <div class="p-6 md:p-8 hidden" data-cookie-panel="details">
+    <div class="p-6 md:p-8 hidden" data-cookie-panel="details" role="tabpanel" id="cookie-panel-details" aria-labelledby="cookie-tab-details">
       <h2 class="text-gray-900 font-bold text-sm mb-3">Ustawienia zgody</h2>
       <p class="text-gray-600 text-[12px] leading-[1.6] mb-4">
         Wybierz, na jakie kategorie plików cookie wyrażasz zgodę. Niezbędne są zawsze aktywne.
@@ -288,7 +289,7 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
       </div>
     </div>
 
-    <div class="p-6 md:p-8 hidden" data-cookie-panel="about">
+    <div class="p-6 md:p-8 hidden" data-cookie-panel="about" role="tabpanel" id="cookie-panel-about" aria-labelledby="cookie-tab-about">
       <h2 class="text-gray-900 font-bold text-sm mb-3">O plikach cookie</h2>
       <p class="text-gray-600 text-[12px] leading-[1.6]">
         Pliki cookie to niewielkie informacje zapisywane w Twojej przeglądarce. Pomagają działać stronie,

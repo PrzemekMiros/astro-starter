@@ -10,9 +10,7 @@ link: https://kajaki24.com.pl/
 thumbnail: /src/content/realizacje/img/kajaki-thumb-big.jpg
 imageMain: /src/content/realizacje/img/kajaki-thumb-big.jpg
 order: 7
-background: "#fefce8"
+background: "#fffcfb"
 ---
-
-## Wypożyczalnia Kajaków
 
 Strona dla wypozyczlni kajaków. Technologia Jamstack, Eleventy.js i Netlify CMS. Indywidualny projekt graficzny, animacje, widget pogodowy. Optymalizacja techniczna pod wyszukiwarki.

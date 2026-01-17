@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import RealizacjeHero from "../../layouts/heroes/RealizacjeHero.astro";
 
 const imageEntries = import.meta.glob("/src/content/realizacje/img/**/*", { eager: true });
 const resolveContentImage = (path) => {
@@ -23,78 +22,77 @@ const items = Object.entries(entries).map(([file, entry]) => {
   description="Galeria wybranych projektow i wdrozen. Zobacz szczegoly realizacji i zakres prac."
 >
 
-  <section class="py-16">
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-      {items.map((realizacja) => {
-        const image = resolveContentImage(
-          realizacja.tileImage ?? realizacja.thumbnail ?? realizacja.imageMain
-        );
-        const tag = Array.isArray(realizacja.category) ? realizacja.category[0] : realizacja.category;
-        const date = realizacja.date ? new Date(realizacja.date) : null;
-        const formattedDate = date ? date.toLocaleDateString('pl-PL', { month: 'long', year: 'numeric' }) : null;
-        const bgColor = realizacja.background ?? realizacja.tileBg;
+<section class="py-16 px-4 md:px-0">
+  <div class="grid gap-12 md:grid-cols-2">
+    {items.map((realizacja) => {
+      const image = resolveContentImage(
+        realizacja.tileImage ?? realizacja.thumbnail ?? realizacja.imageMain
+      );
+      const tag = Array.isArray(realizacja.category) ? realizacja.category[0] : realizacja.category;
+      const date = realizacja.date ? new Date(realizacja.date) : null;
+      const formattedDate = date ? date.toLocaleDateString('pl-PL', { month: 'long', year: 'numeric' }) : null;
+      const bgColor = realizacja.background ?? realizacja.tileBg;
 
-        return (
-          <article 
-            class="group relative bg-[#f5f5f7] rounded-[16px] p-4 border border-black/5 overflow-hidden"
-            style={bgColor ? `background-color: ${bgColor};` : undefined}
-          >
-            {/* Kontener obrazka z efektem Zoom */}
-            <div class="relative aspect-[4/3] overflow-hidden rounded-[16px] bg-white border border-black/5">
-              {image ? (
-                <Image
-                  class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                  src={image}
-                  alt={realizacja.title ?? realizacja.slug}
-                  widths={[400, 800]}
-                  sizes="(max-width: 768px) 100vw, 600px"
-                  loading="lazy"
-                />
-              ) : (
-                <div class="flex h-full items-center justify-center bg-gray-200 text-xs uppercase tracking-widest text-gray-400">
-                  Brak zdjęcia
-                </div>
+      return (
+        <article 
+          class="group relative overflow-hidden rounded-2xl border border-black/6 transition-all duration-500 hover:border-orange-600/30"
+          style={bgColor ? `background-color: ${bgColor};` : undefined}
+        >
+          {/* Kontener obrazka z Twoim efektem grayscale/zoom */}
+          <div class="relative aspect-[12/9] overflow-hidden">
+            {image ? (
+              <Image
+                class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
+                src={image}
+                alt={realizacja.title ?? realizacja.slug}
+                widths={[400, 800]}
+                sizes="(max-width: 768px) 100vw, 600px"
+                loading="lazy"
+              />
+            ) : (
+              <div class="flex h-full items-center justify-center text-[10px] uppercase tracking-widest text-neutral-600">
+                Brak podglądu projektu
+              </div>
+            )}
+
+          </div>
+
+          {/* Treść dopasowana do stylu strony głównej */}
+          <div class="p-8 relative z-10">
+            <div class="flex justify-between items-center mb-4">
+              {tag && (
+                <span class="text-orange-600 text-[11px] font-semibold uppercase tracking-[0.1em]">
+                  {tag}
+                </span>
+              )}
+              {formattedDate && (
+                <span class="text-neutral-500 text-[11px] uppercase tracking-wider">
+                  {formattedDate}
+                </span>
               )}
             </div>
 
-            {/* Treść */}
-            <div class="mt-6 px-4 pb-4 relative z-10">
-              <div class="flex justify-between items-center mb-2">
-                {tag && (
-                  <span class="text-[#ff4d1c] text-xs font-bold uppercase tracking-widest">
-                    {tag}
-                  </span>
-                )}
-                {formattedDate && (
-                  <span class="text-gray-500 text-xs font-medium lowercase">
-                    {formattedDate}
-                  </span>
-                )}
+            <div class="flex justify-between items-end gap-4">
+              <div class="flex-1">
+                <h3 class="text-3xl font-semibold tracking-tight leading-tight">
+                  {realizacja.title ?? realizacja.slug}
+                </h3>
               </div>
 
-              <div class="flex justify-between items-end">
-                <div class="pr-4">
-                  <h3 class="text-2xl font-semibold text-gray-900 tracking-tight leading-none mb-1">
-                    {realizacja.title ?? realizacja.slug}
-                  </h3>
-                </div>
-
-                {/* Przycisk akcji */}
-                <div
-                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-gray-900 shadow-sm transition-colors duration-300 group-hover:bg-[#ff4d1c] group-hover:text-white"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </div>
+              {/* Ikona akcji - minimalistyczna, pomarańczowa w hoverze */}
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/10 bg-neutral-200 text-white transition-all duration-300 group-hover:bg-orange-600 group-hover:border-orange-600 group-hover:rotate-45"
+              >
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
               </div>
             </div>
-            
-            {/* Cała karta jako link */}
-            <a href={`/realizacje/${realizacja.slug}/`} class="absolute inset-0 z-20" aria-label={`Zobacz projekt: ${realizacja.title}`}></a>
-          </article>
-        );
-      })}
-    </div>
-  </section>
+          </div>
+          
+          {/* Cała karta jako link */}
+          <a href={`/realizacje/${realizacja.slug}/`} class="absolute inset-0 z-20" aria-label={`Zobacz projekt: ${realizacja.title}`}></a>
+        </article>
+      );
+    })}
+  </div>
+</section>
 </BaseLayout>

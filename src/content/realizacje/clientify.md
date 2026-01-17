@@ -13,5 +13,5 @@ thumbnail: /src/content/realizacje/img/clientify-mockup.jpg
 order: 13
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/clientify-mockup.jpg
-background: "#fdf4ff"
+background: "#fffcfb"
 ---

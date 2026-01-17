@@ -14,10 +14,8 @@ imageMain: /src/content/realizacje/img/cse-thumb-big.jpg
 imageMobile: /content/realizacje/img/cse-mobile.jpg
 category:
   - Strona internetowa
-background: "#ecfeff"
+background: "#fffcfb"
 ---
  
-
-## Przychodnia stomatologiczna
 
 Strona internetowa dla przychodni stomatologicznych w Warszawie. Indywidualny projekt graficzny. System zarządzania treścią Wordpress.

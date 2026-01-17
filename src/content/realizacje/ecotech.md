@@ -15,7 +15,6 @@ order: 2
 background: "#f6f6fb"
 ---
 
-## Dystrybutor rur stalowych
 
 Strona internetowa dla dystrybutora rur stalowych. Wykonana według dostarczonego projektu graficznego. Oparta na systemie zarządzania treścią Wordpress. Katalog produktów z intuicyjna wyszukiwarką i filtrowaniem. 
 

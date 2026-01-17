@@ -14,10 +14,9 @@ imageMain: /src/content/realizacje/img/soul-thumb-big.jpg
 imageMobile: /content/realizacje/img/soul-mobile.jpg
 category:
   - Strona internetowa
-background: "#f5f3ff"
+background: "#fffcfb"
 ---
 
-## Studio masażu i terapii
 
 Profesjonalny salonem oferujący bezinwazyjny Japoński, liftingujący masaż, sesje dźwiękowe przy użyciu mis, spotkania z coachami i psychologami. 
 

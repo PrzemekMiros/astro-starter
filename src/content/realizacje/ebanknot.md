@@ -13,5 +13,5 @@ thumbnail: /src/content/realizacje/img/ebanknot-mockup.jpg
 order: 15
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/ebanknot-mockup.jpg
-background: "#fff8f2"
+background: "#fffcfb"
 ---

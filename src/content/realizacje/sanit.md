@@ -13,5 +13,5 @@ thumbnail: /src/content/realizacje/img/sanit-mockup.jpg
 order: 42
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/sanit-mockup.jpg
-background: "#e2e8f0"
+background: "#fffcfb"
 ---

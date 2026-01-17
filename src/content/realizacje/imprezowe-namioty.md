@@ -15,8 +15,8 @@ imageMain: /src/content/realizacje/img/namioty-thumb-big.jpg
 imageMobile: /content/realizacje/img/longscroll-mobile.jpg
 category:
   - Strona internetowa
-background: "#eefcf6"
+background: "#fffcfb"
 ---
-## Wypożyczalnia namiotów na imprezy
+
 
 Strona www dla firmy zajmującej się wynajmem namiotów i obsługą imprez. Indywidualny projekt graficzny i CMS Wordpress. Optymalizacja techniczna pod kątem wyszukiwarek.

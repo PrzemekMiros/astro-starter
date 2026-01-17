@@ -10,6 +10,7 @@ link: https://zlomowanie24h.com/
 thumbnail: /src/content/realizacje/img/zlom-thumb-big.jpg
 imageMain: /src/content/realizacje/img/zlom-thumb-big.jpg
 order: 15
-background: "#f8f1fb"
+background: "#fffcfb"
 ---
+
 Strona internetowa dla firmy zajmującej się skupem, kasacją i złomowaniem aut w Krakowie. System zarządzania treścią Wordpress. Indywidualny projekt graficzny.

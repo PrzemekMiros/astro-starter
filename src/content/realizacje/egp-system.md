@@ -15,10 +15,9 @@ imageMain: /src/content/realizacje/img/egp-thumb-big.jpg
 imageMobile: /content/realizacje/img/egp-mobile.jpg
 category:
   - Sklep internetowy
-background: "#fef3c7"
+background: "#fffcfb"
 ---
 
-## Producent nanokoloidów
 
 Strona i sklep interentowy dla producenta nanokoloidów. System zarządzania treścią Wordpress, sklep oparty na Woocommerce, integracja z Baselinker, płatności online. Szybka, zapezpieczona i zoptymalizowana pod wyszukiwarki.
 

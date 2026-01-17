@@ -13,5 +13,5 @@ thumbnail: /src/content/realizacje/img/moc-silver.jpg
 order: 30
 date: 2023-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/moc-silver.jpg
-background: "#fef5ff"
+background: "#fffcfb"
 ---

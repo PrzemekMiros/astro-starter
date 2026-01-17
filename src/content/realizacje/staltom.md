@@ -15,9 +15,7 @@ imageMain: /src/content/realizacje/img/staltom-thumb-big.jpg
 imageMobile: /content/realizacje/img/staltom-mobile.jpg
 category:
   - Strona internetowa
-background: "#f0f6ff"
+background: "#fffcfb"
 ---
-
-## Producent konstrukcji stalowych
 
 Strona internetowa dla producenta konstrukcji stalowych. Indywidualny projekt graficzny. Oparta na systemie zarządzania treścią Wordpress. Bez builderów.

@@ -13,6 +13,6 @@ thumbnail: /src/content/realizacje/img/moc-uneedev.jpg
 order: 9
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/moc-uneedev.jpg
-background: "#f7f5fe"
+background: "#fffcfb"
 ---
 

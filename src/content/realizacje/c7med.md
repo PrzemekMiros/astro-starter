@@ -11,9 +11,8 @@ date: 2021-06-14T22:00:00.000Z
 imageMain: /src/content/realizacje/img/c7med-thumb-big.jpg
 category:
   - Strona internetowa
-background: "#fff7ed"
+background: "#fffcfb"
 ---
 
-## Centrum Rehabilitacji
 
 Strona internetowa dla centrum rehabilitacji w Pruszczu Gdańskim. Indywidualny projekt graficzny. System zarządzania treścią Wordpress.

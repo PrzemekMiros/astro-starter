@@ -15,7 +15,6 @@ imageMain: /src/content/realizacje/img/business-thumb-big.jpg
 background: "#fffcfb"
 ---
 
-## Portal kobiet biznesu
 
 Serwis dla czasopisma Business Woman and Life. Indywidualny projekt graficzny i dedykowany motyw na Wordpressa. 
 

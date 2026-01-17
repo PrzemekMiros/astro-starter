@@ -40,46 +40,108 @@ if (!realizacja) {
   showHero={false}
 >
   <RealizacjeHero title={realizacja.title ?? realizacja.slug} lead={realizacja.description} />
-  <section class="py-24 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+<section class="py-24 grid gap-12 lg:grid-cols-[1fr_minmax(0,450px)] items-start">
+  {/* Lewa kolumna: Obrazek z Twoim charakterystycznym obramowaniem i lekkim desaturatem */}
+  <div class="relative group">
     {headerImage ? (
-      <Image
-        class="aspect-[4/4] w-full rounded-2xl border border-[var(--border)] object-cover"
-        src={headerImage}
-        alt={realizacja.title ?? realizacja.slug}
-        widths={[320, 480, 768, 960, 1100, 1400]}
-        sizes="(max-width: 768px) 100vw, 1100px"
-        loading="lazy"
-        placeholder="blur"
-      />
+      <div class="overflow-hidden rounded-2xl border border-white/10">
+        <Image
+          class="aspect-square w-full object-cover opacity-90 transition-all duration-700 group-hover:opacity-100 group-hover:scale-[1.02]"
+          src={headerImage}
+          alt={realizacja.title ?? realizacja.slug}
+          widths={[320, 480, 768, 960, 1100, 1400]}
+          sizes="(max-width: 1024px) 100vw, 800px"
+          loading="lazy"
+          placeholder="blur"
+        />
+      </div>
     ) : (
-      <div class="grid aspect-[4/4] place-items-center rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface-muted)] text-xs uppercase tracking-widest text-[var(--muted)]">Brak zdjecia</div>
+      <div class="grid aspect-square place-items-center rounded-2xl border border-dashed border-white/10 bg-neutral-900 text-[10px] uppercase tracking-widest text-neutral-500">
+        Brak wizualizacji projektu
+      </div>
     )}
+    {/* Dekoracyjny element - pomarańczowy akcent w rogu obrazka, nawiązujący do Twojego Hero */}
+    <div class="absolute -bottom-2 -left-2 h-12 w-12 bg-orange-600/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  </div>
+
+  {/* Prawa kolumna: Detale projektu */}
+  <div class="sticky top-24 space-y-10">
     <div class="space-y-4">
-    {Content ? (
-    <section class="mt-10 space-y-4 text-[17px] leading-7 text-[var(--text)] [&>a]:underline [&>a]:decoration-[var(--accent)] [&>a]:underline-offset-4 [&>blockquote]:border-l-4 [&>blockquote]:border-[var(--border)] [&>blockquote]:pl-4 [&>blockquote]:text-[var(--muted)] [&>h2]:mt-8 [&>h2]:text-2xl [&>h2]:font-semibold [&>h3]:mt-6 [&>h3]:text-xl [&>h3]:font-semibold [&>hr]:border-[var(--border)] [&>li]:mt-2 [&>ol]:list-decimal [&>ol]:pl-6 [&>p]:leading-7 [&>ul]:list-disc [&>ul]:pl-6">
-      <Content />
-    </section>
-  ) : null}
-      {realizacja.description ? <p class="text-[var(--muted)]">{realizacja.description}</p> : null}
-      {realizacja.client ? <p class="text-[var(--muted)]">{realizacja.client}</p> : null}
-      {year ? <p class="text-[var(--muted)]">{year}</p> : null}
-      {realizacja.link ? (
-        <p class="text-[var(--muted)]">
-          <a class="underline decoration-[var(--accent)] underline-offset-4 hover:text-[var(--text)]" href={realizacja.link} rel="noopener" target="_blank" title={`Otworz strone: ${realizacja.link}`}>
-            {realizacja.link}
-          </a>
-        </p>
-      ) : null}
-        {realizacja.category?.length ? (
-    <section class="mt-12 space-y-2">
-      <h2 class="text-xl font-semibold">Zakres</h2>
-      <p class="text-sm text-[var(--muted)]">{realizacja.category.join(", ")}</p>
-    </section>
-  ) : null}
-
-    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--text)]" href="/realizacje/" title="Wroc do listy realizacji">&larr; Wroc do listy</a>
+      <h1 class="text-4xl font-semibold tracking-tight leading-none">
+        {realizacja.title}
+      </h1>
+      <div class="h-1 w-12 bg-orange-600"></div>
     </div>
-  </section>
 
+      {realizacja.link && (
+        <div class="col-span-2 pt-4">
+          <a 
+            href={realizacja.link} 
+            rel="noopener" 
+            target="_blank" 
+            class="group inline-flex items-center gap-3 text-sm font-bold hover:text-orange-500 transition-colors"
+          >
+            <span>Zobacz online</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      )}
+
+    {/* Dynamiczna treść MDX/Content */}
+    {Content ? (
+      <div class="prose prose-invert prose-sm max-w-none text-neutral-400 
+        [&>p]:leading-relaxed [&>p]:mb-4
+        [&>h2]:text-white [&>h2]:text-xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4
+        [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2
+        [&>a]:text-orange-500 [&>a]:no-underline hover:[&>a]:underline">
+        <Content />
+      </div>
+    ) : null}
+
+    {/* Tabela metadanych - wygląda bardziej profesjonalnie niż lista paragrafów */}
+    <div class="grid grid-cols-2 gap-y-6 border-t border-white/10">
+      {realizacja.client && (
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-1">Klient</p>
+          <p class="text-sm text-black font-medium">{realizacja.client}</p>
+        </div>
+      )}
+      {realizacja.category?.length && (
+        <div class="col-span-2">
+          <p class="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-1">Zakres prac</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            {realizacja.category.map((cat) => (
+              <span class="text-[11px] px-3 py-1 rounded-full bg-gray-100 border border-white/5 text-neutral-00">
+                {cat}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {year && (
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-1">Rok</p>
+          <p class="text-sm text-black font-medium">{year}</p>
+        </div>
+      )}
+
+    </div>
+
+    {/* Powrót */}
+    <div class="pt-6">
+      <a 
+        class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-neutral-500 hover:text-white transition-colors" 
+        href="/realizacje/"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Wróć do listy
+      </a>
+    </div>
+  </div>
+</section>
 
 </BaseLayout>

@@ -55,10 +55,10 @@ const categories = Array.from(
         return (
           <article class="relative isolate flex flex-col gap-8 lg:flex-row group">
             {/* Kontener obrazka z hoverem jak na Twojej stronie */}
-            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:w-80 lg:shrink-0 overflow-hidden rounded-2xl bg-neutral-900">
+            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:w-80 lg:shrink-0 overflow-hidden rounded-2xl">
               {image ? (
                 <Image
-                  class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+                  class="absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:opacity-100"
                   src={image}
                   alt={artykul.title ?? artykul.slug}
                   widths={[320, 480]}

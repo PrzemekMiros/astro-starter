@@ -57,23 +57,10 @@ const contact = {
 
     <div class="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 lg:sticky lg:top-8">
       <h2 class="text-2xl font-semibold tracking-tight">Formularz kontaktowy</h2>
-      <form
-        class="mt-6 grid gap-4"
-        name="kontakt"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="kontakt" />
-        <p class="hidden">
-          <label for="contact-bot-field">
-            Nie wypelniaj:
-            <input id="contact-bot-field" name="bot-field" />
-          </label>
-        </p>
+      <form class="mt-6 grid gap-4" id="contactForm">
         <div class="grid gap-3 sm:grid-cols-2">
           <label class="grid gap-2 text-sm font-semibold text-[var(--muted)]" for="contact-name">
-            Imie i nazwisko
+            Imię i nazwisko
             <input id="contact-name" class="w-full box-border rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] px-4 py-3 text-base text-[var(--text)]" name="name" type="text" placeholder="Jan Kowalski" required />
           </label>
           <label class="grid gap-2 text-sm font-semibold text-[var(--muted)]" for="contact-email">
@@ -82,13 +69,55 @@ const contact = {
           </label>
         </div>
         <label class="grid gap-2 text-sm font-semibold text-[var(--muted)]" for="contact-message">
-          Wiadomosc
+          Wiadomość
           <textarea id="contact-message" class="w-full box-border min-h-[140px] rounded-2xl border border-[var(--border)] bg-[var(--surface-muted)] px-4 py-3 text-base text-[var(--text)]" name="message" placeholder="Napisz, czego potrzebujesz i jaki jest termin." required></textarea>
         </label>
         <button class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-95" type="submit">
-          Wyslij wiadomosc
+          Wyślij wiadomość
         </button>
+        <p id="contact-form-status" class="mt-3 text-sm text-[var(--muted)]" aria-live="polite"></p>
       </form>
     </div>
   </section>
+  <script type="module">
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("contact-form-status");
+
+    if (form) {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (statusEl) {
+          statusEl.textContent = "Wysyłam wiadomość...";
+          statusEl.dataset.state = "sending";
+        }
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            throw new Error("Nie udało się wysłać wiadomości");
+          }
+
+          const result = await response.json();
+          if (statusEl) {
+            statusEl.textContent = result?.message ?? "Wiadomość dotarła - skontaktujemy się wkrótce.";
+            statusEl.dataset.state = "success";
+          }
+
+          form.reset();
+        } catch (error) {
+          console.error("Błąd formularza kontaktowego:", error);
+          if (statusEl) {
+            statusEl.textContent = "Wystąpił problem. Spróbuj ponownie za chwilę.";
+            statusEl.dataset.state = "error";
+          }
+        }
+      });
+    }
+  </script>
 </BaseLayout>

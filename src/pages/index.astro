@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/home/Hero.astro";
-import Services from "../components/home/Services.astro";
 import FeaturedWork from "../components/home/FeaturedWork.astro";
 import Testimonials from "../components/home/Testimonials.astro";
 import CallToAction from "../components/home/CallToAction.astro";
@@ -16,6 +15,8 @@ import ClientsLogos from "../components/home/ClientsLogos.astro";
   showHero={false}
 >
 	<Hero />
+	<ClientsLogos />
+	<BentoGrid />
 	<FeaturedWork />
 	<Testimonials />
 	<LatestPosts />

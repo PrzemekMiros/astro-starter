@@ -41,7 +41,7 @@ const categories = Array.from(
   title="Porady i ciekawostki"
   description="Praktyczne porady, trendy i ciekawostki o stronach, SEO i marketingu."
 >
-<section class="mb-24 mt-16 px-4 md:px-0">
+<section class="mb-24 mt-16">
   <div class="grid gap-16 lg:grid-cols-[minmax(0,1fr)_300px]">
     <div class="space-y-16">
       {items.map((artykul) => {
@@ -53,9 +53,9 @@ const categories = Array.from(
         const initials = author.split(" ").filter(Boolean).slice(0, 2).map((part) => part[0]).join("").toUpperCase();
 
         return (
-          <article class="relative isolate flex flex-col gap-8 lg:flex-row group">
+          <article class="relative isolate flex flex-col gap-8 md:flex-row group">
             {/* Kontener obrazka z hoverem jak na Twojej stronie */}
-            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:w-80 lg:shrink-0 overflow-hidden rounded-2xl">
+            <div class="relative aspect-[16/9] sm:aspect-[2/1] md:w-80 md:shrink-0 overflow-hidden rounded-2xl">
               {image ? (
                 <Image
                   class="absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:opacity-100"

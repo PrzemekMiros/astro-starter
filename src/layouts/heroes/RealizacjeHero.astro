@@ -6,7 +6,7 @@ const { title, client } = Astro.props;
 
 <section class="relative">
   <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
-  <div class="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] min-h-[320px] relative">
+  <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1.66fr)_minmax(0,1fr)] min-h-[320px] relative">
     <div class="relative flex flex-col justify-center pb-16 pt-32 z-10">
       <div class="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-6 font-bold">
         <span>Główna</span>
@@ -19,7 +19,7 @@ const { title, client } = Astro.props;
       <div class="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-[var(--accent)] z-20"></div>
     </div>
     <div class="relative min-h-[320px] lg:min-h-full">
-      <div class="absolute inset-0 right-[-50vw] bg-neutral-900 group overflow-hidden">
+      <div class="absolute inset-0 group overflow-hidden">
         <Image
           src={ heroImage }
           alt="Proces projektowy" 

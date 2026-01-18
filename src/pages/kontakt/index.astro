@@ -29,29 +29,29 @@ const contact = {
       </div>
       <div class="space-y-4">
         <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Email</p>
-          <a class="mt-3 block text-lg text-[var(--text)]" href={`mailto:${contact.email}`} title="Napisz email">
+          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Email</p>
+          <a class="mt-3 block md:text-base text-[var(--text)]" href={`mailto:${contact.email}`} title="Napisz email">
             {contact.email}
           </a>
         </div>
         <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Telefon</p>
-          <a class="mt-3 block text-lg text-[var(--text)]" href={`tel:${contact.phone.replace(/\s/g, "")}`} title="Zadzwon">
+          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Telefon</p>
+          <a class="mt-3 block md:text-base text-[var(--text)]" href={`tel:${contact.phone.replace(/\s/g, "")}`} title="Zadzwon">
             {contact.phone}
           </a>
         </div>
         <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Lokalizacja</p>
+          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Lokalizacja</p>
           <p class="mt-3 text-base text-[var(--text)]">{contact.address}</p>
         </div>
         <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Dostępność</p>
+          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Dostępność</p>
           <p class="mt-3 text-base text-[var(--text)]">{contact.hours}</p>
         </div>
       </div>
     </div>
 
-    <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] p-6 lg:sticky lg:top-8">
+    <div class="rounded-xl border border-[var(--border)] bg-[#fbfbff] p-4 md:p-6 lg:sticky lg:top-8">
       <form class="mt-6 grid gap-4" id="contactForm">
         <div class="grid gap-3 sm:grid-cols-2">
           <label class="grid gap-2 text-sm font-semibold text-[var(--muted)]" for="contact-name">

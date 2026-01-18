@@ -86,9 +86,9 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
           </div>
 
           <div class="">
-            <h3 class="mb-3 text-xl font-bold text-black">{first.title ?? first.slug}</h3>
+            <h3 class="mb-3 text-xl font-bold font-semibold line-clamp-2">{first.title ?? first.slug}</h3>
             {first.description ? (
-              <p class="text-sm leading-relaxed text-black">{first.description}</p>
+              <p class="text-sm leading-relaxed text-black line-clamp-3">{first.description}</p>
             ) : null}
           </div>
         </a>
@@ -130,9 +130,9 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
           </div>
 
           <div class="">
-            <h3 class="mb-3 text-xl font-bold">{second.title ?? second.slug}</h3>
+            <h3 class="mb-3 text-xl font-semibold line-clamp-2">{second.title ?? second.slug}</h3>
             {second.description ? (
-              <p class="text-sm leading-relaxed text-purple-100">{second.description}</p>
+              <p class="text-sm leading-relaxed text-purple-100 line-clamp-3">{second.description}</p>
             ) : null}
           </div>
         </a>
@@ -174,9 +174,9 @@ const getImage = (article) => resolveArticleImage(article?.tileImage ?? article?
           </div>
 
           <div class="">
-            <h3 class="mb-3 text-xl font-bold">{third.title ?? third.slug}</h3>
+            <h3 class="mb-3 text-xl font-semibold line-clamp-2">{third.title ?? third.slug}</h3>
             {third.description ? (
-              <p class="text-sm leading-relaxed text-white/70">{third.description}</p>
+              <p class="text-sm leading-relaxed text-white/70 line-clamp-3">{third.description}</p>
             ) : null}
           </div>
         </a>

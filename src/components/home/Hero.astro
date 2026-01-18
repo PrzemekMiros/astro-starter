@@ -46,8 +46,9 @@ const ctaPrimary = { label: "Zobacz realizacje", href: "/realizacje/" };
       </div>
     </div>
     </div>
-    <div class="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
-      <p class="text-lg font-semibold text-gray-200">Najczęściej wybierane</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
+      <div>
+      <p class="text-lg font-semibold text-gray-200 mb-4">Najczęściej wybierane</p>
       <ul class="space-y-4 text-sm text-gray-200">
         <li class="flex items-start gap-3">
           <span class="mt-1.5 h-2 w-2 rounded-full bg-[var(--accent)]"></span>
@@ -66,6 +67,7 @@ const ctaPrimary = { label: "Zobacz realizacje", href: "/realizacje/" };
           <span>Kampanie reklamowe w Google ADS</span>
         </li>
       </ul>
+      </div>
       <div class="rounded-xl md:border border-white/10 md:bg-white/5 md:p-4 mt-4 md:mt-0 text-sm text-gray-300">
         <p class="font-semibold text-white">Przejrzysty proces</p>
         <p class="mt-2">Stała komunikacja, jasne etapy i pelna opieka od briefu po wsparcie po wdrożeniu.</p>

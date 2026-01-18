@@ -71,7 +71,7 @@ const ogImageUrl = site ? new URL(ogImage.src, site).toString() : ogImage.src;
       <Header settings={settings} logoAsset={logoAsset} />
       {showHero && title ? <PageHero title={title} lead={description} /> : null}
       <slot />
-      <Footer footerText={settings.footerText} />
+      <Footer/>
     </main>
     <WebVitals debug={import.meta.env.DEV} />
     <script is:inline>

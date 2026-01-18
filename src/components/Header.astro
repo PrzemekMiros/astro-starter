@@ -209,24 +209,28 @@ const mobileLinkClass = (href) =>
     }
 </style>
 
-<script is:inline>
-    const toggle = document.querySelector("[data-mobile-toggle]");
-    const menu = document.querySelector("[data-mobile-menu]");
-    const closeBtn = document.querySelector("[data-mobile-close]");
-    const links = document.querySelectorAll("[data-mobile-link]");
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const toggle = document.querySelector("[data-mobile-toggle]");
+        const menu = document.querySelector("[data-mobile-menu]");
+        const closeBtn = document.querySelector("[data-mobile-close]");
+        const links = document.querySelectorAll("[data-mobile-link]");
 
-    if (toggle && menu) {
-        const setOpen = (isOpen) => {
-            menu.classList.toggle("is-open", isOpen);
-            document.body.style.overflow = isOpen ? "hidden" : "";
-        };
+        if (toggle && menu) {
+            const setOpen = (isOpen) => {
+                menu.classList.toggle("is-open", isOpen);
+                document.body.style.overflow = isOpen ? "hidden" : "";
+            };
 
-        toggle.addEventListener("click", () => setOpen(true));
-        closeBtn?.addEventListener("click", () => setOpen(false));
-        
-        // Zamknij po kliknięciu w link
-        links.forEach(link => {
-            link.addEventListener("click", () => setOpen(false));
-        });
-    }
+            toggle.addEventListener("click", () => setOpen(true));
+            closeBtn?.addEventListener("click", () => setOpen(false));
+            
+            /*
+            // Zamknij po kliknięciu w link
+            links.forEach(link => {
+                link.addEventListener("click", () => setOpen(false));
+            });
+            */
+        }
+    });
 </script>

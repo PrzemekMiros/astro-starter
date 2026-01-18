@@ -61,14 +61,14 @@ const items = Object.entries(entries).map(([file, entry]) => {
 
           {/* Treść dopasowana do stylu strony głównej */}
           <div class="p-4 md:p-8 relative z-10">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center md:mb-4">
               {tag && (
                 <span class="text-orange-600 text-[10px] font-semibold uppercase tracking-[0.1em]">
                   {tag}
                 </span>
               )}
               {formattedDate && (
-                <span class="text-neutral-500 text-[10px] uppercase tracking-wider">
+                <span class="hidden md:block text-neutral-500 text-[10px] uppercase tracking-wider">
                   {formattedDate}
                 </span>
               )}

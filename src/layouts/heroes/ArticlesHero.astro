@@ -8,7 +8,7 @@ const formattedDate = date ? new Date(date).toLocaleDateString('pl-PL', {
 ---
 
  
-<section class="relative pt-28 pb-26 md:pt-42 md:pb-82">
+<section class="relative pt-28 pb-24 md:pt-42 md:pb-82">
   <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
   <div class="relative space-y-4 mx-auto max-w-3xl">
         <div class="text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-gray-400 mb-3 md:mb-6 font-semibold">
@@ -29,7 +29,7 @@ const formattedDate = date ? new Date(date).toLocaleDateString('pl-PL', {
       </div>
     )}
     {formattedDate && (
-      <div class="text-gray-400">
+      <div class="text-gray-400 hidden md:block">
         Opublikowano <span class="text-[var(--accent)]"> > </span> <span class="text-white">{formattedDate}</span>
       </div>
     )}

@@ -21,7 +21,7 @@ Jednak, jak każda inna strategia online, marketing treści ma swoje wady. Treś
 
 Przekazywanie informacji bez weryfikowania faktów może sprawić, że będziesz wyglądać głupio. Pamiętaj, że treści, które umieścisz na swojej stronie, mogą być pierwszym wrażeniem dla klienta.
 
-{% lineStatic %}
+
 
 ## Marketing w mediach społecznościowych
 
@@ -37,7 +37,7 @@ Zakupieni znajomi często nie są docelową grupą demograficzną lub są fałsz
 
 Kiedy ludzie myślą o marketingu online i wyszukiwarkach, zazwyczaj pierwszą rzeczą, która przychodzi na myśl, jest SEO. SEO służy do tworzenia witryny, którą wyszukiwarki będą klasyfikować jako jedną z najbardziej odpowiednich stron dla danego hasła. **Faktem jest, że 95 procent ludzi klika link, który pojawia się na pierwszej stronie wyników wyszukiwania Google, Yahoo! lub Bing.** 
 
-{% lineStatic %}
+
 
 Budowanie solidnej strategii SEO polega przede wszystkim na doborze odpowiednich słów kluczowych i dostarczeniu wartościowych treści związanych z tymi słowami kluczowymi. W przeszłości SEO było napędzane przez takie czynniki, jak rozmieszczenie słów kluczowych, gęstość słów kluczowych, a nawet to, ile razy słowo kluczowe było używane do linkowania do strony.
 

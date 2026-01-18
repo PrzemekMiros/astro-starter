@@ -12,7 +12,7 @@ Senuto to polska platforma SEO, która w ostatnich latach zyskała popularność
 
 Przedstawię szczegółowy przegląd funkcji Senuto oraz jego możliwości, aby przybliżyć, jak może pomóc w budowaniu i wzmacnianiu widoczności stron internetowych.
 
-{% lineStatic %}
+
 
 ## Czym jest Senuto?
 
@@ -20,7 +20,7 @@ Senuto to wszechstronne narzędzie SEO dostarczające danych, które wspierają 
 
 Główne moduły narzędzia to analiza widoczności, baza słów kluczowych, monitoring, content marketing oraz integracja z narzędziami analitycznymi.
 
-{% lineStatic %}
+
 
 ## Kluczowe funkcje i moduły
 
@@ -36,7 +36,7 @@ Moduł analizy widoczności to podstawowa funkcja Senuto, która umożliwia moni
 2. **Analiza trendów**: pozwala analizować wzrosty i spadki widoczności w odpowiedzi na działania SEO.
 3. **Sekcja konkurencji**: Senuto oferuje opcję dodania konkurencyjnych domen, aby móc porównać swoją widoczność z innymi witrynami o podobnym profilu.
 
-{% lineStatic %}
+
 
 ![Senuto - Baza słów kluczowych](/content/posts/img/senuto-baza-slow.png)
 
@@ -50,7 +50,7 @@ Moduł baza słów kluczowych to narzędzie do analizy i odkrywania nowych słó
 2. **Trudność fraz (Keyword Difficulty)**: ocena trudności słów kluczowych pozwala wybrać te, które mogą być łatwiejsze do zdobycia w krótkim czasie.
 3. **Sugestie fraz powiązanych**: dzięki tej funkcji użytkownicy mogą uzyskać propozycje fraz, które mogą uzupełnić treść strony o dodatkowe wartościowe słowa.
 
-{% lineStatic %}
+
 
 ![Senuto - Monitoring pozycji](/content/posts/img/senuto-monitoring.png)
 
@@ -64,7 +64,7 @@ Monitoring pozycji umożliwia śledzenie zmian pozycji słów kluczowych dla kon
 2. **Alarmy powiadomień**: narzędzie może wysyłać powiadomienia, gdy pozycje istotnych słów kluczowych gwałtownie spadną.
 3. **Raporty dzienne, tygodniowe i miesięczne**: dzięki regularnym raportom można analizować, jakie działania przynoszą efekty i jakie wymagają poprawy.
 
-{% lineStatic %}
+
 
 ![Senuto - Content marketing](/content/posts/img/senuto-content-marketing.png)
 
@@ -88,7 +88,7 @@ Senuto umożliwia generowanie raportów, które są bardzo przydatne zarówno dl
 2. **Integracja z Google Analytics i Google Search Console**: integracja z tymi narzędziami umożliwia bardziej kompleksową analizę wyników SEO.
 3. **Dostęp do API**: dla bardziej zaawansowanych użytkowników, Senuto oferuje dostęp do API, co umożliwia tworzenie własnych rozwiązań na podstawie danych z Senuto.
 
-{% lineStatic %}
+
 
 ## Jakie korzyści daje Senuto dla strategii SEO?
 
@@ -102,7 +102,7 @@ Senuto jest narzędziem wszechstronnym, które wspiera różne etapy pracy nad s
 4. **Porównanie z konkurencją**: opcje analizy konkurencji pomagają zrozumieć, jakie działania przynoszą rezultaty w branży i jak można się wyróżnić.
 5. **Automatyzacja procesów**: raportowanie i możliwość ustawiania powiadomień upraszczają pracę specjalistów SEO, pozwalając im skupić się na strategicznych działaniach.
 
-{% lineStatic %}
+
 
 ## Kto najczęściej korzysta z Senuto?
 
@@ -115,7 +115,7 @@ Senuto jest narzędziem stosowanym zarówno przez agencje SEO, jak i freelancer�
 3. **Wydawcy internetowi**: do optymalizacji treści i analizowania tematów, które mogą zwiększyć ruch na stronie.
 4. **Freelancerzy SEO i copywriterzy**: do tworzenia zoptymalizowanych treści i monitorowania widoczności publikowanych materiałów.
 
-{% lineStatic %}
+
 
 Senuto to jedno z najważniejszych narzędzi SEO dostępnych na polskim rynku, które umożliwia kompleksową analizę, planowanie i monitorowanie działań. Dzięki bogatej bazie słów kluczowych, zaawansowanym opcjom monitoringu i narzędziom do content marketingu. 
 

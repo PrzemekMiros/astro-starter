@@ -11,19 +11,19 @@ thumbnail: /content/posts/img/blog-site-long.jpg
 ---
 Dowiedziałeś się, jakie problemy powodują, że klienci opuszczają witrynę Twojej firmy. Teraz skupmy się na tym, jak zatrzymać ich dłużej na stronie, aby zmaksymalizować konwersję i przekształcić użytkowników w płacących i lojalnych klientów.
 
-{% lineStatic %}
+
 
 ## Odśwież design
 
 Jeżeli Twoja witryna nadal jest pełna animowanych obrazów, nadmiarowych funkcji projektowych i innych niepotrzebnych rozwiązań, czas na przeprojektowanie. Według badań masz tylko 15 sekund (lub mniej), aby przekonać nowych użytkowników, aby pozostali w mocy samego projektu strony www.
 
-{% lineStatic %}
+
 
 ## Zmniejsz liczbę fontów
 
 Za dużo rodzai fontów - pierwsze wrażenie, które użytkownik odniesie po wejściu na stronę. Jeśli na swojej stronie głównej masz więcej niż dwa lub trzy fonty, zmniejsz ich liczbę do jednego - maksymalnie dwóch, aby uzyskać bardziej nowoczesny wygląd.
 
-{% lineStatic %}
+
 
 ## Zachęcaj do komentowania
 
@@ -31,7 +31,7 @@ Zachęcanie odwiedzających do zostawiania komentarzy to łatwy sposób na popra
 
 Spraw, by rozmowa toczyła się dalej, kończąc każdy post na swoim blogu dociekliwym pytaniem, które zachęca do komentowania.
 
-{% lineStatic %}
+
 
 ## Opowiedz historię
 

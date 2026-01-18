@@ -19,7 +19,7 @@ Na przykład, znamy mantrę „treść jest królem”, dlatego stwórz mnóstwo
 
 > Łatwo jest podkreślić słowo kluczowe. O wiele trudniej jest powstrzymać odwiedzających przed klikaniem przycisku Wstecz w Twojej witrynie, gdy nie znajdą tego, czego szukają.
 
-{% lineStatic %}
+
 
 ## Wskaźniki User Experience
 
@@ -31,7 +31,7 @@ Jeżeli skupisz się na tych aspektach, poprawisz komfort użytkowania. I wiesz 
 
 >   „Jeśli myślisz, że dobry projekt jest drogi, powinieneś spojrzeć na koszt złego projektu”
 
-{% lineStatic %}
+
 
 ## Szybkość ładowania strony
 
@@ -39,7 +39,7 @@ User Experience zaczyna się, gdy użytkownik kliknie w Twojej witrynie. Jeśli 
 
 Najważniejsze jest to, że dłuższe czasy wczytywania mają bezpośredni wpływ na konwersje, a ostatecznie na wynik finansowy. Według badań przeprowadzonych przez Kissmetrics, każda sekunda po idealnym czasie ładowania wynoszącym trzy sekundy kosztuje 7% redukcję sprzedaży!
 
-{% lineStatic %}
+
 
 ## Nawigacja w witrynie
 
@@ -52,7 +52,7 @@ Google opublikował nową aktualizację algorytmu, która skupiała się na witr
 
 Stało się więc jasne, że w Google chodzi o wysokiej jakości UX. Ponieważ większość ludzi przegląda obecnie sieć na urządzeniach mobilnych, takie podejście było logiczne. Ludzie powinni mieć taki sam poziom jakości na swoich urządzeniach mobilnych.
 
-{% lineStatic %}
+
 
 ## Zachowanie użytkowników w wynikach wyszukiwania
 
@@ -61,7 +61,7 @@ Stało się więc jasne, że w Google chodzi o wysokiej jakości UX. Ponieważ w
 Najbardziej wymowne były „krótkie kliknięcia”, w których użytkownik kliknął odsyłacz i natychmiast wrócił, aby spróbować ponownie. „Jeśli ludzie coś wpiszą, a następnie zmienią zapytanie, można powiedzieć, że nie są zadowoleni” - mówi Neil Patel. „Jeśli przejdą do następnej strony wyników, to znak, że nie są zadowoleni".
 A Ty jak polepszasz User Experience?
 
-{% lineStatic %}
+
 
 **Istnieją dwa rodzaje SEO: takie, które stara się zadowolić roboty i takie, które skupia się na satysfakcji użytkowników.**
 

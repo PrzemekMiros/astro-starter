@@ -15,7 +15,7 @@ Page Speed Insight to narzędzie stworzone przez Google, które umożliwia anali
 
 Page Speed Insight ocenia stronę w skali od 0 do 100, gdzie wyższe wartości oznaczają lepszą wydajność. Wartość ta bazuje na szeregu kluczowych wskaźników, takich jak czas pierwszego buforowania, szybkość interakcji użytkownika i ogólna płynność działania strony.
 
-{% lineStatic %}
+
 
 ## Kluczowe wskaźniki w Page Speed Insight
 
@@ -23,7 +23,7 @@ Page Speed Insight ocenia stronę w skali od 0 do 100, gdzie wyższe wartości o
 * **Time to Interactive (TTI)** – czas, po którym strona jest w pełni interaktywna, co oznacza, że użytkownik może w pełni korzystać z jej funkcji. Optymalny czas TTI to poniżej 5 sekund, co zapewnia płynne działanie strony.
 * **Cumulative Layout Shift (CLS)** – wskaźnik stabilności wizualnej strony. Jest to wartość określająca, na ile elementy strony zmieniają swoje położenie podczas jej ładowania. Wartość CLS poniżej 0,1 uznawana jest za idealną, co zapewnia użytkownikowi stabilne i przewidywalne doświadczenie.
 
-{% lineStatic %}
+
 
 ## Dlaczego szybkość ładowania strony jest ważna dla SEO?
 
@@ -31,7 +31,7 @@ Szybkość ładowania strony jest jednym z ważnych czynników rankingowych, wp�
 
 Wolno ładująca się strona zwiększa prawdopodobieństwo, że użytkownik opuści ją przed zakończeniem ładowania, co przekłada się na wyższy wskaźnik odrzuceń (bounce rate). Strony o niskim współczynniku odrzuceń oraz długim czasie spędzonym przez użytkowników na stronie są bardziej wartościowe z punktu widzenia Google i często zajmują wyższe pozycje w wynikach wyszukiwania.
 
-{% lineStatic %}
+
 
 ### Jakie są konsekwencje wolnego ładowania strony?
 
@@ -41,7 +41,7 @@ Wolna strona internetowa może negatywnie wpływać na konwersję, doświadczeni
 * **Spadek konwersji** – wolno ładująca się strona może obniżyć współczynnik konwersji nawet o 20-30%, ponieważ użytkownicy nie chcą czekać na załadowanie strony z formularzem kontaktowym czy procesem zakupowym.
 * **Gorsze pozycjonowanie** – Google, w trosce o komfort użytkowników, premiuje strony szybkie, co oznacza, że wolne witryny mogą spadać w wynikach wyszukiwania.
 
-{% lineStatic %}
+
 
 ## Jak poprawić szybkość ładowania strony? Najlepsze praktyki 
 
@@ -76,7 +76,7 @@ Kompresja plików, zwłaszcza CSS, JavaScript i HTML, pozwala na zmniejszenie ic
 
 Zminimalizuj kod CSS i JavaScript, usuwając zbędne spacje, komentarze i inne elementy, które nie wpływają na działanie strony, a jedynie zwiększają jej rozmiar. Warto także przesunąć niektóre skrypty na koniec strony (ang. defer), aby ładowały się dopiero po załadowaniu najważniejszych elementów.
 
-{% lineStatic %}
+
 
 ## Podsumowanie
 

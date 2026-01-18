@@ -18,7 +18,7 @@ Wizytówka Google, zwana również Google My Business (GMB), to darmowe narzędz
 * **Godziny otwarcia** – dostosowane do realnych godzin działalności,
 * **Zdjęcia i opinie** – wizualne przedstawienie oraz rekomendacje klientów.
 
-{% lineStatic %}
+
 
 ## Zalety dobrze zoptymalizowanej wizytówki Google
 
@@ -26,7 +26,7 @@ Wizytówka Google, zwana również Google My Business (GMB), to darmowe narzędz
 2. **Wzrost zaufania klientów** – wyświetlanie recenzji oraz autentycznych zdjęć buduje zaufanie potencjalnych klientów.
 3. **Poprawa SEO lokalnego** – szczególnie dla firm lokalnych, wizytówka Google jest jednym z kluczowych elementów strategii SEO.
 
-{% lineStatic %}
+
 
 ## Jak skutecznie zoptymalizować wizytówkę Google?
 
@@ -38,7 +38,7 @@ Pełne wypełnienie wszystkich dostępnych pól to fundament skutecznej optymali
 * **Kategoria działalności** – Wybierz kategorię najbardziej odpowiadającą Twojej branży. Jeśli działasz w niszowej branży, wybierz jak najbliższą kategorię.
 * **Atrybuty** – Google udostępnia także możliwość dodania atrybutów (np. dostępność Wi-Fi, udogodnienia dla osób niepełnosprawnych). Uzupełnij je, aby zapewnić potencjalnym klientom dodatkowe informacje.
 
-{% lineStatic %}
+
 
 #### Pozyskuj pozytywne recenzje od klientów
 
@@ -47,7 +47,7 @@ Pełne wypełnienie wszystkich dostępnych pól to fundament skutecznej optymali
 * **Zachęć klientów do oceny Twojej firmy** – po zakończonej transakcji poproś klientów o krótką opinię. Możesz to zrobić bezpośrednio, mailowo lub poprzez media społecznościowe.
 * **Odpowiadaj na opinie** – Google premiuje wizytówki, na których właściciele regularnie odpowiadają na opinie. Każda odpowiedź to sygnał, że zależy Ci na kontakcie z klientami.
 
-{% lineStatic %}
+
 
 #### Regularnie aktualizuj informacje
 
@@ -56,7 +56,7 @@ Regularne **aktualizowanie danych** o Twojej firmie to sygnał dla Google, że b
 * **Sezonowe godziny otwarcia** – jeśli zmieniasz godziny pracy w zależności od sezonu, zawsze je aktualizuj.
 * **Nowości w ofercie** – jeżeli dodajesz nowe produkty lub usługi, dodaj te informacje do wizytówki, aby klienci byli na bieżąco.
 
-{% lineStatic %}
+
 
 #### Wykorzystaj słowa kluczowe
 
@@ -65,7 +65,7 @@ Słowa kluczowe to frazy, które klienci wpisują, szukając firm takich jak Two
 * **Badanie słów kluczowych** – Zidentyfikuj najważniejsze słowa kluczowe dla swojej branży i lokalizacji, używając narzędzi do analizy słów kluczowych.
 * **Naturalne użycie** – Umieszczaj słowa kluczowe w opisie firmy i usług, ale unikaj przesycenia – treść powinna brzmieć naturalnie i być przyjazna dla użytkowników.
 
-{% lineStatic %}
+
 
 #### Dodawaj wysokiej jakości zdjęcia
 
@@ -74,7 +74,7 @@ Słowa kluczowe to frazy, które klienci wpisują, szukając firm takich jak Two
 * **Profesjonalne fotografie** – Postaraj się, aby zdjęcia były wysokiej jakości, wyraźne i przedstawiały Twoją firmę w pozytywnym świetle.
 * **Różnorodność** – Dodaj zdjęcia wnętrza, zewnętrznego wyglądu firmy, produktów oraz zespołu. Dzięki temu klienci lepiej poznają Twoją ofertę.
 
-{% lineStatic %}
+
 
 #### Uzupełnij opis firmy
 
@@ -83,7 +83,7 @@ Słowa kluczowe to frazy, które klienci wpisują, szukając firm takich jak Two
 * **Uwzględnić główne słowa kluczowe** – Starannie wplataj słowa kluczowe, opisując swoje usługi, ale zachowując czytelność tekstu.
 * **Zwrócić uwagę na unikalność oferty** – Podkreśl, co wyróżnia Twoją firmę na tle konkurencji.
 
-{% lineStatic %}
+
 
 #### Promuj swoją wizytówkę Google
 
@@ -93,7 +93,7 @@ Im więcej linków prowadzących do wizytówki Google, tym wyższe szanse na dob
 * **Udostępniaj wizytówkę w mediach społecznościowych** – Facebook, Instagram, LinkedIn i inne platformy to idealne miejsce na promowanie Twojej wizytówki.
 * **Dodaj link do wizytówki w podpisie e-mail** – przy każdym kontakcie mailowym przypominasz o możliwości odwiedzenia Twojej wizytówki.
 
-{% lineStatic %}
+
 
 ## Jakie korzyści płyną z pozycjonowania wizytówki Google?
 
@@ -103,7 +103,7 @@ Dobrze wypozycjonowana wizytówka Google to narzędzie, które przyciąga więce
 * **Lepsze wrażenie na potencjalnych klientach**, którzy widzą aktualne informacje i pozytywne recenzje,
 * **Większy ruch na stronie i w firmie stacjonarnej**, ponieważ klienci mogą łatwiej znaleźć Twoją lokalizację.
 
-{% lineStatic %}
+
 
 ## Podsumowanie
 

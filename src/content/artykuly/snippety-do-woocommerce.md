@@ -135,7 +135,7 @@ function woo_add_my_country( $country ) {
 }add_filter( ‘woocommerce_countries’, ‘woo_add_my_country’, 10, 1 );
 ```
 
-{% lineStatic %}
+
 
 ## Strona sklepu
 
@@ -325,7 +325,7 @@ function woo_archive_custom_cart_button_text() {
 }
 ```
 
-{% lineStatic %}
+
 
 ## Kategorie i produkty
 

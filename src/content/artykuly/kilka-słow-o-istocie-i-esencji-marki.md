@@ -15,7 +15,7 @@ Możesz zrozumieć związek między odnoszącymi sukcesy biznesami a silnym bran
 
 Marki są nie tylko dla dużych firm, mogą sprawić, że mniejsze firmy będą się wyróżniać z tłumu, szczególnie jeśli działasz na konkurencyjnym rynku. Pomyśl o tym w ten sposób: jeśli Twoja firma jest zbudowana na solidnej podstawie marki, możesz pomyślnie przejść do następnego etapu bez utraty zaufania klientów.
 
-{% lineStatic %}
+
 
 ## Jaki jest Twój cel?
 
@@ -23,13 +23,13 @@ Każda firma ma cel, ostateczny powód istnienia. Kiedy jasno określisz swój c
 
 Jaka jest misja Twojej firmy? Jakie są zalety i cechy Twoich produktów lub usług? Co Twoi klienci i potencjalni klienci już myślą o Twojej firmie? Jakie cechy chcesz, aby kojarzyły się z Twoją firmą? Przeprowadź swoje badania. Poznaj potrzeby, zwyczaje i pragnienia swoich obecnych i potencjalnych klientów. I nie polegaj na tym, co myślisz, że myślą. Wiedz, co myślą.
 
-{% lineStatic %}
+
 
 ## Pomyśl o tym jak o osobie
 
 Podobnie jak DNA w naszych ciałach, cel Twojej marki powinien być rdzeniem, DNA biznesu. Każdy z nas jest osobą, której charakter tworzą przekonania, wartości i cele, które określają, kim jesteśmy i z kim się łączymy. Nasza osobowość determinuje to, jak zachowujemy się w różnych sytuacjach, jak się ubieramy i co mówimy. Oczywiście dla ludzi jest to intuicyjne i rzadko kiedy zastanawiasz się, jaki jest twój własny charakter, ale kiedy budujesz markę, musisz mieć to zrozumienie.
 
-{% lineStatic %}
+
 
 ## Bądź konsekwentny
 

@@ -1,19 +1,45 @@
 ---
-const { title, lead } = Astro.props;
+const { title, lead, tags, date } = Astro.props;
+const formattedDate = date ? new Date(date).toLocaleDateString('pl-PL', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+}) : null;
 ---
 
  
-<section class="relative pt-28 pb-32 md:pt-42 md:pb-78">
+<section class="relative pt-28 pb-26 md:pt-42 md:pb-82">
   <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
   <div class="relative space-y-4 mx-auto max-w-3xl">
-        <div class="text-[8px] uppercase tracking-[0.1em] text-gray-500 mb-3 md:mb-4 font-semibold">
+        <div class="text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-gray-400 mb-3 md:mb-6 font-semibold">
         <span>Główna</span>
-        <span class="text-orange-600">></span>
-        <span class="text-white">{title}</span>
+        <span class="text-orange-600"> > </span>
+        <span class="text-white"> {title}</span>
       </div>
     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
       {title}
     </h1>
+
+  <div class="font-sans max-w-2xl">
+
+  <div class="flex flex-wrap gap-x-8 gap-y-2 py-4 mt-4 md:py-8 md:mt-8 border-t border-white/15 font-semibold text-[8px] md:text-[10px] tracking-[0.15em] uppercase">
+    {tags && tags.length > 0 && (
+      <div class="text-gray-400">
+        Kategoria: <span class="text-white">{tags[0]}</span>
+      </div>
+    )}
+    {formattedDate && (
+      <div class="text-gray-400">
+        Opublikowano: <span class="text-white">{formattedDate}</span>
+      </div>
+    )}
+    <!--
+    <div class="text-gray-400">
+      4 minuty czytania
+    </div>
+     -->
+  </div>
+</div>
+
   </div>
 </section>
-

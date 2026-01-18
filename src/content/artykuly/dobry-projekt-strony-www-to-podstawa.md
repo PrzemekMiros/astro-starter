@@ -26,7 +26,7 @@ Dobra obecność w sieci jest niezbędna do udanego przedsięwzięcia online. Ta
 
 **Dlatego ważne jest, aby Twoja witryna odzwierciedlała osobowość Twojej firmy.**
 
-{% lineStatic %}
+
 
 ### Lepsze zaangażowanie klientów
 
@@ -34,7 +34,7 @@ Strony, które nie są dobrze zaprojektowane, zwykle mają niską wydajność i 
 
 Jeśli projekt Twojej witryny jest responsywny, będziesz mieć więcej odbiorców. Nawet Google twierdzi, że responsywne projektowanie stron internetowych jest zalecaną konfiguracją mobilną i określa responsywne projektowanie stron internetowych jako najlepszą praktykę w branży.
 
-{% lineStatic %}
+
 
 Współczesne strony internetowe muszą spełniać wiele wymagań, aby skutecznie przyciągać i zatrzymywać użytkowników. Dobry projekt strony internetowej nie tylko poprawia estetykę witryny, ale również wpływa na jej funkcjonalność i użyteczność. 
 

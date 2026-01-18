@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/clientify-mockup.jpg
 title: Clientify
 description: Projekt i wdrożenie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: http://clientify.pl/
 thumbnail: /src/content/realizacje/img/clientify-mockup.jpg
 order: 13

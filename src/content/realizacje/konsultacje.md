@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/konsultacje-thumb-big.jpg
 title: Konsultacje Społeczne
 description: Kodowanie i optymalizacja
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://twojekonsultacje.pl/
 thumbnail: /src/content/realizacje/img/konsultacje-thumb-big.jpg
 order: 22

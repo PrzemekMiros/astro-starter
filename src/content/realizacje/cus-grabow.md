@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/moc-cus.jpg
 title: CUS Grabów
 description: Projekt i kodownie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://cusgrabow.pl/
 thumbnail: /src/content/realizacje/img/moc-cus.jpg
 order: 14

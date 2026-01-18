@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/moc-holding.jpg
 title: Goźliński Holding
 description: Kodowanie i optymalizacja
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://gozlinskiholding.pl/
 thumbnail: /src/content/realizacje/img/moc-holding.jpg
 order: 16

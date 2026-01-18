@@ -2,15 +2,13 @@
 imageGridOne: /content/realizacje/img/moc-uneedev.jpg
 title: Uneedev
 description: Projekt i kodowanie
-author:
+author: Przemek
 client: Uneedev
 category:
-  - design
-  - interaction
-  - visible
-link: https://agencjacosmos.pl/
+  - Strona internetowa
+link: https://uneedev.pl/
 thumbnail: /src/content/realizacje/img/moc-uneedev.jpg
-order: 9
+order: 20
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/moc-uneedev.jpg
 background: "#fffcfb"

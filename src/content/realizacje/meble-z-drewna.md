@@ -8,7 +8,7 @@ author: Przemek Miros
 category:
   - Sklep internetowy
 thumbnail: /src/content/realizacje/img/moneso-thumb-big.jpg
-order: 5
+order: 36
 title: Producent mebli z drewna
 date: 2023-05-22T13:42:19.166Z
 link: https://moneso.pl/

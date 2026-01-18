@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/ebanco-mockup.jpg
 title: Ebanco
 description: Projekt i wdrożenie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://ebanco.pl/
 thumbnail: /src/content/realizacje/img/ebanco-mockup.jpg
 order: 7

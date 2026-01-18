@@ -9,7 +9,7 @@ category:
 link: https://zlomowanie24h.com/
 thumbnail: /src/content/realizacje/img/zlom-thumb-big.jpg
 imageMain: /src/content/realizacje/img/zlom-thumb-big.jpg
-order: 15
+order: 9
 background: "#fffcfb"
 ---
 

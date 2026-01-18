@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/olender-mockup.jpg
 title: Olender Solutions
 description: Projekt i kodowanie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://olendersolutions.com/
 thumbnail: /src/content/realizacje/img/olender-mockup.jpg
 order: 7

@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/moc-congress.jpg
 title: BW Congress
 description: Kodowanie i optymalizacja
-author:
+author: Przemek
 client: Business Woman Congress
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://businesswomancongress.pl/
 thumbnail: /src/content/realizacje/img/moc-congress.jpg
 order: 19

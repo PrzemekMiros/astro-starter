@@ -11,7 +11,7 @@ description: Wykonana według dostarczonego projektu graficznego. Oparta na syst
 link: https://ecotechgroup.pl/
 category:
   - Strona internetowa 
-order: 2
+order: 95
 background: "#f6f6fb"
 ---
 

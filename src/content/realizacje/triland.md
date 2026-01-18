@@ -7,7 +7,7 @@ author: Przemek Miros
 category:
   - Strona internetowa
 thumbnail: /src/content/realizacje/img/triland-thumb-big.jpg
-order: 11
+order: 27
 title: Doradztwo środowiskowe
 date: 2024-02-27T23:00:00.000Z
 link: https://triland.pl/

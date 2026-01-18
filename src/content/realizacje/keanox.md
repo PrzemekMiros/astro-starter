@@ -2,15 +2,13 @@
 imageGridOne: /content/realizacje/img/moc-keanox.jpg
 title: Keanox Meble
 description: Projekt i wdrożenie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://keanox.pl/
 thumbnail: /src/content/realizacje/img/moc-keanox.jpg
-order: 20
+order: 34
 date: 2024-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/moc-keanox.jpg
 background: "#fffcfb"

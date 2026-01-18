@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/moc-discover.jpg
 title: Discover Warsaw
 description: Projekt i kodowanie
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://discover-warsaw.com/
 thumbnail: /src/content/realizacje/img/moc-discover.jpg
 order: 4

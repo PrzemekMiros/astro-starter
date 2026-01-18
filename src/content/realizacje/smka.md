@@ -2,12 +2,10 @@
 imageGridOne: /content/realizacje/img/moc-smka.jpg
 title: SMKA
 description: Wdrożenie i optymalizacja
-author:
+author: Przemek
 client:
 category:
-  - development
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://smka.pl/
 thumbnail: /src/content/realizacje/img/moc-smka.jpg
 order: 6

@@ -9,7 +9,7 @@ category:
   - Portal internetowy
 link: https://businesswomanlife.pl/
 thumbnail: /src/content/realizacje/img/business-thumb-big.jpg
-order: 1
+order: 100
 date: 2022-09-22
 imageMain: /src/content/realizacje/img/business-thumb-big.jpg
 background: "#fffcfb"

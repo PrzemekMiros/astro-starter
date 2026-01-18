@@ -2,15 +2,13 @@
 imageGridOne: /content/realizacje/img/ebanknot-mockup.jpg
 title: Ebanknot
 description: Kodowanie i optymalizacja
-author:
+author: Przemek
 client:
 category:
-  - design
-  - interaction
-  - visible
+  - Strona internetowa
 link: https://ebanknot.pl/
 thumbnail: /src/content/realizacje/img/ebanknot-mockup.jpg
-order: 15
+order: 11
 date: 2025-01-01T00:00:00.000Z
 imageMain: /src/content/realizacje/img/ebanknot-mockup.jpg
 background: "#fffcfb"

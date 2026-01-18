@@ -58,7 +58,7 @@ const contact = {
             &nbsp;&nbsp;&nbsp; Imię i nazwisko
             <input
               id="contact-name"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
               name="form-name"
               type="text"
               placeholder="Jan Kowalski"
@@ -69,7 +69,7 @@ const contact = {
             &nbsp;&nbsp;&nbsp; Email
             <input
               id="contact-email"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
               name="form-mail"
               type="email"
               placeholder="jan@firma.pl"
@@ -82,7 +82,7 @@ const contact = {
             &nbsp;&nbsp;&nbsp; Telefon
             <input
               id="contact-phone"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
               name="form-phone"
               type="tel"
               placeholder="+48 123 456 789"
@@ -92,7 +92,7 @@ const contact = {
             &nbsp;&nbsp;&nbsp; Firma 
             <input
               id="contact-company"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
               name="form-company"
               type="text"
               placeholder="Nazwa firmy"
@@ -103,7 +103,7 @@ const contact = {
           &nbsp;&nbsp;&nbsp; Usługa
           <input
             id="contact-service"
-            class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+            class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
             name="form-service"
             type="text"
             placeholder="Strona internetowa"
@@ -113,19 +113,32 @@ const contact = {
           &nbsp;&nbsp;&nbsp; Wiadomość
           <textarea
             id="contact-message"
-            class="w-full box-border min-h-[140px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-base text-[var(--muted)]"
+            class="w-full box-border min-h-[110px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
             name="form-message"
-            placeholder="Napisz, czego potrzebujesz"
+            placeholder="Napisz czego potrzebujesz"
             required
           ></textarea>
         </label>
+        <label class="flex flex-row items-start text-sm font-medium text-[var(--muted)]" for="contact-check">
+          <input
+            id="contact-check"
+            class="w-auto mr-2 mt-1"
+            name="form-service"
+            type="checkbox"
+            required
+            checked
+          />
+          <span class="text-[var(--muted)]">
+            Akceptuję <a href="/polityka/" title="Polityka prywatności" class="text-[var(--accent)]"> politykę prywatności</a> i wyrażam zgodę na kontakt w celu przygotowania oferty lub odpowiedzi na moją wiadomość.
+          </span>
+        </label>
         <button
-          class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+          class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-95 cursor-pointer"
           type="submit"
         >
           Wyślij wiadomość
         </button>
-        <p id="contact-form-status" class="mt-3 text-sm text-[var(--muted)]" aria-live="polite"></p>
+        <p id="contact-form-status" class="mt-3 text-md text-[var(--accent)]" aria-live="polite"></p>
       </form>
     </div>
   </section>

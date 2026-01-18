@@ -215,13 +215,13 @@ import contactFormUrl from "../scripts/contact-form.js?url";
     </div>
 
     <div class="flex border-b border-gray-100" role="tablist" aria-label="Cookie consent">
-      <button class="flex-1 py-3 text-[#00a3ff] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[#00a3ff]" type="button" data-cookie-tab="consent" role="tab" id="cookie-tab-consent" aria-controls="cookie-panel-consent" aria-selected="true">
+      <button class="flex-1 py-3 text-[#00a3ff] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[#00a3ff] cursor-pointer" type="button" data-cookie-tab="consent" role="tab" id="cookie-tab-consent" aria-controls="cookie-panel-consent" aria-selected="true">
         Zgoda
       </button>
-      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="details" role="tab" id="cookie-tab-details" aria-controls="cookie-panel-details" aria-selected="false">
+      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors cursor-pointer" type="button" data-cookie-tab="details" role="tab" id="cookie-tab-details" aria-controls="cookie-panel-details" aria-selected="false">
         Szczegóły
       </button>
-      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors" type="button" data-cookie-tab="about" role="tab" id="cookie-tab-about" aria-controls="cookie-panel-about" aria-selected="false">
+      <button class="flex-1 py-3 text-gray-800 font-bold text-[11px] uppercase tracking-wider hover:bg-gray-50 transition-colors cursor-pointer" type="button" data-cookie-tab="about" role="tab" id="cookie-tab-about" aria-controls="cookie-panel-about" aria-selected="false">
         O plikach cookie
       </button>
     </div>
@@ -260,7 +260,7 @@ import contactFormUrl from "../scripts/contact-form.js?url";
         </label>
       </div>
       <div class="mt-5">
-        <button class="w-full bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-save>
+        <button class="cursor-pointer w-full bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-save>
           Zapisz ustawienia
         </button>
       </div>
@@ -275,16 +275,16 @@ import contactFormUrl from "../scripts/contact-form.js?url";
     </div>
 
     <div class="p-6 pt-0 flex flex-col md:flex-row gap-2">
-      <button class="flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-deny>
+      <button class="cursor-pointer flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-deny>
         Odmów
       </button>
-      <button class="flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide flex items-center justify-center gap-1" type="button" data-cookie-customize>
+      <button class="cursor-pointer flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide flex items-center justify-center gap-1" type="button" data-cookie-customize>
         Dostosuj
         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
-      <button class="flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-accept>
+      <button class="cursor-pointer flex-1 bg-[#00a3ff] hover:bg-[#008bdb] text-white font-bold py-3 px-4 rounded transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-accept>
         Zezwól
       </button>
     </div>

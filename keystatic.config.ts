@@ -2,7 +2,8 @@ import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'local', // Zmień na 'github' przy wdrożeniu online
+    kind: 'github',
+    repo: 'PrzemekMiros/astro-starter' // WAŻNE: Uzupełnij nazwę swojego repozytorium GitHub (np. jan-kowalski/moj-blog)
   },
   // --- SINGLETONY (Ustawienia globalne) ---
   singletons: {

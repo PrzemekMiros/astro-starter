@@ -5,7 +5,7 @@ export default config({
     kind: 'github',
     repo: 'PrzemekMiros/astro-starter' // WAŻNE: Uzupełnij nazwę swojego repozytorium GitHub (np. jan-kowalski/moj-blog)
   },
-  // --- SINGLETONY (Ustawienia globalne) ---
+  // --- SINGLETONY (Ustawienia  globalne) ---
   singletons: {
     ustawienia: singleton({
       label: 'Ustawienia strony',

@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PageHero from "./heroes/PageHero.astro";
 import "../styles/global.css";
+import { getImage } from "astro:assets";
 import ogImage from "../assets/images/opengraph/opengraph.png";
 import faviconSvg from "../assets/images/global/favicon.svg";
 import faviconPng from "../assets/images/global/favicon.png";
@@ -22,7 +23,8 @@ const { site, url } = Astro;
 const pageTitle = title ? ` ${title} - ${settings.siteTitle}` : settings.siteTitle;
 const metaDescription = description ?? settings.metaDescription;
 const logoAsset = resolveAsset(settings.logo);
-const ogImageUrl = site ? new URL(ogImage.src, site).toString() : ogImage.src;
+const processedOgImage = await getImage({ src: ogImage, format: 'png' });
+const ogImageUrl = site ? new URL(processedOgImage.src, site).toString() : processedOgImage.src;
 ---
 
 <html lang="pl">

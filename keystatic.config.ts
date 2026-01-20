@@ -53,7 +53,11 @@ export default config({
         author: fields.text({ label: 'Autor' }),
         client: fields.text({ label: 'Klient' }),
         link: fields.url({ label: 'Link (URL)' }),
-        thumbnail: fields.text({ label: 'Miniatura (sciezka)' }),
+        thumbnail: fields.image({
+          label: 'Miniatura',
+          directory: 'src/content/realizacje/img',
+          publicPath: '/content/realizacje/img/',
+        }),
         category: fields.array(fields.text({ label: 'Kategoria' }), {
           label: 'Kategorie',
         }),

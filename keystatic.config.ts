@@ -109,6 +109,10 @@ export default config({
         }),
         order: fields.integer({ label: 'Kolejnosc na liscie' }),
         date: fields.datetime({ label: 'Data' }),
+        background: fields.text({
+          label: 'Kolor tla (HEX)',
+          validation: { isRequired: false },
+        }),
         content: fields.markdoc({ label: 'Tresc', extension: 'md' }),
       },
     }),

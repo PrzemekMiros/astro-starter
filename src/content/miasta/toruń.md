@@ -7,7 +7,7 @@ description: Tworzę atrakcyjne strony internetowe w przystępnych cenach dla fi
 ---
 ### Stwórzmy stronę która pozyska dla Ciebie nowych klientów!
 
-Specjalizuje się w tworzeniu wysokiej jakości stron internetowych dla firm z {{ town }}
+Specjalizuje się w tworzeniu wysokiej jakości stron internetowych dla firm z {town}
 
 Dlaczego warto skorzystać z moich usług? Przede wszystkim, posiadam duże doświadczenie w branży, a każdy projekt traktuje indywidualnie, tak aby spełnił oczekiwania klienta. Tworzę strony responsywne, które są dostosowane do różnych urządzeń, co zwiększa komfort przeglądania strony i wpływa na korzyści biznesowe.
 

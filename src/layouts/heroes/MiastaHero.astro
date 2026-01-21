@@ -1,58 +1,76 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "../../assets/images/sections/blog-responsive.jpg";
-const { title, lead } = Astro.props;
+const { town, lead } = Astro.props;
 ---
 
-<section class="relative">
-  <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
-  <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1.66fr)_minmax(0,1fr)] min-h-[320px] relative">
-    <div class="relative flex flex-col justify-center pb-8 pt-28 md:pb-16 md:pt-32 z-10">
-      <div class="text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-gray-400 mb-3 md:mb-6 font-semibold">
-        <span>Główna</span>
-        <span class="text-[var(--accent)]"> > </span>
-        <span class="text-white">{title}</span>
+<section class="relative bg-black pb-20 pt-32 md:pb-34 md:pt-50 text-white">
+  <div class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
+  <div class="relative grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+    <div class="space-y-6 max-w-xl">
+      <div class="flex items-center space-x-3 mb-6">
+      <div class="flex items-center bg-[#1a1a1a] border border-gray-800 rounded-full px-4 py-0">
+        <div class="flex text-orange-500 text-[14px] mr-2">
+          ★★★★★
+        </div>
+        <span class="text-[9px] font-semibold tracking-wide uppercase">
+          Ocena 5/5 <span class="text-gray-400 font-normal ml-1">10+ opinii</span>
+        </span>
       </div>
-      <h1 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight text-white max-w-2xl">
-        {title}
-      </h1>
-      <div class="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-[var(--accent)] z-20"></div>
     </div>
-    <div class="relative min-h-[160px] lg:min-h-full">
-      <div class="absolute inset-0 group overflow-hidden">
-        <Image
-          src={ heroImage }
-          alt="Proces projektowy" 
-          class="size-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-          widths={[320, 480, 768]}
-          sizes="(max-width: 1024px) 100vw, 420px"
-      />
-      <div class="lg:hidden absolute left-[21vw] top-0 w-18 h-18 bg-[var(--accent)] z-20"></div>
+
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-8">
+      Tworzę strony www skupione
+      <span class="text-white/50"> { town }</span>
+    </h1>
+
+      <p class="max-w-2xl text-md text-gray-300 mb-10">
+        { lead }
+      </p>
+
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
+        <a class="inline-flex rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95" href="" title="">
+          Zobacz realizacje
+        </a>
+
+      <div class="flex items-center">
+        <div class="flex -space-x-3 mr-4">
+          <img class="w-10 h-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?u=1" alt="User">
+          <img class="w-10 h-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?u=2" alt="User">
+          <img class="w-10 h-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?u=3" alt="User">
+          <img class="w-10 h-10 rounded-full border-2 border-black object-cover" src="https://i.pravatar.cc/100?u=4" alt="User">
+        </div>
+        <p class="text-xs text-gray-400 leading-tight">
+          <span class="text-white font-bold text-sm">40+</span>
+          zadowolonych <br>klientów
+        </p>
       </div>
-      <div class="hidden lg:block absolute left-0 bottom-32 w-32 h-32 bg-white z-20"></div>
+    </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6">
+      <div>
+      <p class="text-lg font-semibold text-gray-200 mb-4">Wspieram rozwój firm poprzez</p>
+      <ul class="space-y-4 text-sm text-gray-200">
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+          <span>Strony dla firm i marek osobistych</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+          <span>Sklepy online gotowe do skalowania</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+          <span>Opiekę i rozwój stron po wdrożeniu</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+          <span>Kampanie reklamowe w Google ADS</span>
+        </li>
+      </ul>
+      </div>
+      <div class="rounded-xl md:border border-white/10 md:bg-white/5 md:p-4 mt-4 md:mt-0 text-sm text-gray-300">
+        <p class="font-semibold text-white">Przejrzysty proces</p>
+        <p class="mt-2">Stała komunikacja, jasne etapy i pelna opieka od briefu po wsparcie po wdrożeniu.</p>
+      </div>
     </div>
   </div>
 </section>
-
-  <section class="relative py-5 flex flex-row items-center justify-between border-b border-gray-200">
-    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 md:mb-0">
-      <span class="text-[10px] mt-1 md:mt-0 text-gray-400 uppercase font-bold tracking-tighter">Średnia opinia w </span>
-      
-      <div class="flex items-center gap-3">
-        <span class="text-xl font-black text-[#002B49] tracking-tighter">Google</span>
-        <div class="flex items-center gap-1">
-          <div class="flex text-orange-400 text-xs">★★★★★</div>
-          <span class="text-gray-900 font-bold text-xs ml-1">5.0</span>
-        </div>
-      </div>
-
-      <span class="text-[11px] text-gray-500 font-medium hidden sm:block">
-        w tworzeniu stron www
-      </span>
-    </div>
-
-    <a href="/kontakt/" class="flex items-center gap-3 group text-gray-900 font-extrabold text-[11px] uppercase tracking-widest hover:text-orange-600 transition-colors  hidden md:block">
-      Bezpłatna konsultacja
-      <span class="text-orange-600 text-lg -translate-y-0.5 group-hover:translate-x-1 transition-transform">»»»</span>
-    </a>
-  </section>

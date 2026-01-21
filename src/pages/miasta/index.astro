@@ -1,11 +1,15 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import MiastaHero from "../../layouts/heroes/MiastaHero.astro";
+import { slugifyTitle } from "../../lib/slugifyTitle";
 
 const entries = import.meta.glob("../../content/miasta/*.md", { eager: true });
 const items = Object.entries(entries)
   .map(([file, entry]) => {
-    const slug = file.split("/").pop().replace(".md", "");
+    const fileSlug = file.split("/").pop().replace(".md", "");
+    const title = entry.frontmatter?.title;
+    const titleSlug = title ? slugifyTitle(title) : undefined;
+    const slug = titleSlug ?? fileSlug;
     return { slug, ...entry.frontmatter };
   })
   .sort((a, b) => a.title.localeCompare(b.title, "pl", { sensitivity: "base" }));
@@ -14,13 +18,8 @@ const items = Object.entries(entries)
 <BaseLayout
   title="Miasta"
   description="Zobacz, gdzie projektuję strony internetowe i sprawdź lokalne propozycje oraz kontekst rynkowy."
-  showHero={false}
+  showHero={true}
 >
-  <MiastaHero
-    title="Miasta"
-    lead="Tworzę strony dla firm z całej Polski. Wybierz swoje miasto i zobacz, jak mogę wesprzeć lokalny biznes."
-  />
-
   <section class="py-20">
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {items.map((miasto) => (

@@ -141,7 +141,7 @@ if (!artykul) {
     readingTimeMinutes={artykul.readingTimeMinutes}
   />
   <article
-    class="mb-18 pt-18 z-50"
+    class="mb-18 pt-10 md:pt-18 z-50"
     itemscope
     itemtype="https://schema.org/BlogPosting"
   >
@@ -225,7 +225,7 @@ if (!artykul) {
         {Content ? (
           <section
             id="article-content"
-            class="mx-auto max-w-2xl space-y-6 text-[16px] leading-relaxed text-[var(--text)] sm:text-[16px] sm:leading-relaxed
+            class="mx-auto max-w-2xl space-y-6 text-[15px] leading-relaxed text-[var(--text)] sm:text-[16px] sm:leading-relaxed
             [&>a]:underline [&>a]:decoration-[var(--accent)] [&>a]:underline-offset-4 [&>a]:font-medium hover:[&>a]:text-[var(--accent)]
             [&>blockquote]:bg-[#f9fafb] [&>blockquote]:p-[2em] [&>blockquote]:not-italic [&>blockquote]:text-[0.9em] [&>blockquote]:text-[var(--muted)] [&>blockquote]:border-l-[3px] [&>blockquote]:border-l-[var(--accent)]
             [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-[var(--heading)] [&>h2]:scroll-mt-[144px]

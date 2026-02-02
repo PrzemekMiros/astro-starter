@@ -18,4 +18,6 @@ Strona internetowa dla Przychodni Zdrowia w Grabowie zaprojektowana jako prosty 
 
 Projekt skupia się na szybkim dostępie do kluczowych informacji, takich jak zakres świadczeń, dane kontaktowe, godziny przyjęć oraz bieżące komunikaty.
 
-Lekka, bezpieczna i bardzo szybką stronę, dobrze działająca na urządzeniach mobilnych i łatwa w utrzymaniu. Przygotowana z myślą o przejrzystości, dostępności oraz lokalnej widoczności w Google.
+Lekka, bezpieczna i bardzo szybką stronę, dobrze działająca na urządzeniach mobilnych i łatwa w utrzymaniu. 
+
+Przygotowana z myślą o przejrzystości, dostępności oraz lokalnej widoczności w Google.

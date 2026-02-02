@@ -15,9 +15,18 @@ const resolveArticleImage = (path) => {
   return entry?.default ?? null;
 };
 
-const entries = import.meta.glob("../../content/artykuly/*.md", { eager: true });
+function getSlugPathFromFile(file) {
+  return file.replace(/^.*content\/artykuly\//, "").replace(/\.md$/, "");
+}
+function getArticleSlug(slugPath) {
+  const parts = slugPath.split("/");
+  return parts.length > 1 ? parts.slice(1).join("/") : slugPath;
+}
+
+const entries = import.meta.glob("../../content/artykuly/**/*.md", { eager: true });
 const items = Object.entries(entries).map(([file, entry]) => {
-  const slug = file.split("/").pop().replace(".md", "");
+  const slugPath = getSlugPathFromFile(file);
+  const slug = getArticleSlug(slugPath);
   return { slug, ...entry.frontmatter };
 });
 

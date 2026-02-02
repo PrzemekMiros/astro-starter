@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { slugifyTitle } from "../../lib/slugifyTitle";
 
-const entries = import.meta.glob("../../content/artykuly/*.md", { eager: true });
+const entries = import.meta.glob("../../content/artykuly/**/*.md", { eager: true });
 const totalPosts = Object.keys(entries).length;
 const toDate = (value) => {
   if (!value) return null;

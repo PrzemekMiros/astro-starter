@@ -1,0 +1,51 @@
+---
+import { slugifyTitle } from "../../../lib/slugifyTitle";
+
+export const prerender = true;
+
+function getSlugPathFromFile(file) {
+  return file.replace(/^.*content\/artykuly\//, "").replace(/\.md$/, "");
+}
+function getCategorySlug(frontmatter, slugPath) {
+  const parts = slugPath.split("/");
+  if (parts.length > 1) return parts[0];
+  const categoryValue = Array.isArray(frontmatter?.category)
+    ? frontmatter.category[0]
+    : frontmatter?.category;
+  return categoryValue ? slugifyTitle(categoryValue) : "artykuly";
+}
+function getArticleSlug(slugPath) {
+  const parts = slugPath.split("/");
+  return parts.length > 1 ? parts.slice(1).join("/") : slugPath;
+}
+
+export function getStaticPaths() {
+  const getSlugPathFromFileLocal = (file) =>
+    file.replace(/^.*content\/artykuly\//, "").replace(/\.md$/, "");
+  const getCategorySlugLocal = (frontmatter, slugPath) => {
+    const parts = slugPath.split("/");
+    if (parts.length > 1) return parts[0];
+    const categoryValue = Array.isArray(frontmatter?.category)
+      ? frontmatter.category[0]
+      : frontmatter?.category;
+    return categoryValue ? slugifyTitle(categoryValue) : "artykuly";
+  };
+  const getArticleSlugLocal = (slugPath) => {
+    const parts = slugPath.split("/");
+    return parts.length > 1 ? parts.slice(1).join("/") : slugPath;
+  };
+  const entries = import.meta.glob("../../../content/artykuly/**/*.md", { eager: true });
+  return Object.entries(entries).map(([file, entry]) => {
+    const slugPath = getSlugPathFromFileLocal(file);
+    const categorySlug = getCategorySlugLocal(entry.frontmatter ?? {}, slugPath);
+    const articleSlug = getArticleSlugLocal(slugPath);
+    return {
+      params: { category: categorySlug, slug: articleSlug },
+      props: { redirectTo: `/artykuly/${articleSlug}/` },
+    };
+  });
+}
+
+const { redirectTo } = Astro.props;
+return Astro.redirect(redirectTo ?? "/artykuly/");
+---

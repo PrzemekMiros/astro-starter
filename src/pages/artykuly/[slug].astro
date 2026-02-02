@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticlesHero from "../../layouts/heroes/ArticlesHero.astro";
 import settings from "../../content/ustawienia.json";
+import { slugifyTitle } from "../../lib/slugifyTitle";
 
 export const prerender = true;
 
@@ -27,8 +28,17 @@ function getArticleSlug(slugPath) {
   const parts = slugPath.split("/");
   return parts.length > 1 ? parts.slice(1).join("/") : slugPath;
 }
-
 export async function getStaticPaths() {
+  const getReadingTimeMinutesLocal = (content) => {
+    const plainText = (content ?? "")
+      .replace(/```[\s\S]*?```/g, " ")
+      .replace(/`[^`]*`/g, " ")
+      .replace(/!\[[^\]]*\]\([^)]+\)/g, " ")
+      .replace(/\[[^\]]*\]\([^)]+\)/g, " ")
+      .replace(/<[^>]+>/g, " ");
+    const words = plainText.trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.ceil(words / 200));
+  };
   const getSlugPathFromFileLocal = (file) =>
     file.replace(/^.*content\/artykuly\//, "").replace(/\.md$/, "");
   const getArticleSlugLocal = (slugPath) => {
@@ -45,10 +55,12 @@ export async function getStaticPaths() {
     const entryHeadings = typeof entry.getHeadings === "function"
       ? await entry.getHeadings()
       : entry.headings ?? [];
+    const rawContent = typeof entry.rawContent === "function" ? entry.rawContent() : "";
+    const readingTimeMinutes = getReadingTimeMinutesLocal(rawContent);
     uniqueBySlug.set(slug, {
       params: { slug },
       props: {
-        artykul: { slug, ...entry.frontmatter },
+        artykul: { slug, ...entry.frontmatter, readingTimeMinutes },
         Content: entry.Content,
         headings: entryHeadings,
       },
@@ -68,6 +80,18 @@ const allArticles = Object.entries(allArticleEntries).map(([file, entry]) => {
     ...entry.frontmatter,
   };
 });
+const categories = Array.from(
+  allArticles.reduce((set, item) => {
+    const tags = Array.isArray(item.tags) ? item.tags : item.tags ? [item.tags] : [];
+    tags.forEach((tag) => set.add(tag));
+    return set;
+  }, new Set())
+)
+  .map((label) => ({ label, slug: slugifyTitle(label) }))
+  .sort((a, b) => a.label.localeCompare(b.label, "pl-PL"));
+const activeCategorySlug = slugifyTitle(
+  Array.isArray(artykul?.tags) ? (artykul.tags[0] ?? "") : (artykul?.tags ?? "")
+);
 const getTag = (article) => {
   const tag = Array.isArray(article?.tags) ? article.tags[0] : article?.tags;
   return tag ?? "Artykul";
@@ -114,6 +138,7 @@ if (!artykul) {
     lead={artykul.description}
     tags={artykul.tags}
     date={artykul.date}
+    readingTimeMinutes={artykul.readingTimeMinutes}
   />
   <article
     class="mb-18 pt-18 z-50"
@@ -136,9 +161,9 @@ if (!artykul) {
     <div class="grid gap-10 lg:grid-cols-[250px_minmax(0,1fr)_280px]">
       <aside class="hidden lg:block">
         <div class="sticky top-38 space-y-4">
-          <h3 class="mb-4 text-sm font-semibold text-[var(--text)] uppercase tracking-wider">Spis tresci</h3>
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-2 border-orange-600 pl-4">Spis treści</h3>
           {headings?.length ? (
-            <ol class="space-y-2 text-sm text-[var(--muted)]" data-toc>
+            <ol class="space-y-2.5 text-sm text-[var(--muted)]" data-toc>
               {headings
                 .filter((h) => h.depth === 2)
                 .map((heading) => (
@@ -200,11 +225,11 @@ if (!artykul) {
         {Content ? (
           <section
             id="article-content"
-            class="mx-auto max-w-2xl space-y-6 text-[16px] leading-relaxed text-[var(--text)] sm:text-[17px] sm:leading-relaxed
+            class="mx-auto max-w-2xl space-y-6 text-[16px] leading-relaxed text-[var(--text)] sm:text-[16px] sm:leading-relaxed
             [&>a]:underline [&>a]:decoration-[var(--accent)] [&>a]:underline-offset-4 [&>a]:font-medium hover:[&>a]:text-[var(--accent)]
             [&>blockquote]:bg-[#f9fafb] [&>blockquote]:p-[2em] [&>blockquote]:not-italic [&>blockquote]:text-[0.9em] [&>blockquote]:text-[var(--muted)] [&>blockquote]:border-l-[3px] [&>blockquote]:border-l-[var(--accent)]
-            [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-[var(--text)] [&>h2]:scroll-mt-[144px]
-            [&>h3]:mt-7 [&>h3]:mb-3 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-[var(--text)]
+            [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-[var(--heading)] [&>h2]:scroll-mt-[144px]
+            [&>h3]:mt-7 [&>h3]:mb-3 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-[var(--heading)]
             [&>hr]:my-8 [&>hr]:border-[var(--border)]
             [&>li]:mt-3 [&>ol]:list-decimal [&>ol]:pl-6 [&>ul]:list-disc [&>ul]:pl-6
             [&>p]:mb-5 [&>p]:last:mb-0"
@@ -215,7 +240,34 @@ if (!artykul) {
       </div>
 
       <aside class="space-y-6">
-        <div class="sticky top-38"></div>
+        <div class="sticky top-38">
+          <section>
+            <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-2 border-orange-600 pl-4">
+              Kategorie
+            </h3>
+            {categories.length ? (
+              <ul class="space-y-2">
+                {categories.map((category) => (
+                  <li>
+                    <a
+                      href={`/tags/${category.slug}/`}
+                      class={`block rounded-xl border px-4 py-3 text-sm transition-all ${
+                        category.slug === activeCategorySlug
+                          ? "bg-orange-50 border-orange-500/40 text-orange-700"
+                          : "bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"
+                      }`}
+                      aria-current={category.slug === activeCategorySlug ? "page" : undefined}
+                    >
+                      {category.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="text-sm text-[var(--muted)]">Brak kategorii</p>
+            )}
+          </section>
+        </div>
       </aside>
 
     </div>
@@ -223,7 +275,7 @@ if (!artykul) {
     {relatedArticles.length ? (
       <section class="mx-auto max-w-7xl space-y-6 pt-6 mt-16 border-t border-black/10">
         <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold text-[var(--text)]">Przeczytaj tez</h2>
+          <h2 class="text-lg font-semibold text-[var(--text)]">Przeczytaj też</h2>
           <a href="/artykuly/" class="flex items-center gap-3 group text-black/90 font-bold text-[11px] uppercase tracking-widest hover:text-orange-600 transition-colors hidden md:block">
             Wszystkie wpisy
             <span class="text-orange-600 text-lg -translate-y-0.5 group-hover:translate-x-1 transition-transform">&gt;&gt;&gt;</span>
@@ -284,31 +336,41 @@ if (!artykul) {
     ) : null}
   </article>
   <script>
-    const tocLinks = Array.from(document.querySelectorAll("[data-toc-link]"));
-    const headings = tocLinks
-      .map((link) => document.getElementById(link.dataset.tocTarget))
-      .filter(Boolean);
+    const setupArticleToc = () => {
+      const tocLinks = Array.from(document.querySelectorAll("[data-toc-link]"));
+      const headings = tocLinks
+        .map((link) => document.getElementById(link.dataset.tocTarget))
+        .filter(Boolean);
 
-    if (tocLinks.length && headings.length) {
+      if (!tocLinks.length || !headings.length) return;
+
+      if (typeof window.__articleTocCleanup === "function") {
+        window.__articleTocCleanup();
+      }
+
+      const controller = new AbortController();
+      const { signal } = controller;
       const offset = 144;
+
       const setActive = (id) => {
         tocLinks.forEach((link) => {
           const isActive = link.dataset.tocTarget === id;
-          link.classList.toggle("text-[var(--text)]", isActive);
-          link.classList.toggle("font-semibold", isActive);
+          link.classList.toggle("text-[var(--accent)]", isActive);
         });
+      };
+
+      const scrollToHeading = (target, smooth = true) => {
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: smooth ? "smooth" : "auto" });
+        setActive(target.id);
       };
 
       const updateActive = () => {
         const scrollPos = window.scrollY + offset + 1;
         let current = headings[0];
         for (const heading of headings) {
-          const top = heading.offsetTop;
-          if (top <= scrollPos) {
-            current = heading;
-          } else {
-            break;
-          }
+          if (heading.offsetTop <= scrollPos) current = heading;
+          else break;
         }
         if (current) setActive(current.id);
       };
@@ -323,24 +385,44 @@ if (!artykul) {
         });
       };
 
-      window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", onScroll);
+      window.addEventListener("scroll", onScroll, { passive: true, signal });
+      window.addEventListener("resize", onScroll, { signal });
+      window.addEventListener("hashchange", () => {
+        const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+        const target = id ? document.getElementById(id) : null;
+        if (target) scrollToHeading(target, true);
+      }, { signal });
 
       tocLinks.forEach((link) => {
         link.addEventListener("click", (event) => {
           event.preventDefault();
           const target = document.getElementById(link.dataset.tocTarget);
-          if (target) {
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top, behavior: "smooth" });
-            setActive(target.id);
-            history.replaceState(null, "", `#${target.id}`);
-            setTimeout(updateActive, 0);
-          }
-        });
+          if (!target) return;
+          scrollToHeading(target, true);
+          history.replaceState(null, "", `#${target.id}`);
+          setTimeout(updateActive, 0);
+        }, { signal });
       });
 
-      updateActive();
+      // Handles entering article from another page with a hash in URL.
+      const hashId = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      const hashTarget = hashId ? document.getElementById(hashId) : null;
+      if (hashTarget) {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => scrollToHeading(hashTarget, true));
+        });
+      } else {
+        updateActive();
+      }
+
+      window.__articleTocCleanup = () => controller.abort();
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupArticleToc, { once: true });
+    } else {
+      setupArticleToc();
     }
+    document.addEventListener("astro:page-load", setupArticleToc);
   </script>
 </BaseLayout>

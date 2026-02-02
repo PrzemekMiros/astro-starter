@@ -11,6 +11,8 @@ Nudzi Ci się Wordpress? Mam dla Ciebie dobrą alternatywę - generator stron st
 
 Musisz znać HTML, CSS, podstawy JavaScript i Gita. Jak widzisz to nie są duże wymagania. Dobra, to do dzieła!
 
+## Przygotowanie środowiska
+
 Zaczniemy od przygotowania środowiska (Node.js) i instalacji GIT. Przejdź na stronę https://nodejs.org/en/ i zainstaluj ostatnią stabilna wersję, w momencie pisania tego samouczka mamy wersję 18.12.1.
 
 Instalacja jest bardzo prosta, po pobraniu i uruchomieniu kreatora instalacji wszystko może zostac domyślnie, poprostu klikaj "Dalej" aż przejdziesz cały proces instalacji. Następnie otwórz wiersz poleceń i sprawdź czy instalacja przebiegła prawidłowo, jeżeli jest wszystko ok, to po wpisaniu poniższego polecenia powinna wyświetlic Ci się aktualna wersj Node.js
@@ -36,8 +38,9 @@ Jeżeli wszystko jest w porządku wyświetli sie aktualna wersja jak poniżej:
 ```javascript
 git version 2.38.0.windows.1
 ```
+## Instalacja Eleventy.js
 
-Jak już mamy przygotowane srodowisko przechodzimy do sedna, czyli instalacji generatora stron statycznych Eleventy. Zacznij od utworzenia folderu z nazwą projektu w którym będą wszystkie pliki. Możesz to zrobić poprostu w edytorze wizualnym albo w konsoli wpisując 
+Jak już mamy przygotowane środowisko przechodzimy do sedna, czyli instalacji frameworka Eleventy. Zacznij od utworzenia folderu z nazwą projektu w którym będą wszystkie pliki. Możesz to zrobić poprostu w edytorze wizualnym albo w konsoli wpisując 
 
 ```javascript
 mkdir nazwaprojektu
@@ -71,6 +74,7 @@ Teraz instalujemy eleventy przez npm
 ```javascript
 npm install @11ty/eleventy --save-dev
 ```
+## Konfiguracja frameworka
 
 Jak już pewnie zauważeś że utworzył się kolejny plik o nazwie package.json
 
@@ -82,5 +86,6 @@ Plik zawiera kofigurację projektu, utworzymy w nim własne nazwy poleceń do po
     "build": "eleventy"
   },
 ```
+## Uruchomienie podglądu strony
 
 Będziemy korzystać z polecenia "npm start" żeby uruchomić podgląd strony

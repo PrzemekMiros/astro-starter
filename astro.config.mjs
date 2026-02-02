@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import robots from 'astro-robots-txt';
 import sitemap from 'astro-sitemap';
 import min from 'astro-min';
+import remarkBannerStatic from './src/utils/remarkBannerStatic.js';
 
 export default defineConfig({
   site: 'https://przemekmiros.pl/',
@@ -21,6 +22,9 @@ export default defineConfig({
     }),
     min()
   ],
+  markdown: {
+    remarkPlugins: [remarkBannerStatic],
+  },
 
   vite: {
     plugins: [tailwindcss()],

@@ -4,9 +4,7 @@ description: Odkryj, jak sztuczna inteligencja rewolucjonizuje budowę i działa
 author: Przemek
 date: 2023-11-02
 tags:
-  - AI
-  - technologie
-  - strony internetowe
+  - Strony www
 thumbnail: /content/posts/img/strony-internetowe-w-dobie-ai.png
 ---
 

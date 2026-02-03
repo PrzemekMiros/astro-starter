@@ -1,5 +1,5 @@
 ---
-title: Sztuczna inteligencja w służbie marketingu: Przełomowe zmiany w strategiach rynkowych
+title: Sztuczna inteligencja w służbie marketingu - Przełomowe zmiany w strategiach rynkowych
 description: Odkryj, jak sztuczna inteligencja rewolucjonizuje marketing, wprowadzając innowacyjne techniki personalizacji, analizy danych i automatyzacji działań, co przyczynia się do zwiększenia efektywności kampanii i zadowolenia klientów.
 author: Przemek
 date: 2023-10-12

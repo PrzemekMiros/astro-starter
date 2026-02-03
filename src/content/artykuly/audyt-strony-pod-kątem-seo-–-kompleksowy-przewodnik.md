@@ -4,7 +4,7 @@ description: 'Audyt SEO to proces, który pozwala na przeanalizowanie strony int
 author: Przemek
 date: 2024-11-05T17:19:42.446Z
 tags:
-  - Strony www
+  - Pozycjonowanie
 thumbnail: /content/posts/img/optymalizacja-seo-strony-wwww.jpg
 ---
 

@@ -5,7 +5,7 @@ description: To narzędzie, które umożliwia szeroką analizę widoczności w
 author: Przemek
 date: 2024-11-03T08:03:18.338Z
 tags:
-  - Strony www
+  - Pozycjonowanie
 thumbnail: /content/posts/img/senut-ekran-startowy.png
 ---
 

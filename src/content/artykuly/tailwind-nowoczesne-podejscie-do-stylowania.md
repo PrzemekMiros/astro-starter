@@ -4,7 +4,7 @@ description: W dobie cyfryzacji,
   posiadanie strony internetowej staje się kluczowe zarówno dla dużych firm, jak
   i małych przedsiębiorstw, freelancerów czy blogerów
 author: Przemek
-date: 2026-01-08T13:33:02.042Z
+date: 2025-06-08T13:33:02.042Z
 tags:
   - Poradniki
 thumbnail: /content/posts/img/tailwind-2.png

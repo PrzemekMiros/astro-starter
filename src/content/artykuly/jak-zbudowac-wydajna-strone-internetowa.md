@@ -4,7 +4,7 @@ description: Poznaj kluczowe strategie i narzędzia do tworzenia wydajnych stron
 author: Przemek
 date: 2026-02-04T20:34:06.074Z
 tags:
-  - Strony internetowe
+  - Strony www
 thumbnail: /content/artykuly/img/jak-zbudowac-wydajna-strone-internetowa.png
 ---
 

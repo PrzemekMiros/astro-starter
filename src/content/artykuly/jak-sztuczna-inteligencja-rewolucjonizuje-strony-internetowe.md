@@ -12,10 +12,6 @@ thumbnail: /content/posts/img/rewolucja_sztuczna_inteligencja.png
 
 Sztuczna inteligencja (SI) w ostatnich latach stała się jednym z kluczowych narzędzi wykorzystywanych w projektowaniu i rozwijaniu stron internetowych. Dzięki swoim zaawansowanym algorytmom i zdolności do uczenia się na podstawie ogromnych ilości danych, AI oferuje webmasterom i projektantom nowe możliwości, które kilka lat temu wydawały się poza zasięgiem.
 
-### Co to jest sztuczna inteligencja?
-
-Zanim zagłębimy się w szczegóły, warto zdefiniować, czym jest sztuczna inteligencja. W najprostszych słowach, jest to gałąź informatyki, która zajmuje się tworzeniem systemów zdolnych do samodzielnego myślenia, uczenia się i rozwiązywania problemów w sposób zbliżony do ludzkiego. AI wykorzystuje techniki takie jak uczenie maszynowe, sieci neuronowe i procesy poznawcze do wnioskowania i podejmowania decyzji.
-
 ## Automatyzacja projektowania
 
 Jednym z najważniejszych obszarów, w których AI ma ogromny wpływ, jest automatyzacja projektowania stron internetowych. Dzięki narzędziom opartym na sztucznej inteligencji, możliwe staje się automatyczne tworzenie układów stron, dostosowywanie szablonów czy generowanie kodu, co oszczędza czas i zasoby programistów.

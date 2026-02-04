@@ -5,7 +5,7 @@ author: Przemek
 date: 2026-02-04T20:34:06.074Z
 tags:
   - Strony internetowe
-thumbnail: ./img/jak-zbudowac-wydajna-strone-internetowa.png
+thumbnail: /content/artykuly/img/jak-zbudowac-wydajna-strone-internetowa.png
 ---
 
 ## Wprowadzenie

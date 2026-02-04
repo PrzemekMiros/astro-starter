@@ -1,10 +1,10 @@
 ---
-title: Optimizacja strony internetowej wedlug najnowszych trendow
+title: Optymalizacja strony internetowej wedlug najnowszych trendów
 description: Poznaj nowoczesne techniki optimizacji stron internetowych, aby zwiększyć widoczność w sieci oraz poprawić doświadczenia użytkowników.
 author: Przemek
 date: 2026-02-04T21:44:11.240Z
 tags:
-  - Strony internetowe
+  - Strony www
 thumbnail: /content/artykuly/img/optimizacja-strony-internetowej-wedlug-najnowszych-trendow.png
 ---
 

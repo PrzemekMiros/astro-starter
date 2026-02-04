@@ -1,5 +1,5 @@
 ---
-title: Jak wykorzystac sztuczna inteligencje w marketingu 2026
+title: Jak wykorzystać sztucznę inteligencje w marketingu 2026
 description: Odkryj, jak sztuczna inteligencja rewolucjonizuje marketing i jak możesz ją efektywnie wykorzystać, aby zwiększyć sukces swojej firmy.
 author: Przemek
 date: 2026-02-04T21:40:59.945Z

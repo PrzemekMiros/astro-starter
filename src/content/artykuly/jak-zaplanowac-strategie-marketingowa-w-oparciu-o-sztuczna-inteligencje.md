@@ -1,5 +1,5 @@
 ---
-title: Jak zaplanowac strategie marketingowa w oparciu o sztuczna inteligencje
+title: Jak zaplanować strategie marketingową w oparciu o sztuczną inteligencje
 description: Odkryj, jak wdrożenie sztucznej inteligencji może zrewolucjonizować planowanie i realizację strategii marketingowych w Twojej firmie.
 author: Przemek
 date: 2026-02-04T21:25:08.110Z

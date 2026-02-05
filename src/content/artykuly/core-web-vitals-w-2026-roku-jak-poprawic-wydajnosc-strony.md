@@ -5,7 +5,7 @@ author: Przemek
 date: 2026-02-05T12:22:13.618Z
 tags:
   - Strony www
-thumbnail: /content/artykuly/img/core-web-vitals-w-2026-roku-jak-poprawic-wydajnosc-strony.png
+thumbnail: /content/artykuly/img/jak-zbudowac-wydajna-strone-internetowa.png
 ---
 
 Wydajność strony internetowej przestała być wyłącznie technicznym dodatkiem. W 2026 roku Core Web Vitals są jednym z fundamentów nowoczesnego projektowania stron www, bezpośrednio wpływając na doświadczenie użytkownika, konwersje oraz widoczność w Google. Jako webmasterzy i właściciele stron musimy traktować je nie jako jednorazową optymalizację, ale jako ciągły proces.

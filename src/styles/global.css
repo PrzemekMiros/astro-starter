@@ -83,6 +83,92 @@ pre.astro-code {
   max-width: 100%;
 }
 
+#article-content > :is(ul, ol) {
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+#article-content > ul {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+#article-content > ul > li {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+}
+
+#article-content > ul > li::before {
+  content: "";
+  position: absolute;
+  top: 1.04rem;
+  left: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(244, 88, 60, 0.18);
+}
+
+#article-content > ol {
+  list-style: none;
+  counter-reset: article-list;
+  display: grid;
+  gap: 0.75rem;
+}
+
+#article-content > ol > li {
+  counter-increment: article-list;
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f8fafc;
+  padding: 0.5rem 1rem 0.5rem 2.75rem;
+}
+
+#article-content > ol > li::before {
+  content: counter(article-list);
+  position: absolute;
+  top: 0.6rem;
+  left: 0.85rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--accent);
+}
+
+#article-content li > :is(ul, ol) {
+  margin-top: 0.7rem;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+#article-content li > ul {
+  list-style: disc;
+}
+
+#article-content li > ol {
+  list-style: decimal;
+}
+
+#article-content li > :is(ul, ol) li::marker {
+  color: var(--accent);
+}
+
+#article-content li > :last-child {
+  margin-bottom: 0;
+}
+
 
 .circle-container {
   background: transparent;

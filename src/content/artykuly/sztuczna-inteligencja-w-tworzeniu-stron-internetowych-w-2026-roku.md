@@ -2,7 +2,7 @@
 title: Sztuczna inteligencja w tworzeniu stron internetowych w 2026 roku
 description: Przegląd realnych zastosowań sztucznej inteligencji w projektowaniu i rozwoju stron www. Trendy, narzędzia, korzyści biznesowe oraz ograniczenia.
 author: Przemek
-date: 2026-02-05T13:08:23.337Z
+date: 2026-01-15T13:08:23.337Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/artykuly/img/sztuczna-inteligencja-w-tworzeniu-stron-internetowych-w-2026-roku.png

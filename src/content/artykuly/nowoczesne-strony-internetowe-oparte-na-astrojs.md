@@ -2,7 +2,7 @@
 title: Nowoczesne strony internetowe oparte na Astro.js
 description: Praktyczny przewodnik eksperta, jak projektować szybkie, skalowalne i bezpieczne strony internetowe w oparciu o Astro.js oraz nowoczesne standardy webowe.
 author: Przemek
-date: 2026-02-05T13:34:18.387Z
+date: 2025-06-11T13:34:18.387Z
 tags:
   - Strony www
 thumbnail: /content/artykuly/img/nowoczesne-strony-internetowe-oparte-na-astrojs.png

@@ -2,7 +2,7 @@
 title: Jak sztuczna inteligencja zmienia tworzenie stron internetowych
 description: Artykuł pokazuje, jak sztuczna inteligencja wpływa na projektowanie, rozwój i optymalizację stron internetowych oraz jakie realne korzyści przynosi właścicielom biznesów online.
 author: Przemek
-date: 2026-02-05T12:52:10.669Z
+date: 2026-01-15T12:52:10.669Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/artykuly/img/jak-sztuczna-inteligencja-zmienia-tworzenie-stron-internetowych.png

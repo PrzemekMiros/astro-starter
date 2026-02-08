@@ -2,7 +2,7 @@
 title: Sztuczna inteligencja w przyszłości marketingu
 description: Analiza roli sztucznej inteligencji w marketingu najbliższych lat. Jak technologia zmieni kampanie, strategie i interakcje z klientem? Odkrywamy kluczowe trendy i możliwości.
 author: Przemek
-date: 2026-02-03T20:44:36.633Z
+date: 2025-08-03T20:44:36.633Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/posts/img/marketing-ai2.jpg

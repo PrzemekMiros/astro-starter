@@ -2,7 +2,7 @@
 title: Jak skutecznie remarketingować w 2026 roku
 description: Remarketing to ważne narzędzie marketingowe w 2026 roku. Dowiedz się, jak go efektywnie wykorzystać, aby zwiększyć ROI swojej kampanii online.
 author: Przemek
-date: 2026-02-05T11:23:05.582Z
+date: 2026-01-05T11:23:05.582Z
 tags:
   - Marketing
 thumbnail: /content/artykuly/img/jak-skutecznie-remarketingowac-w-2026-roku.png

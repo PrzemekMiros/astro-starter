@@ -2,7 +2,7 @@
 title: Sztuczna inteligencja w projektowaniu nowoczesnych stron internetowych
 description: Artykuł wyjaśnia, jak sztuczna inteligencja zmienia projektowanie i rozwój stron www, automatyzuje pracę webmastera i poprawia doświadczenie użytkownika.
 author: Przemek
-date: 2026-02-05T12:27:44.131Z
+date: 2025-05-19T12:27:44.131Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/artykuly/img/sztuczna-inteligencja-w-projektowaniu-nowoczesnych-stron-internetowych.png

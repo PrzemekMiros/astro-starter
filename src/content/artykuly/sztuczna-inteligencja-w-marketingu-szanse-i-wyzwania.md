@@ -2,7 +2,7 @@
 title: Sztuczna inteligencja w marketingu szanse i wyzwania
 description: Sztuczna inteligencja zmienia oblicze marketingu, oferując nowe możliwości personalizacji i analizy danych, ale również stawiając przed firmami nowe wyzwania i ryzyko.
 author: Przemek
-date: 2026-02-05T11:49:14.545Z
+date: 2025-10-17T11:49:14.545Z
 tags:
   - Marketing
 thumbnail: /content/artykuly/img/sztuczna-inteligencja-w-marketingu-szanse-i-wyzwania.png

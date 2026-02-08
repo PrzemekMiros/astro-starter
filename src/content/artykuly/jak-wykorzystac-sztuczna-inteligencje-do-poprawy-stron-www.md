@@ -2,7 +2,7 @@
 title: Jak wykorzystać sztuczną inteligencję do poprawy stron www
 description: Odkryj, jak za pomocą sztucznej inteligencji można usprawnić funkcjonowanie stron www, poprawić ich wydajność oraz zoptymalizować interakcje z użytkownikami.
 author: Przemek
-date: 2026-02-05T11:32:46.314Z
+date: 2025-10-23T11:32:46.314Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/artykuly/img/jak-wykorzystac-sztuczna-inteligencje-do-poprawy-stron-www.png

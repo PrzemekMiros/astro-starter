@@ -35,7 +35,16 @@ const avatars = Object.values(entries)
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
     <div class="hidden md:block absolute inset-0 left-4/7 group">
-      <Image src={ heroImage } alt="Proces projektowy" class="size-full object-cover grayscale" widths={[520, 780, 1200]} sizes="(max-width: 1024px) 100vw, 820px" />
+      <Image
+        src={ heroImage }
+        alt="Proces projektowy"
+        class="size-full object-cover grayscale"
+        widths={[520, 780, 1200]}
+        sizes="(max-width: 1024px) 100vw, 820px"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="lg:hidden absolute left-[21vw] top-0 w-18 h-18 bg-[var(--accent)] z-20"></div>
       <div class="hidden lg:block absolute left-0 bottom-30 w-30 h-30 bg-[var(--accent)] z-20"></div>
       <div class="hidden lg:block absolute -left-30 bottom-0 w-30 h-30 bg-white z-20"></div>

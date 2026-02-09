@@ -59,6 +59,9 @@ const currentUrl = baseUrl ? new URL(url.pathname, baseUrl).toString() : url.pat
           class="size-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
           widths={[320, 480, 768]}
           sizes="(max-width: 1024px) 100vw, 420px"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
       />
         <div class="lg:hidden absolute left-[21vw] top-0 w-18 h-18 bg-[var(--accent)] z-20"></div>
       </div>

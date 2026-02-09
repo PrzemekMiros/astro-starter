@@ -10,6 +10,8 @@ import { getImage } from "astro:assets";
 import ogImage from "../assets/images/opengraph/opengraph.png";
 import faviconSvg from "../assets/images/global/favicon.svg";
 import faviconPng from "../assets/images/global/favicon.png";
+import zalandoSemiExpanded from "../assets/fonts/Zalando_Sans_SemiExpanded/ZalandoSansSemiExpanded-VariableFont_wght.ttf?url";
+import zalandoSemiExpandedItalic from "../assets/fonts/Zalando_Sans_SemiExpanded/ZalandoSansSemiExpanded-Italic-VariableFont_wght.ttf?url";
 
 const assets = import.meta.glob("/src/assets/**/*", { eager: true });
 const resolveAsset = (path) => {
@@ -30,6 +32,20 @@ const ogImageUrl = site ? new URL(processedOgImage.src, site).toString() : proce
 <html lang="pl">
   <head>
     <meta charset="utf-8" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href={zalandoSemiExpanded}
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href={zalandoSemiExpandedItalic}
+      crossorigin
+    />
     <link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
     <link rel="icon" type="image/png" href={faviconPng.src} />
     <meta name="viewport" content="width=device-width" />

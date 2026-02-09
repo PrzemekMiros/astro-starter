@@ -57,17 +57,21 @@
       return consent;
     };
 
-    const openModal = () => {
-      modal.classList.remove("hidden");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("overflow-hidden");
-      modal.focus();
-    };
-
-    const closeModal = () => {
-      modal.classList.add("hidden");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("overflow-hidden");
+    const setModalOpen = (isOpen) => {
+      if (isOpen) {
+        modal.classList.remove("hidden");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+        requestAnimationFrame(() => {
+          if (!modal.classList.contains("hidden")) {
+            modal.focus({ preventScroll: true });
+          }
+        });
+      } else {
+        modal.classList.add("hidden");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("overflow-hidden");
+      }
     };
 
     const setTabActive = (target) => {
@@ -92,7 +96,7 @@
         analytics: true,
         marketing: true,
       });
-      closeModal();
+      setModalOpen(false);
     };
 
     const denyAll = () => {
@@ -102,12 +106,12 @@
         analytics: false,
         marketing: false,
       });
-      closeModal();
+      setModalOpen(false);
     };
 
     const saveCustom = () => {
       writeConsent(getConsentFromUI());
-      closeModal();
+      setModalOpen(false);
     };
 
     tabs.forEach((tab) => {
@@ -123,7 +127,7 @@
         const stored = readConsent();
         if (stored) applyConsentToUI(stored);
         setTabActive("consent");
-        openModal();
+        setModalOpen(true);
       });
     });
 
@@ -134,21 +138,21 @@
 
     modal.addEventListener("click", (event) => {
       if (event.target !== modal) return;
-      if (readConsent()) closeModal();
+      if (readConsent()) setModalOpen(false);
     });
 
     window.addEventListener("keydown", (event) => {
       if (event.key !== "Escape") return;
-      if (readConsent()) closeModal();
+      if (readConsent()) setModalOpen(false);
     });
 
     const stored = readConsent();
     if (stored) {
       applyConsentToUI(stored);
-      closeModal();
+      setModalOpen(false);
     } else {
       setTabActive("consent");
-      openModal();
+      setModalOpen(true);
     }
   };
 

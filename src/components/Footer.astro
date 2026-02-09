@@ -170,41 +170,55 @@ import contactFormUrl from "../scripts/contact-form.js?url";
 </div>
 
 <script>
-document.addEventListener("astro:page-load", function(event) {
-    let circleContainer = document.querySelector(".circle-container");
-    if (!circleContainer) return;
-        
-		let offset = 50;
-		let circlePath = document.querySelector('.circle-container path');
-		let pathLength = circlePath.getTotalLength();
-		circlePath.style.transition = circlePath.style.WebkitTransition = 'none';
-		circlePath.style.strokeDasharray = pathLength;
-		circlePath.style.strokeDashoffset = pathLength;
-		circlePath.getBoundingClientRect();
-		circlePath.style.transition = circlePath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+document.addEventListener("astro:page-load", function () {
+  const circleContainer = document.querySelector(".circle-container");
+  if (!circleContainer) return;
 
-		let updateLoader = () => {
+  const offset = 50;
+  const circlePath = document.querySelector(".circle-container path");
+  const pathLength = circlePath.getTotalLength();
 
-			let scrollTop = window.scrollY;
-			let docHeight = document.body.offsetHeight;
-			let winHeight = window.innerHeight;
-			let height = docHeight - winHeight;
-			let progress = pathLength - (scrollTop * pathLength / height);
-			circlePath.style.strokeDashoffset = progress;
+  circlePath.style.transition = circlePath.style.WebkitTransition = "none";
+  circlePath.style.strokeDasharray = pathLength;
+  circlePath.style.strokeDashoffset = pathLength;
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      circlePath.style.transition = circlePath.style.WebkitTransition =
+        "stroke-dashoffset 10ms linear";
+    });
+  });
 
-			if (scrollTop > offset) {
-				circleContainer.classList.add("active");
-			} else {
-				circleContainer.classList.remove("active");
-			}         
-		}
-	circleContainer.onclick = function(){
-		window.scrollTo({ top: 0, behavior: 'smooth'});
-	}
-	window.onscroll = () => {
-		updateLoader();
-	}
-	updateLoader();
+  const updateLoader = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
+    const height = Math.max(1, docHeight - winHeight);
+    const progress = pathLength - (scrollTop * pathLength) / height;
+    circlePath.style.strokeDashoffset = progress;
+
+    if (scrollTop > offset) {
+      circleContainer.classList.add("active");
+    } else {
+      circleContainer.classList.remove("active");
+    }
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateLoader();
+      ticking = false;
+    });
+  };
+
+  circleContainer.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  updateLoader();
 });
 </script>
 

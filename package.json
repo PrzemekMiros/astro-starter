@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "dev:astro": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/fix-gsc-meta.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

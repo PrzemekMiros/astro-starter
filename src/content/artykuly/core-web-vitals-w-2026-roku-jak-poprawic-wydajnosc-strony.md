@@ -1,5 +1,5 @@
 ---
-title: Core Web Vitals w 2026 roku jak poprawić wydajność strony
+title: Core Web Vitals - jak poprawić wydajność strony
 description: Praktyczny i aktualny przewodnik po Core Web Vitals w 2026 roku. Dowiedz się, jak poprawić wydajność strony, UX i realnie wpłynąć na widoczność w Google.
 author: Przemek
 date: 2026-01-05T12:22:13.618Z

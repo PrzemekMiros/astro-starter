@@ -1,5 +1,5 @@
 ---
-title: Audyt strony pod kątem SEO – Kompleksowy przewodnik
+title: Audyt strony pod kątem SEO - Przewodnik
 description: 'Audyt SEO to proces, który pozwala na przeanalizowanie strony internetowej w celu sprawdzenia, czy spełnia ona aktualne standardy optymalizacji wyszukiwarek.'
 author: Przemek
 date: 2024-11-05T17:19:42.446Z

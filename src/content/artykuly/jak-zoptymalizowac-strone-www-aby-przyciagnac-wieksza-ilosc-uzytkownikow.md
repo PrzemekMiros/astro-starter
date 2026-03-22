@@ -5,7 +5,7 @@ author: Przemek
 date: 2026-02-01T11:38:22.441Z
 tags:
   - Strony www
-thumbnail: /content/artykuly/img/jak-zoptymalizowac-strone-www-aby-przyciagnac-wieksza-ilosc-uzytkownikow.png
+thumbnail: /content/artykuly/img/jak-zopt-strone.png
 ---
 
 W dzisiejszym cyfrowym świecie, posiadanie strony internetowej to za mało. Kluczowe jest, aby strona była zoptymalizowana pod kątem użytkownika, co w efekcie przyciągnie więcej odwiedzających, zwiększy czas ich spędzony na stronie oraz poprawi współczynnik konwersji. 

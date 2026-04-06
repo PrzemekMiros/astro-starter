@@ -4,7 +4,7 @@ description: Jeśli Twoja witryna nadal jest pełna animowanych obrazów,
   nadmiarowych funkcji projektowych i innych przestarzałych rozwiązań, czas na
   przeprojektowanie
 author: Przemek
-date: 2025-10-21
+date: 2026-03-21
 tags:
   - Strony www
 thumbnail: /content/posts/img/blog-site-long.jpg

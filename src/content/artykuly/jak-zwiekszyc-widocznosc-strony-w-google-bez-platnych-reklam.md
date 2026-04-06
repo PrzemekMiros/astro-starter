@@ -2,7 +2,7 @@
 title: Jak zwiększyć widoczność strony w Google bez płatnych reklam
 description: Poznaj skuteczne strategie zwiększania widoczności strony w Google bez inwestowania w reklamy. Praktyczne wskazówki SEO, content i techniczne optymalizacje.
 author: Przemek
-date: 2026-03-28T12:51:01.834Z
+date: 2025-08-28T12:51:01.834Z
 tags:
   - Pozycjonowanie
 thumbnail: /content/artykuly/img/jak-zwiekszyc-widocznosc-strony-w-google-bez-platnych-reklam.png

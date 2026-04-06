@@ -2,7 +2,7 @@
 title: Jak wykorzystać dane strukturalne Schema.org aby zwiększyć widoczność strony w Google
 description: Dowiedz się jak wdrożyć dane strukturalne Schema.org, aby poprawić widoczność w Google, zdobyć rich snippets i zwiększyć CTR w wynikach wyszukiwania.
 author: Przemek
-date: 2026-03-28T21:11:00.114Z
+date: 2025-11-28T21:11:00.114Z
 tags:
   - Pozycjonowanie
 thumbnail: /content/artykuly/img/jak-wykorzystac-dane-strukturalne-schemaorg-aby-zwiekszyc-widocznosc-strony-w-google.png

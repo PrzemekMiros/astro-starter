@@ -2,7 +2,7 @@
 title: Optymalizacja Core Web Vitals i wydajność nowoczesnych stron internetowych
 description: Dowiedz się, jak skutecznie poprawić Core Web Vitals i realnie zwiększyć wydajność strony internetowej. Praktyczne wskazówki techniczne dla właścicieli i webmasterów.
 author: Przemek
-date: 2026-03-27T15:41:09.546Z
+date: 2026-01-27T15:41:09.546Z
 tags:
   - Strony www
 thumbnail: /content/artykuly/img/optymalizacja-core-web-vitals-i-wydajnosc-nowoczesnych-stron-internetowych.png

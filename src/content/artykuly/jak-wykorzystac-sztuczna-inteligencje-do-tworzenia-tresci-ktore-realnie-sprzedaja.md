@@ -2,7 +2,7 @@
 title: Jak wykorzystać sztuczną inteligencję do tworzenia treści które realnie sprzedają
 description: Dowiedz się, jak skutecznie wykorzystać sztuczną inteligencję do tworzenia treści marketingowych, które zwiększają widoczność w Google i realnie wpływają na sprzedaż.
 author: Przemek
-date: 2026-03-29T05:30:59.146Z
+date: 2025-05-29T05:30:59.146Z
 tags:
   - Sztuczna inteligencja
 thumbnail: /content/artykuly/img/jak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja.png

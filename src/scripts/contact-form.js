@@ -1,4 +1,7 @@
 const ENDPOINT = "https://www.futurewebstudio.pl/contactFormPortfolio.php";
+const THANK_YOU_PATH = "/wyslano-wiadomosc/";
+const DEFAULT_CONVERSION_VALUE = 1;
+const DEFAULT_CONVERSION_CURRENCY = "PLN";
 const MESSAGES = {
   sending: "Wysyłam wiadomość...",
   error: "Wystąpił problem. Spróbuj ponownie za chwilę.",
@@ -6,6 +9,21 @@ const MESSAGES = {
 };
 
 function createSubmitHandler(form, statusEl) {
+  function buildThankYouUrl(result) {
+    const value = Number(result?.value);
+    const conversionValue = Number.isFinite(value) ? value : DEFAULT_CONVERSION_VALUE;
+    const currency = typeof result?.currency === "string" && result.currency.trim()
+      ? result.currency.trim().toUpperCase()
+      : DEFAULT_CONVERSION_CURRENCY;
+
+    const params = new URLSearchParams({
+      value: String(conversionValue),
+      currency,
+    });
+
+    return `${THANK_YOU_PATH}?${params.toString()}`;
+  }
+
   return async function handleContactSubmit(event) {
     event.preventDefault();
     if (statusEl) {
@@ -36,6 +54,7 @@ function createSubmitHandler(form, statusEl) {
       }
 
       form.reset();
+      window.location.assign(buildThankYouUrl(result));
     } catch (error) {
       console.error("Błąd formularza kontaktowego:", error);
       if (statusEl) {
@@ -68,3 +87,4 @@ runContactFormInit();
 document.addEventListener("DOMContentLoaded", runContactFormInit);
 document.addEventListener("astro:page-load", runContactFormInit);
 document.addEventListener("astro:after-swap", runContactFormInit);
+

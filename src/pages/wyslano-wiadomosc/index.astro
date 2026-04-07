@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Wiadomość wysłana"
+  description="Dziękuje za kontakt"
+>
+  <script slot="head" is:inline>
+    const params = new URLSearchParams(window.location.search);
+    const parsedValue = Number(params.get("value"));
+    const value = Number.isFinite(parsedValue) ? parsedValue : 1.0;
+    const currency = (params.get("currency") || "PLN").toUpperCase();
+
+    gtag("event", "conversion", {
+      send_to: "AW-18067926091/kgjcCNis7ZYcEMvYuqdD",
+      value,
+      currency,
+    });
+  </script>
+
+  <section class="pb-16 pt-12 md:pb-20 md:pt-20">
+    <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] p-8 md:p-12 text-center">
+      <p class="mb-3 text-xs uppercase tracking-[0.12em] text-[var(--accent)]">Wiadomość wysłana</p>
+      <h1 class="mb-4 text-3xl font-semibold text-black/90 md:text-4xl">Dziękuje za kontakt</h1>
+      <p class="mx-auto mb-8 max-w-2xl text-base text-[var(--muted)]">
+        Twoja wiadomość została wysłana. Odpowiem w ciagu 24h.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+      >
+        Wróć na stronę główną
+      </a>
+    </div>
+  </section>
+</BaseLayout>

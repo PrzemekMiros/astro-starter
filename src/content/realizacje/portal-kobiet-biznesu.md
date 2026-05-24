@@ -5,7 +5,7 @@ description: Serwis dla czasopisma Business Woman and Life. Indywidualny projekt
 author: Przemek
 client: Business Woman Life
 category:
-  - Portal internetowy
+  - Marketing i media
 link: https://businesswomanlife.pl/
 thumbnail: /content/realizacje/img/business-thumb-big.jpg
 order: 100

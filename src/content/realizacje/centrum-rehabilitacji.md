@@ -9,7 +9,7 @@ thumbnail: /content/realizacje/img/c7med-thumb-big.jpg
 order: 16
 date: 2021-06-14T22:00:00.000Z
 category:
-  - Strona internetowa
+  - Medycyna i zdrowie
 background: "#fffcfb"
 ---
 

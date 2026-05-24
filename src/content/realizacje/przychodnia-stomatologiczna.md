@@ -9,7 +9,7 @@ thumbnail: /content/realizacje/img/cse-thumb-big.jpg
 order: 9
 date: 2024-05-21T22:00:00.000Z
 category:
-  - Strona internetowa
+  - Medycyna i zdrowie
 background: "#fffcfb"
 ---
  

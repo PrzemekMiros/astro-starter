@@ -4,7 +4,7 @@ description: Projekt i wdrożenie
 author: Przemek
 client: Sanit Instalacje
 category:
-  - Strona internetowa
+  - Przemysł i produkcja
 link: https://sanit-instalacje.pl/
 thumbnail: /content/realizacje/img/sanit-mockup.jpg
 order: 5

@@ -10,7 +10,7 @@ thumbnail: /content/realizacje/img/egp-thumb-big.jpg
 order: 80
 date: 2021-08-29T22:00:00.000Z
 category:
-  - Sklep internetowy
+  - Przemysł i produkcja
 background: "#fffcfb"
 ---
 

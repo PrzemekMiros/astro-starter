@@ -4,7 +4,7 @@ description: Projekt i kodowanie
 author: Przemek
 client: Silver Plus
 category:
-  - Strona internetowa
+  - Handel i e-commerce
 link: https://www.silverplus2100.pl/
 thumbnail: /content/realizacje/img/moc-silver.jpg
 order: 21

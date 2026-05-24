@@ -4,7 +4,7 @@ description: Projekt i kodowanie
 author: Przemek
 client: Uneedev
 category:
-  - Strona internetowa
+  - Marketing i media
 link: https://uneedev.pl/
 thumbnail: /content/realizacje/img/moc-uneedev.jpg
 order: 20

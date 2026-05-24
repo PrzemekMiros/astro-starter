@@ -5,7 +5,7 @@ description: Strona internetowa dla agencji aktorskiej. Projekt graficzny,
   w archiwach, schowek.
 author: Przemek
 category:
-  - Strona internetowa
+  - Rozrywka
 thumbnail: /content/realizacje/img/cosmos-thumb-big.jpg
 order: 4
 title: Agencja aktorska

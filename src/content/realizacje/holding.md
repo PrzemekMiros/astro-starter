@@ -4,7 +4,7 @@ description: Kodowanie i optymalizacja
 author: Przemek
 client: Goźliński Holding
 category:
-  - Strona internetowa
+  - Usługi biznesowe
 link: https://gozlinskiholding.pl/
 thumbnail: /content/realizacje/img/moc-holding.jpg
 order: 16

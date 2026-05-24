@@ -4,7 +4,7 @@ description: Strona internetowa do sprzedaży kursów stylizacji paznokci online
   Projekt graficzny, system zarządzania Wordpress.
 author: Przemek Miros
 category:
-  - Sklep internetowy
+  - Edukacja i społeczność
 thumbnail: /content/realizacje/img/nail-thumb-big.jpg
 order: 30
 title: Kursy stylizacji paznokci

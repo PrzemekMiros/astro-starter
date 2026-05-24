@@ -4,7 +4,7 @@ description: Projekt i wdrożenie
 author: Przemek
 client: Keanox Meble
 category:
-  - Strona internetowa
+  - Przemysł i produkcja
 link: https://keanox.pl/
 thumbnail: /content/realizacje/img/moc-keanox.jpg
 order: 34

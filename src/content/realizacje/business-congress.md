@@ -4,7 +4,7 @@ description: Kodowanie i optymalizacja
 author: Przemek
 client: Business Woman Congress
 category:
-  - Strona internetowa
+  - Usługi biznesowe
 link: 'https://businesswomancongress.pl/'
 thumbnail: /content/realizacje/img/moc-congress.jpg
 background: '#fefbff'

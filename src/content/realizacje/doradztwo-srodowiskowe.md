@@ -5,7 +5,7 @@ description: Strona internetowa dla firmy zajmującej sie doradztwem w zakresie
   Wordpress.
 author: Przemek Miros
 category:
-  - Strona internetowa
+  - Usługi biznesowe
 thumbnail: /content/realizacje/img/triland-thumb-big.jpg
 order: 27
 title: Doradztwo środowiskowe

@@ -4,7 +4,7 @@ description: Projekt i kodowanie
 author: Przemek
 client: BW Awards
 category:
-  - Strona internetowa
+  - Marketing i media
 link: https://businesswomenawards.pl/
 thumbnail: /content/realizacje/img/moc-awards.jpg
 order: 5

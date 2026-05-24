@@ -5,7 +5,7 @@ description: Strona dla wypozyczlni kajaków. Technologia Jamstack, Eleventy.js 
 author: Przemek Miros
 date: 2023-06-19T15:47:50.998Z
 category:
-  - Strona internetowa
+  - Turystyka i hotelarstwo
 link: https://kajaki24.com.pl/
 thumbnail: /content/realizacje/img/kajaki-thumb-big.jpg
 order: 7

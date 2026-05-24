@@ -7,7 +7,7 @@ title: Dystrybutor rur
 description: Wykonana według dostarczonego projektu graficznego. Oparta na systemie zarządzania treścią Wordpress. Katalog produktów z intuicyjna wyszukiwarką i filtrowaniem.
 link: https://ecotechgroup.pl/
 category:
-  - Strona internetowa 
+  - Przemysł i produkcja
 order: 95
 background: "#f6f6fb"
 ---

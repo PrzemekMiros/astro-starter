@@ -4,7 +4,7 @@ description: Projekt i kodowanie
 author: Przemek
 client: Olender Solutions
 category:
-  - Strona internetowa
+  - Motoryzacja i transport
 link: https://olendersolutions.com/
 thumbnail: /content/realizacje/img/olender-mockup.jpg
 order: 7

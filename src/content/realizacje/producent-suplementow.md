@@ -4,7 +4,7 @@ description: Wdrożenie i optymalizacja
 author: Przemek
 client: SMKA
 category:
-  - Strona internetowa
+  - Handel i e-commerce
 link: https://smka.pl/
 thumbnail: /content/realizacje/img/moc-smka.jpg
 order: 6

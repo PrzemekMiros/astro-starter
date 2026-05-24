@@ -5,7 +5,7 @@ description: Strona www dla firmy zajmującej się dystrybucją i serwisów
   zoptymalizowana pod wyszukiwarki.
 author: Przemek
 category:
-  - Strona internetowa
+  - Przemysł i produkcja
 link: https://ideal-lift.pl/
 thumbnail: /content/realizacje/img/idealift-thumb-big.jpg
 order: 5

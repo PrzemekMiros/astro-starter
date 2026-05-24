@@ -4,7 +4,7 @@ description: Projekt i kodownie
 author: Przemek
 client: CUS Grabów
 category:
-  - Strona internetowa
+  - Edukacja i społeczność
 link: https://cusgrabow.pl/
 thumbnail: /content/realizacje/img/moc-cus.jpg
 order: 14

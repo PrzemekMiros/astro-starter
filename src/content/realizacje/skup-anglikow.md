@@ -4,7 +4,7 @@ description: Strona www oparta na CMS Wordpress. Indywidualny projekt graficzny
   i optymalizacja pod wyszukiwarki
 author: Przemek
 category:
-  - Strona internetowa
+  - Motoryzacja i transport
 thumbnail: /content/realizacje/img/angliki-thumb-big.jpg
 order: 7
 title: Skup Anglików 

@@ -4,7 +4,7 @@ description: Kodowanie i optymalizacja
 author: Przemek
 client: Ebanknot
 category:
-  - Strona internetowa
+  - Finanse i ubezpieczenia
 link: https://ebanknot.pl/
 thumbnail: /content/realizacje/img/ebanknot-mockup.jpg
 order: 11

@@ -5,7 +5,7 @@ description: "Strona dla Przychodni Zdrowia. Indywidualny projekt graficzny.
   Scroll, Swup.js"
 author: Przemek
 category:
-  - Strona internetowa
+  - Medycyna i zdrowie
 thumbnail: /content/realizacje/img/przychodnia-thumb-big.jpg
 order: 19
 title: Przychodnia zdrowia

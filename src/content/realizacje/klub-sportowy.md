@@ -4,7 +4,7 @@ description: Strona www dla klubu sportowego w Warszawie. Indywidualny projekt
   graficzny, CMS Wordpress, zoptymalizowana pod wyszukiwarki.
 author: Przemek
 category:
-  - Strona internetowa
+  - Edukacja i społeczność
 link: https://victoriagrochow.pl/
 thumbnail: /content/realizacje/img/victoria-thumb-big.jpg
 order: 22

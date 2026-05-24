@@ -4,7 +4,7 @@ description: Kodowanie i optymalizacja
 author: Przemek
 client: Konsultacje Społeczne
 category:
-  - Strona internetowa
+  - Edukacja i społeczność
 link: https://twojekonsultacje.pl/
 thumbnail: /content/realizacje/img/konsultacje-thumb-big.jpg
 order: 22

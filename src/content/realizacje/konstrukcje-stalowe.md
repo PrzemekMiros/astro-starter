@@ -10,7 +10,7 @@ thumbnail: /content/realizacje/img/staltom-thumb-big.jpg
 order: 23
 date: 2022-02-02T23:00:00.000Z
 category:
-  - Strona internetowa
+  - Przemysł i produkcja
 background: "#fffcfb"
 ---
 

@@ -9,7 +9,7 @@ thumbnail: /content/realizacje/img/master-thumb-big.jpg
 order: 16
 date: 2022-06-23T22:00:00.000Z
 category:
-  - Strona internetowa
+  - Usługi biznesowe
 background: "#fffcfb"
 ---
 

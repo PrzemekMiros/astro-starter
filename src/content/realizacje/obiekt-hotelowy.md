@@ -9,7 +9,7 @@ description: Strona dla hotelu w Strzelcach Opolskich. Indywidualny projekt
   zawartości strony.
 date: 2024-01-16T21:32:05.619Z
 category:
-  - Strona internetowa
+  - Turystyka i hotelarstwo
 link: https://momentstrzelce.pl/
 background: "#f3f4f6"
 ---

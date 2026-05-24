@@ -4,7 +4,7 @@ description: Projekt i wdrożenie
 author: Przemek
 client: Clientify
 category:
-  - Strona internetowa
+  - Usługi biznesowe
 link: http://clientify.pl/
 thumbnail: /content/realizacje/img/clientify-mockup.jpg
 order: 13

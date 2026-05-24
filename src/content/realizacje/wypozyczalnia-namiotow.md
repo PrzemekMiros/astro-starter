@@ -10,7 +10,7 @@ thumbnail: /content/realizacje/img/namioty-thumb-big.jpg
 order: 14
 date: 2023-01-19T23:00:00.000Z
 category:
-  - Strona internetowa
+  - Turystyka i hotelarstwo
 background: "#fffcfb"
 ---
 

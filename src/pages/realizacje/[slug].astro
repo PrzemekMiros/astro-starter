@@ -85,9 +85,9 @@ if (!realizacja) {
             target="_blank" 
             class="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold hover:text-[var(--accent)] transition-colors"
           >
-            <span>Zobacz online</span>
+            <span class="text-[var(--accent)]">Zobacz online</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke="var(--accent)" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
         )}
@@ -108,7 +108,7 @@ if (!realizacja) {
 
       {realizacja.category?.length && (
         <div class="">
-          <p class="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-3">Zakres prac</p>
+          <p class="text-[10px] text-[var(--accent)] uppercase tracking-[0.2em] font-bold mb-3">Branża</p>
           <div class="flex flex-wrap gap-2">
             {realizacja.category.map((cat) => (
               <span class="text-sm text-neutral-00 font-medium">
@@ -121,7 +121,7 @@ if (!realizacja) {
 
       {year && (
         <div>
-          <p class="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold mb-3">Rok</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-[var(--accent)] font-bold mb-3">Rok</p>
           <p class="text-sm text-neutral-00 font-medium">{year}</p>
         </div>
       )}

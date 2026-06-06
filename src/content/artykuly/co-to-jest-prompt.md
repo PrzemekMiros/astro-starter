@@ -4,7 +4,7 @@ description: Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promp
 author: Przemek Miros
 date: 2025-07-22T19:52:00.000Z
 tags:
-  - Poradniki
+  - Sztuczna inteligencja
 thumbnail: /content/posts/img/prompt.png
 ---
 

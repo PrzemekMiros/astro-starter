@@ -3,7 +3,7 @@ title: Senuto - Narzędzie do pozycjonowania stron
 description: To narzędzie, które umożliwia szeroką analizę widoczności w
   wyszukiwarce Google, optymalizację treści oraz śledzenie wyników działań SEO.
 author: Przemek
-date: 2024-11-03T08:03:18.338Z
+date: 2026-11-03T08:03:18.338Z
 tags:
   - Pozycjonowanie
 thumbnail: /content/posts/img/senut-ekran-startowy.png

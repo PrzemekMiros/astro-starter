@@ -2,7 +2,7 @@
 title: Co to jest Google Cloud i jak działa?
 description: Co to jest Google Cloud i jak działa? Poznaj najważniejsze usługi Google Cloud Platform, korzyści, zastosowania oraz sposób rozpoczęcia pracy z chmurą Google.
 author: Przemek Miros
-date: 2025-03-22T19:52:00.000Z
+date: 2026-09-22T19:52:00.000Z
 tags:
   - Poradniki
 thumbnail: /content/posts/img/gcloud.png

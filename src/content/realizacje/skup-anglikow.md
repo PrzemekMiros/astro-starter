@@ -6,7 +6,7 @@ author: Przemek
 category:
   - Motoryzacja i transport
 thumbnail: /content/realizacje/img/angliki-thumb-big.jpg
-order: 7
+order: 3
 title: Skup Anglików 
 date: 2023-08-02T13:25:45.709Z
 link: https://skup-anglikow.pl/

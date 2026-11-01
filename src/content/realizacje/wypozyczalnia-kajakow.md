@@ -8,7 +8,7 @@ category:
   - Turystyka i hotelarstwo
 link: https://kajaki24.com.pl/
 thumbnail: /content/realizacje/img/kajaki-thumb-big.jpg
-order: 7
+order: 19
 background: "#fffcfb"
 ---
 

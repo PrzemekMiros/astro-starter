@@ -8,7 +8,7 @@ category:
   - Przemysł i produkcja
 link: https://ideal-lift.pl/
 thumbnail: /content/realizacje/img/idealift-thumb-big.jpg
-order: 5
+order: 13
 title: Podnośniki warsztatowe
 date: 2024-07-09T19:21:41.426Z
 background: "#fffcfb"

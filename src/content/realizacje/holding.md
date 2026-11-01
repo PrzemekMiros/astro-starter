@@ -7,7 +7,7 @@ category:
   - Usługi biznesowe
 link: https://gozlinskiholding.pl/
 thumbnail: /content/realizacje/img/moc-holding.jpg
-order: 16
+order: 23
 date: 2025-01-01T00:00:00.000Z
 background: "#f8f7fa"
 ---

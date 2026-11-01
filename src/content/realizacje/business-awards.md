@@ -7,7 +7,7 @@ category:
   - Marketing i media
 link: https://businesswomenawards.pl/
 thumbnail: /content/realizacje/img/moc-awards.jpg
-order: 5
+order: 21
 date: 2025-01-01T00:00:00.000Z
 background: "#fffdfb"
 ---

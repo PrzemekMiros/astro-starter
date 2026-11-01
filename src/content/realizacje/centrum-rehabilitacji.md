@@ -6,7 +6,7 @@ author: Przemek Miros
 client: C7Med
 link: https://c7med.pl/
 thumbnail: /content/realizacje/img/c7med-thumb-big.jpg
-order: 16
+order: 1
 date: 2021-06-14T22:00:00.000Z
 category:
   - Medycyna i zdrowie

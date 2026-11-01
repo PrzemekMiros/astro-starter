@@ -7,7 +7,7 @@ category:
   - Finanse i ubezpieczenia
 link: https://ebanknot.pl/
 thumbnail: /content/realizacje/img/ebanknot-mockup.jpg
-order: 11
+order: 7
 date: 2025-01-01T00:00:00.000Z
 background: "#fffcfb"
 ---

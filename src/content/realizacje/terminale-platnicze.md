@@ -7,7 +7,7 @@ category:
   - Finanse i ubezpieczenia
 link: https://datecspay.pl/
 thumbnail: /content/realizacje/img/moc-datex.jpg
-order: 85
+order: 25
 date: 2024-01-01T00:00:00.000Z
 background: "#fbfbff"
 ---

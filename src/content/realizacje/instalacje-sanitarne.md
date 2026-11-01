@@ -7,7 +7,7 @@ category:
   - Przemysł i produkcja
 link: https://sanit-instalacje.pl/
 thumbnail: /content/realizacje/img/sanit-mockup.jpg
-order: 5
+order: 15
 date: 2025-01-01T00:00:00.000Z
 background: "#fffcfb"
 ---

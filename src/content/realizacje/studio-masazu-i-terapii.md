@@ -8,7 +8,7 @@ category:
 link: 'https://callyoursoul.pl/'
 thumbnail: /content/realizacje/img/soul-thumb-big.jpg
 background: '#fffcfb'
-order: 8
+order: 9
 date: 2022-11-15T23:00:00.000Z
 ---
 

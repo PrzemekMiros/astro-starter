@@ -7,7 +7,7 @@ category:
   - Usługi biznesowe
 link: http://clientify.pl/
 thumbnail: /content/realizacje/img/clientify-mockup.jpg
-order: 13
+order: 17
 date: 2025-01-01T00:00:00.000Z
 background: "#fffcfb"
 ---

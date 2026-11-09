@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="pl"> <head><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=AW-18067926091"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "AW-18067926091");
+    </script><meta name="google-site-verification" content="_uLorccZIpY-NlRb036yMXgs2lvctMD5A_aSlU6HRa4"><meta charset="utf-8"><link rel="preload" as="font" type="font/ttf" href="/_astro/ZalandoSansSemiExpanded-VariableFont_wght.Ba9e6dal.ttf" crossorigin><link rel="icon" type="image/svg+xml" href="/_astro/favicon.NJ9PyspR.svg"><link rel="icon" type="image/png" href="/_astro/favicon.Cg538DyT.png"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.16.12"><meta name="robots" content="index"><title> Co to jest prompt? Kompletny przewodnik po promptach - Przemek Miros | Strony internetowe</title><meta name="description" content="Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promptowania, najczęstsze błędy oraz praktyczne przykłady tworzenia promptów dla sztucznej inteligencji."><meta property="og:title" content=" Co to jest prompt? Kompletny przewodnik po promptach - Przemek Miros | Strony internetowe"><meta property="og:description" content="Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promptowania, najczęstsze błędy oraz praktyczne przykłady tworzenia promptów dla sztucznej inteligencji."><meta property="og:type" content="website"><meta property="og:site_name" content="Przemek Miros | Strony internetowe"><meta property="og:image" content="https://przemekmiros.pl/.netlify/images?url=_astro%2Fopengraph.1jk5YtXr.png&fm=png&w=1903&h=1075"><meta property="og:url" content="https://przemekmiros.pl/artykuly/co-to-jest-prompt/"><link rel="canonical" href="https://przemekmiros.pl/artykuly/co-to-jest-prompt/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content=" Co to jest prompt? Kompletny przewodnik po promptach - Przemek Miros | Strony internetowe"><meta name="twitter:description" content="Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promptowania, najczęstsze błędy oraz praktyczne przykłady tworzenia promptów dla sztucznej inteligencji."><meta name="twitter:image" content="https://przemekmiros.pl/.netlify/images?url=_astro%2Fopengraph.1jk5YtXr.png&fm=png&w=1903&h=1075"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js"></script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><style>.astro-loading-indicator {
+  pointer-events: none;
+  background-color: var(--accent);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transition: transform 400ms ease-out, opacity 200ms 200ms ease-in;
+	transform: translate3d(0, 0, 0) scaleX(var(--progress, 0));
+  transform-origin: 0;
+}
+
+[dir="rtl"] .astro-loading-indicator {
+  transform-origin: 100% 0;
+}
+</style><script>(function(){const className = "astro-loading-indicator";
+const animationDuration = 400;
+const threshold = 200;
+
+(() => {
+  let progress = 0.25
+  let opacity = 0
+  /** @type {number | undefined} */
+  let trickleInterval = undefined
+  /** @type {number | undefined} */
+  let thresholdTimeout = undefined;
+
+  const element = document.createElement("div")
+  element.classList.add(className)
+  element.ariaHidden = "true"
+
+  /** @param {typeof progress} _progress */
+  const setProgress = (_progress) => {
+    progress = _progress
+    element.style.setProperty('--progress', String(progress))
+  }
+
+  /** @param {typeof opacity} _opacity */
+  const setOpacity = (_opacity) => {
+    opacity = _opacity
+    element.style.setProperty('opacity', String(opacity))
+  }
+
+  setOpacity(opacity)
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.prepend(element)
+  })
+
+  document.addEventListener("astro:before-preparation", () => {
+    thresholdTimeout = setTimeout(() => {
+      setOpacity(1)
+      trickleInterval = window.setInterval(() => {
+        setProgress(progress + Math.random() * 0.03)
+      }, animationDuration)
+    }, threshold)
+  })
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    if (!thresholdTimeout) {
+      return
+    }
+    window.clearTimeout(thresholdTimeout)
+
+    ev.newDocument.body.prepend(element)
+    window.clearInterval(trickleInterval)
+    trickleInterval = undefined
+
+    setProgress(1)
+    window.setTimeout(() => {
+      setOpacity(0)
+    }, animationDuration / 2)
+
+    window.setTimeout(() => {
+      setProgress(0.25)
+    }, animationDuration * 2)
+  })
+})()
+})();</script><style>
+      ::view-transition-old(root) {
+        animation: fade-out 160ms ease;
+      }
+      ::view-transition-new(root) {
+        animation: fade-in 160ms ease;
+      }
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes fade-out {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    </style><link rel="stylesheet" href="/_astro/_slug_.BwB6xDMq.css"><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"></head> <body class="min-h-screen bg-[var(--bg)] font-sans text-[var(--text)]"> <main class="mx-auto flex min-h-screen w-full max-w-[1320px] flex-col px-4 sm:px-10 lg:px-12"> <header class="fixed left-0 right-0 top-0 z-500 border-b border-white/15 bg-black/90 py-5 sm:pb-4 sm:pt-4 backdrop-blur-md" data-astro-cid-3ef6ksr2> <div class="mx-auto w-full max-w-[1240px] px-4 sm:px-10 md:px-10 xl:px-0" data-astro-cid-3ef6ksr2> <nav class="flex items-center justify-between gap-4" data-astro-cid-3ef6ksr2> <a href="/" title="Strona główna" class="text-xl font-bold tracking-tighter text-white no-underline" aria-label="Logo" data-astro-cid-3ef6ksr2> <img src="/_astro/logo.B5XILTm-.png" class="w-38 mb-0.5" width="280" height="66" alt="Logo Przemek Miros" data-astro-cid-3ef6ksr2> </a> <div class="hidden items-center justify-center gap-8 text-sm font-medium md:flex" data-astro-cid-3ef6ksr2> <a class="px-3 py-3 text-white/70 no-underline transition hover:text-white transition-colors hover:text-white" href="/realizacje/" title="Realizacje" data-astro-cid-3ef6ksr2> Realizacje </a><a class="px-3 py-3 text-white/70 no-underline transition hover:text-white transition-colors hover:text-white" href="/opinie/" title="Opinie" data-astro-cid-3ef6ksr2> Opinie </a><a class="px-3 py-3 text-white/70 no-underline transition hover:text-white transition-colors hover:text-white" href="/faq/" title="Faq" data-astro-cid-3ef6ksr2> Faq </a><a class="px-3 py-3 text-white no-underline transition hover:brightness-95 transition-colors hover:text-white" href="/artykuly/" title="Poradnik" aria-current="page" data-astro-cid-3ef6ksr2> Poradnik </a><a class="px-3 py-3 text-white/70 no-underline transition hover:text-white transition-colors hover:text-white" href="/kontakt/" title="Kontakt" data-astro-cid-3ef6ksr2> Kontakt </a> </div> <a href="/kontakt/" title="Wycena" class="hidden md:inline-flex group relative h-11 items-center justify-center rounded-md bg-[var(--accent)] px-6 font-normal text-neutral-200" data-astro-cid-3ef6ksr2><span data-astro-cid-3ef6ksr2>Wycena</span><div class="relative ml-1 h-5 w-5 overflow-hidden" data-astro-cid-3ef6ksr2><div class="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4" data-astro-cid-3ef6ksr2><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" data-astro-cid-3ef6ksr2><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path></svg><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -translate-x-4" data-astro-cid-3ef6ksr2><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" data-astro-cid-3ef6ksr2></path></svg></div></div></a> <button class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white/10 md:hidden" type="button" data-mobile-toggle data-astro-cid-3ef6ksr2>
+Menu
+</button> </nav> <div class="fixed inset-x-0 top-0 z-[60] h-screen flex flex-col gap-6 overflow-hidden bg-[#0a0a0a] p-8 text-white transition-all duration-300 pointer-events-none opacity-0 md:hidden" id="mobile-menu" data-mobile-menu data-astro-cid-3ef6ksr2> <div class="flex items-center justify-between" data-astro-cid-3ef6ksr2> <span class="text-xs font-bold uppercase tracking-widest text-gray-500" data-astro-cid-3ef6ksr2>Nawigacja</span> <button class="text-[10px] font-bold uppercase tracking-widest text-orange-500" type="button" data-mobile-close data-astro-cid-3ef6ksr2>
+Zamknij
+</button> </div> <div class="flex flex-col gap-6 pt-12" data-astro-cid-3ef6ksr2> <a class="text-xl font-semibold tracking-tight text-white no-underline" href="/realizacje/" title="Realizacje" data-mobile-link data-astro-cid-3ef6ksr2> Realizacje </a>
+						<div class="border border-b border-white/10" data-astro-cid-3ef6ksr2></div><a class="text-xl font-semibold tracking-tight text-white no-underline" href="/opinie/" title="Opinie" data-mobile-link data-astro-cid-3ef6ksr2> Opinie </a>
+						<div class="border border-b border-white/10" data-astro-cid-3ef6ksr2></div><a class="text-xl font-semibold tracking-tight text-white no-underline" href="/faq/" title="Faq" data-mobile-link data-astro-cid-3ef6ksr2> Faq </a>
+						<div class="border border-b border-white/10" data-astro-cid-3ef6ksr2></div><a class="text-xl font-semibold tracking-tight text-white no-underline" href="/artykuly/" title="Poradnik" data-mobile-link data-astro-cid-3ef6ksr2> Poradnik </a>
+						<div class="border border-b border-white/10" data-astro-cid-3ef6ksr2></div><a class="text-xl font-semibold tracking-tight text-white no-underline" href="/kontakt/" title="Kontakt" data-mobile-link data-astro-cid-3ef6ksr2> Kontakt </a>
+						<div class="border border-b border-white/10" data-astro-cid-3ef6ksr2></div> </div> </div> </div> </header>  <script type="module">document.addEventListener("astro:page-load",()=>{const e=document.querySelector("[data-mobile-toggle]"),t=document.querySelector("[data-mobile-menu]"),n=document.querySelector("[data-mobile-close]");if(document.querySelectorAll("[data-mobile-link]"),e&&t){const o=l=>{t.classList.toggle("is-open",l),document.body.style.overflow=l?"hidden":""};e.addEventListener("click",()=>o(!0)),n?.addEventListener("click",()=>o(!1))}});</script>   <section class="relative pt-28 pb-0 md:pt-38 md:pb-8"> <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-gray-50"></div> <div class="grid gap-4 md:gap-10 md:grid-cols-[250px_minmax(0,1fr)]"> <div class="relative hidden md:flex md:flex-col gap-2 text-black/70"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprzemekmiros.pl%2Fartykuly%2Fco-to-jest-prompt%2F" target="_blank" rel="noopener noreferrer" aria-label="Udostepnij na Facebooku" class="block w-11 h-11 transition hover:text-[var(--accent)] rounded-full border border-gray-500 p-3"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M13.5 8.5V7c0-1.1.9-2 2-2h2V2h-3c-2.8 0-5 2.2-5 5v1.5H7v3h2.5V22h3v-10.5h3l.5-3h-3.5z"></path> </svg> </a> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fprzemekmiros.pl%2Fartykuly%2Fco-to-jest-prompt%2F&text=Co%20to%20jest%20prompt%3F%20Kompletny%20przewodnik%20po%20promptach" target="_blank" rel="noopener noreferrer" aria-label="Udostepnij na X" class="block w-11 h-11 transition hover:text-[var(--accent)] rounded-full border border-gray-500 p-3.5"> <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-4.8-6.1L6.2 22H3l7.3-8.5L1 2h6.6l4.3 5.5L18.9 2z"></path> </svg> </a> <a href="mailto:?subject=Co%20to%20jest%20prompt%3F%20Kompletny%20przewodnik%20po%20promptach&#38;body=Co%20to%20jest%20prompt%3F%20Kompletny%20przewodnik%20po%20promptach%0Ahttps%3A%2F%2Fprzemekmiros.pl%2Fartykuly%2Fco-to-jest-prompt%2F" aria-label="Wyslij link mailem" class="block w-11 h-11 transition hover:text-[var(--accent)] rounded-full border border-gray-500 p-3"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <rect x="3" y="5" width="18" height="14" rx="2"></rect> <path d="M3 7l9 6 9-6"></path> </svg> </a> <button type="button" data-copy-link="https://przemekmiros.pl/artykuly/co-to-jest-prompt/" aria-label="Kopiuj link artykulu" class="block w-11 h-11 transition hover:text-[var(--accent)] rounded-full border border-gray-500 p-3"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <rect x="9" y="9" width="13" height="13" rx="2"></rect> <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path> </svg> </button> </div> <div class="max-w-4xl"> <div class="relative space-y-4 mx-auto"> <div class="text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-gray-400 mb-3 md:mb-6 font-semibold"> <span class="text-gray">Artykuly</span> <span class="text-[var(--accent)]"> • </span> <span class="text-gray">Co to jest prompt? Kompletny przewodnik po promptach</span> </div> <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black/90"> Co to jest prompt? Kompletny przewodnik po promptach </h1> <p class="max-w-3xl text-base md:text-lg text-black/70 leading-relaxed">Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promptowania, najczęstsze błędy oraz praktyczne przykłady tworzenia promptów dla sztucznej inteligencji.</p> <div class="flex flex-wrap gap-x-8 gap-y-2 pt-4 mt-4 md:pt-8 md:mt-8 border-t border-black/20 font-semibold text-[8px] md:text-[10px] tracking-[0.15em] uppercase"> <div class="text-gray-400"><span class="text-gray">Sztuczna inteligencja</span></div> <div class="text-gray-400 hidden md:block"><span class="text-gray">22.07.2025</span></div> <div class="text-gray-400">6 minut czytania</div> </div> </div> </div> </div> </section> <script>
+  const copyButtons = document.querySelectorAll("[data-copy-link]");
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const link = button.getAttribute("data-copy-link");
+      if (!link) return;
+
+      try {
+        await navigator.clipboard.writeText(link);
+        button.classList.add("text-[var(--accent)]");
+        setTimeout(() => button.classList.remove("text-[var(--accent)]"), 1200);
+      } catch {
+        window.prompt("Skopiuj link:", link);
+      }
+    });
+  });
+</script> <article class="mb-18 pt-10 md:pt-18 z-50" itemscope itemtype="https://schema.org/BlogPosting"> <meta itemprop="mainEntityOfPage" content="https://przemekmiros.pl/artykuly/co-to-jest-prompt/"> <meta itemprop="url" content="https://przemekmiros.pl/artykuly/co-to-jest-prompt/"> <meta itemprop="headline" content="Co to jest prompt? Kompletny przewodnik po promptach"> <meta itemprop="description" content="Co to jest prompt i jak go skutecznie tworzyć? Poznaj zasady promptowania, najczęstsze błędy oraz praktyczne przykłady tworzenia promptów dla sztucznej inteligencji."> <meta itemprop="datePublished" content="2025-07-22T19:52:00.000Z"> <meta itemprop="dateModified" content="2025-07-22T19:52:00.000Z"> <div itemprop="author" itemscope itemtype="https://schema.org/Person"> <meta itemprop="name" content="Przemek Miros"> </div> <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"> <meta itemprop="name" content="Przemek Miros | Strony internetowe"> <meta itemprop="logo" content="https://przemekmiros.pl/assets/images/global/logo.png"> </div> <div class="grid gap-10 lg:grid-cols-[250px_minmax(0,1fr)_280px]"> <aside class="hidden lg:block"> <div class="sticky top-38 space-y-4"> <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-2 border-orange-600 pl-4">Spis treści</h3> <ol class="space-y-2.5 text-sm text-[var(--muted)]" data-toc> <li> <a class="transition-colors" href="#co-to-jest-prompt" data-toc-link data-toc-target="co-to-jest-prompt"> Co to jest prompt? </a> </li><li> <a class="transition-colors" href="#dlaczego-prompt-jest-tak-ważny" data-toc-link data-toc-target="dlaczego-prompt-jest-tak-ważny"> Dlaczego prompt jest tak ważny? </a> </li><li> <a class="transition-colors" href="#jak-działa-prompt-w-sztucznej-inteligencji" data-toc-link data-toc-target="jak-działa-prompt-w-sztucznej-inteligencji"> Jak działa prompt w sztucznej inteligencji? </a> </li><li> <a class="transition-colors" href="#jak-stworzyć-skuteczny-prompt" data-toc-link data-toc-target="jak-stworzyć-skuteczny-prompt"> Jak stworzyć skuteczny prompt? </a> </li><li> <a class="transition-colors" href="#czym-jest-prompt-engineering" data-toc-link data-toc-target="czym-jest-prompt-engineering"> Czym jest Prompt Engineering? </a> </li><li> <a class="transition-colors" href="#najpopularniejsze-rodzaje-promptów" data-toc-link data-toc-target="najpopularniejsze-rodzaje-promptów"> Najpopularniejsze rodzaje promptów </a> </li><li> <a class="transition-colors" href="#najczęstsze-błędy-podczas-tworzenia-promptów" data-toc-link data-toc-target="najczęstsze-błędy-podczas-tworzenia-promptów"> Najczęstsze błędy podczas tworzenia promptów </a> </li><li> <a class="transition-colors" href="#przykład-dobrego-promptu" data-toc-link data-toc-target="przykład-dobrego-promptu"> Przykład dobrego promptu </a> </li><li> <a class="transition-colors" href="#korzyści-płynące-z-umiejętności-tworzenia-promptów" data-toc-link data-toc-target="korzyści-płynące-z-umiejętności-tworzenia-promptów"> Korzyści płynące z umiejętności tworzenia promptów </a> </li><li> <a class="transition-colors" href="#faq--najczęściej-zadawane-pytania" data-toc-link data-toc-target="faq--najczęściej-zadawane-pytania"> FAQ – Najczęściej zadawane pytania </a> </li> </ol> </div> </aside> <div class="min-w-0 space-y-12"> <header class="mb-8 md:mb-12"> <div class="mx-auto max-w-3xl space-y-12"> <div class="space-y-4 text-sm text-[var(--muted)]">    </div> </div> <img src="/.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=1536&#38;h=1024" srcset="/.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=480&#38;h=320 480w, /.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=768&#38;h=512 768w, /.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=960&#38;h=640 960w, /.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=1100&#38;h=733 1100w, /.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=1400&#38;h=933 1400w, /.netlify/images?url=_astro%2Fprompt.Bumwr6di.png&#38;w=1536&#38;h=1024 1536w" alt="Co to jest prompt? Kompletny przewodnik po promptach" sizes="(max-width: 1320px) 100vw, 1320px" loading="lazy" placeholder="blur" itemprop="image" decoding="async" fetchpriority="auto" width="1536" height="1024" class="aspect-[16/9] rounded-xl border border-[var(--border)] object-cover"> </header>  <section id="article-content" class="mx-auto min-w-0 max-w-2xl space-y-6 text-[15px] leading-relaxed text-[var(--text)] sm:text-[16px] sm:leading-relaxed
+            [&>a]:underline [&>a]:decoration-[var(--accent)] [&>a]:underline-offset-4 [&>a]:font-medium hover:[&>a]:text-[var(--accent)]
+            [&>blockquote]:bg-[#f9fafb] [&>blockquote]:p-[2em] [&>blockquote]:not-italic [&>blockquote]:text-[0.9em] [&>blockquote]:text-[var(--muted)] [&>blockquote]:border-l-[3px] [&>blockquote]:border-l-[var(--accent)]
+            [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-[var(--heading)] [&>h2]:scroll-mt-[144px]
+            [&>h3]:mt-7 [&>h3]:mb-3 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-[var(--heading)]
+            [&>hr]:my-8 [&>hr]:border-[var(--border)]
+            [&>p]:mb-5 [&>p]:last:mb-0"> <p>Dynamiczny rozwój sztucznej inteligencji sprawił, że coraz więcej osób korzysta z narzędzi takich jak ChatGPT, Gemini, Claude czy Perplexity. Jednak jakość odpowiedzi generowanych przez AI zależy przede wszystkim od jednego elementu – promptu.</p>
+<p>To właśnie prompt stanowi instrukcję dla modelu sztucznej inteligencji i decyduje o tym, czy otrzymana odpowiedź będzie trafna, szczegółowa oraz użyteczna. W tym artykule wyjaśnimy, czym jest prompt, jak działa oraz jak tworzyć skuteczne polecenia pozwalające osiągać lepsze rezultaty.</p>
+<hr>
+<h2 id="co-to-jest-prompt">Co to jest prompt?</h2>
+<p>Prompt to komunikat przekazywany systemowi sztucznej inteligencji w celu wykonania określonego zadania. Może przyjmować formę:</p>
+<ul>
+<li>pytania,</li>
+<li>polecenia,</li>
+<li>opisu sytuacji,</li>
+<li>zestawu instrukcji,</li>
+<li>scenariusza działania.</li>
+</ul>
+<p>Najprościej mówiąc, prompt jest sposobem komunikacji pomiędzy użytkownikiem a modelem AI.</p>
+<p>Przykładowe prompty:</p>
+<p><strong>Prosty prompt:</strong></p>
+<blockquote>
+<p>Napisz artykuł o marketingu internetowym.</p>
+</blockquote>
+<p><strong>Bardziej zaawansowany prompt:</strong></p>
+<blockquote>
+<p>Jesteś ekspertem SEO. Napisz artykuł o marketingu internetowym dla właścicieli małych firm. Użyj prostego języka, dodaj przykłady i zakończ sekcją FAQ.</p>
+</blockquote>
+<p>Jak łatwo zauważyć, drugi prompt dostarcza więcej informacji, dzięki czemu sztuczna inteligencja może przygotować bardziej dopasowaną odpowiedź.</p>
+<hr>
+<h2 id="dlaczego-prompt-jest-tak-ważny">Dlaczego prompt jest tak ważny?</h2>
+<p>Modele językowe nie czytają w myślach użytkowników. Ich działanie opiera się na analizie instrukcji zawartych w prompcie.</p>
+<p>Jakość odpowiedzi zależy między innymi od:</p>
+<ul>
+<li>precyzji polecenia,</li>
+<li>ilości dostarczonych informacji,</li>
+<li>określenia celu,</li>
+<li>wskazania odbiorcy,</li>
+<li>opisu oczekiwanego formatu.</li>
+</ul>
+<p>Im lepiej przygotowany prompt, tym większe prawdopodobieństwo uzyskania wartościowej odpowiedzi.</p>
+<hr>
+<h2 id="jak-działa-prompt-w-sztucznej-inteligencji">Jak działa prompt w sztucznej inteligencji?</h2>
+<p>Po wpisaniu promptu model AI analizuje:</p>
+<ol>
+<li>Znaczenie słów.</li>
+<li>Kontekst wypowiedzi.</li>
+<li>Relacje między informacjami.</li>
+<li>Intencję użytkownika.</li>
+</ol>
+<p>Następnie generuje odpowiedź na podstawie wzorców wyuczonych podczas treningu modelu.</p>
+<p>W praktyce oznacza to, że nawet niewielka zmiana treści promptu może znacząco wpłynąć na wynik.</p>
+<p>Przykład:</p>
+<p><strong>Prompt 1:</strong></p>
+<blockquote>
+<p>Napisz tekst o samochodach.</p>
+</blockquote>
+<p><strong>Prompt 2:</strong></p>
+<blockquote>
+<p>Napisz poradnik dla początkujących kierowców dotyczący wyboru pierwszego samochodu do 50 000 zł.</p>
+</blockquote>
+<p>Drugi prompt daje znacznie bardziej precyzyjne rezultaty.</p>
+<hr>
+<h2 id="jak-stworzyć-skuteczny-prompt">Jak stworzyć skuteczny prompt?</h2>
+<h3 id="1-określ-rolę-ai">1. Określ rolę AI</h3>
+<p>Jednym z najskuteczniejszych sposobów poprawy jakości odpowiedzi jest wskazanie roli, w jaką ma wcielić się model.</p>
+<p>Przykłady:</p>
+<ul>
+<li>Jesteś ekspertem SEO.</li>
+<li>Jesteś nauczycielem matematyki.</li>
+<li>Jesteś specjalistą ds. marketingu.</li>
+<li>Jesteś konsultantem biznesowym.</li>
+</ul>
+<p>Dzięki temu AI lepiej rozumie kontekst zadania.</p>
+<hr>
+<h3 id="2-dokładnie-opisz-zadanie">2. Dokładnie opisz zadanie</h3>
+<p>Należy jasno określić, co model ma zrobić.</p>
+<p>Przykłady:</p>
+<ul>
+<li>Napisz artykuł.</li>
+<li>Stwórz strategię marketingową.</li>
+<li>Przygotuj analizę konkurencji.</li>
+<li>Wygeneruj listę pomysłów.</li>
+</ul>
+<p>Niejasne polecenia prowadzą do mniej trafnych odpowiedzi.</p>
+<hr>
+<h3 id="3-określ-format-odpowiedzi">3. Określ format odpowiedzi</h3>
+<p>Warto wskazać, jak ma wyglądać wygenerowana treść.</p>
+<p>Przykłady:</p>
+<ul>
+<li>lista punktowana,</li>
+<li>tabela,</li>
+<li>artykuł blogowy,</li>
+<li>raport,</li>
+<li>instrukcja krok po kroku.</li>
+</ul>
+<p>Dzięki temu odpowiedź jest bardziej użyteczna.</p>
+<hr>
+<h3 id="4-wskaż-grupę-docelową">4. Wskaż grupę docelową</h3>
+<p>Inaczej należy pisać dla początkujących, a inaczej dla ekspertów.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Wyjaśnij działanie SEO osobie, która dopiero zaczyna swoją przygodę z marketingiem internetowym.</p>
+</blockquote>
+<p>Takie doprecyzowanie pozwala lepiej dopasować poziom szczegółowości.</p>
+<hr>
+<h3 id="5-dodaj-kontekst">5. Dodaj kontekst</h3>
+<p>Kontekst pomaga AI zrozumieć sytuację i dostarczyć trafniejszą odpowiedź.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Przygotuj plan marketingowy dla nowo otwartego sklepu internetowego sprzedającego odzież sportową.</p>
+</blockquote>
+<p>Im więcej istotnych informacji otrzyma model, tym lepszy będzie efekt końcowy.</p>
+<hr>
+<h2 id="czym-jest-prompt-engineering">Czym jest Prompt Engineering?</h2>
+<p>Prompt Engineering to proces projektowania skutecznych promptów w celu uzyskania jak najlepszych rezultatów od systemów sztucznej inteligencji.</p>
+<p>Obejmuje on:</p>
+<ul>
+<li>tworzenie odpowiednich instrukcji,</li>
+<li>testowanie różnych wersji promptów,</li>
+<li>analizę wyników,</li>
+<li>optymalizację poleceń.</li>
+</ul>
+<p>Wraz z rozwojem AI prompt engineering staje się coraz bardziej cenioną kompetencją na rynku pracy.</p>
+<hr>
+<h2 id="najpopularniejsze-rodzaje-promptów">Najpopularniejsze rodzaje promptów</h2>
+<h3 id="prompty-informacyjne">Prompty informacyjne</h3>
+<p>Służą do uzyskiwania wiedzy i wyjaśnień.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Wyjaśnij, czym jest blockchain.</p>
+</blockquote>
+<h3 id="prompty-kreatywne">Prompty kreatywne</h3>
+<p>Pomagają generować pomysły i treści.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Wymyśl 20 nazw dla nowego sklepu internetowego.</p>
+</blockquote>
+<h3 id="prompty-analityczne">Prompty analityczne</h3>
+<p>Służą do analizowania danych i sytuacji.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Przeanalizuj zalety i wady pracy zdalnej.</p>
+</blockquote>
+<h3 id="prompty-techniczne">Prompty techniczne</h3>
+<p>Wykorzystywane przez programistów i specjalistów IT.</p>
+<p>Przykład:</p>
+<blockquote>
+<p>Napisz skrypt w Pythonie sortujący dane z pliku CSV.</p>
+</blockquote>
+<hr>
+<h2 id="najczęstsze-błędy-podczas-tworzenia-promptów">Najczęstsze błędy podczas tworzenia promptów</h2>
+<h3 id="brak-kontekstu">Brak kontekstu</h3>
+<p>Zbyt ogólne pytania często prowadzą do powierzchownych odpowiedzi.</p>
+<h3 id="niejasny-cel">Niejasny cel</h3>
+<p>Jeśli AI nie wie, jaki ma być efekt końcowy, odpowiedź może być nieprzydatna.</p>
+<h3 id="zbyt-wiele-poleceń-jednocześnie">Zbyt wiele poleceń jednocześnie</h3>
+<p>Łączenie kilku różnych zadań w jednym prompcie często obniża jakość wyników.</p>
+<h3 id="brak-informacji-o-odbiorcy">Brak informacji o odbiorcy</h3>
+<p>Model nie wie wtedy, jaki poziom wiedzy założyć.</p>
+<h3 id="pomijanie-ograniczeń">Pomijanie ograniczeń</h3>
+<p>Warto określać:</p>
+<ul>
+<li>długość tekstu,</li>
+<li>styl wypowiedzi,</li>
+<li>strukturę odpowiedzi,</li>
+<li>wymagane elementy.</li>
+</ul>
+<hr>
+<h2 id="przykład-dobrego-promptu">Przykład dobrego promptu</h2>
+<blockquote>
+<p>Jesteś ekspertem SEO. Napisz artykuł o sztucznej inteligencji dla właścicieli małych firm. Artykuł powinien mieć około 1500 słów, zawierać nagłówki H2 i H3, przykłady zastosowań AI oraz sekcję FAQ. Używaj prostego języka.</p>
+</blockquote>
+<p>Taki prompt dostarcza wszystkich kluczowych informacji potrzebnych do wykonania zadania.</p>
+<hr>
+<h2 id="korzyści-płynące-z-umiejętności-tworzenia-promptów">Korzyści płynące z umiejętności tworzenia promptów</h2>
+<p>Osoby potrafiące skutecznie komunikować się z AI mogą:</p>
+<ul>
+<li>oszczędzać czas,</li>
+<li>zwiększać produktywność,</li>
+<li>szybciej tworzyć treści,</li>
+<li>automatyzować zadania,</li>
+<li>uzyskiwać bardziej precyzyjne odpowiedzi.</li>
+</ul>
+<p>W wielu branżach umiejętność promptowania staje się obecnie równie ważna jak obsługa tradycyjnych narzędzi cyfrowych.</p>
+<hr>
+<h2 id="faq--najczęściej-zadawane-pytania">FAQ – Najczęściej zadawane pytania</h2>
+<h3 id="czy-prompt-to-tylko-pytanie">Czy prompt to tylko pytanie?</h3>
+<p>Nie. Prompt może być pytaniem, instrukcją, opisem sytuacji lub rozbudowanym zestawem poleceń.</p>
+<h3 id="czy-długość-promptu-ma-znaczenie">Czy długość promptu ma znaczenie?</h3>
+<p>Tak. Zbyt krótki prompt może być nieprecyzyjny, a zbyt długi może utrudnić interpretację najważniejszych informacji.</p>
+<h3 id="czy-każdy-model-ai-reaguje-tak-samo-na-prompty">Czy każdy model AI reaguje tak samo na prompty?</h3>
+<p>Nie. ChatGPT, Gemini, Claude czy Perplexity mogą interpretować te same instrukcje w różny sposób.</p>
+<h3 id="czym-jest-prompt-engineering-1">Czym jest prompt engineering?</h3>
+<p>To proces tworzenia i optymalizacji promptów w celu uzyskania lepszych rezultatów od systemów sztucznej inteligencji.</p>
+<h3 id="jak-poprawić-jakość-odpowiedzi-ai">Jak poprawić jakość odpowiedzi AI?</h3>
+<p>Najlepiej określić rolę modelu, jasno opisać zadanie, wskazać odbiorcę oraz format odpowiedzi.</p>
+<h3 id="czy-warto-korzystać-z-gotowych-promptów">Czy warto korzystać z gotowych promptów?</h3>
+<p>Mogą być pomocne jako inspiracja, jednak najlepsze efekty zwykle daje dostosowanie promptu do konkretnej sytuacji.</p>
+<hr>
+<p>Prompt to podstawowe narzędzie komunikacji ze sztuczną inteligencją. Od jego jakości zależy trafność, szczegółowość i użyteczność generowanych odpowiedzi. Dobrze skonstruowany prompt powinien zawierać jasno określony cel, kontekst, rolę AI oraz oczekiwany format odpowiedzi.</p>
+<p>Wraz z rosnącą popularnością narzędzi AI umiejętność tworzenia skutecznych promptów staje się jedną z najważniejszych kompetencji cyfrowych. Niezależnie od tego, czy korzystasz z ChatGPT, Gemini czy innych modeli językowych, odpowiednio przygotowany prompt pozwoli Ci osiągać znacznie lepsze rezultaty.</p> </section> </div> <aside class="space-y-6"> <div class="sticky top-38"> <section> <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-2 border-orange-600 pl-4">
+Kategorie
+</h3> <ul class="space-y-2"> <li> <a href="/tags/marketing/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"> Marketing </a> </li><li> <a href="/tags/poradniki/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"> Poradniki </a> </li><li> <a href="/tags/pozycjonowanie/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"> Pozycjonowanie </a> </li><li> <a href="/tags/strony-www/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"> Strony www </a> </li><li> <a href="/tags/sztuczna-inteligencja/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-orange-50 border-orange-500/40 text-orange-700" aria-current="page"> Sztuczna inteligencja </a> </li><li> <a href="/tags/wordpress/" class="block rounded-xl border px-4 py-3 text-sm transition-all bg-gray-100 border-white/5 text-neutral-600 hover:border-orange-600/50 hover:text-orange-700"> Wordpress </a> </li> </ul> </section> </div> </aside> </div> <section class="mx-auto max-w-7xl space-y-6 pt-6 mt-16 border-t border-black/10"> <div class="flex items-center justify-between"> <h2 class="text-lg font-semibold text-[var(--text)]">Przeczytaj też</h2> <a href="/artykuly/" class="flex items-center gap-3 group text-black/90 font-bold text-[11px] uppercase tracking-widest hover:text-orange-600 transition-colors hidden md:block">
+Wszystkie wpisy
+<span class="text-orange-600 text-lg -translate-y-0.5 group-hover:translate-x-1 transition-transform">&gt;&gt;&gt;</span> </a> </div> <div class="grid gap-5 md:grid-cols-3"> <a class="group flex h-full w-full flex-col rounded-2xl border border-[var(--border)] bg-white px-5 pb-8 pt-6 md:px-6 transition-transform hover:scale-[1.02]" href="https://przemekmiros.pl/artykuly/nowoczesne-strony-internetowe-oparte-na-astrojs/"> <div class="mb-4 flex items-start justify-between"> <span class="flex items-center gap-2 rounded-full border border-black/20 px-3 py-1.5 text-[10px] font-bold uppercase text-black"> <span class="flex h-3 w-3 items-center justify-center rounded-sm bg-[var(--accent)] text-[8px] text-white">II</span> Strony www </span> <div class="rounded-full border border-black/20 p-2"> <svg class="h-3 w-3 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </div> </div> <div class="mb-6"> <img src="/.netlify/images?url=_astro%2Fnowoczesne-strony-internetowe-oparte-na-astrojs.RmGWWDI4.png&#38;w=1792&#38;h=1024" srcset="/.netlify/images?url=_astro%2Fnowoczesne-strony-internetowe-oparte-na-astrojs.RmGWWDI4.png&#38;w=360&#38;h=206 360w, /.netlify/images?url=_astro%2Fnowoczesne-strony-internetowe-oparte-na-astrojs.RmGWWDI4.png&#38;w=520&#38;h=297 520w, /.netlify/images?url=_astro%2Fnowoczesne-strony-internetowe-oparte-na-astrojs.RmGWWDI4.png&#38;w=720&#38;h=411 720w" alt="Nowoczesne strony internetowe oparte na Astro.js" sizes="(max-width: 900px) 100vw, 320px" loading="lazy" placeholder="blur" decoding="async" fetchpriority="auto" width="1792" height="1024" class="h-[185px] w-full rounded-xl border border-black/10 object-cover"> </div> <div> <h3 class="mb-3 text-xl font-semibold leading-snug text-black line-clamp-2"> Nowoczesne strony internetowe oparte na Astro.js </h3> <p class="text-sm leading-relaxed text-black/70 line-clamp-3">Praktyczny przewodnik eksperta, jak projektować szybkie, skalowalne i bezpieczne strony internetowe w oparciu o Astro.js oraz nowoczesne standardy webowe.</p> </div> </a><a class="group flex h-full w-full flex-col rounded-2xl border border-[var(--border)] bg-white px-5 pb-8 pt-6 md:px-6 transition-transform hover:scale-[1.02]" href="https://przemekmiros.pl/artykuly/tailwind-nowoczesne-podejscie-do-stylowania/"> <div class="mb-4 flex items-start justify-between"> <span class="flex items-center gap-2 rounded-full border border-black/20 px-3 py-1.5 text-[10px] font-bold uppercase text-black"> <span class="flex h-3 w-3 items-center justify-center rounded-sm bg-[var(--accent)] text-[8px] text-white">II</span> Poradniki </span> <div class="rounded-full border border-black/20 p-2"> <svg class="h-3 w-3 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </div> </div> <div class="mb-6"> <img src="/.netlify/images?url=_astro%2Ftailwind-2.VrlVqiiF.png&#38;w=1392&#38;h=730" srcset="/.netlify/images?url=_astro%2Ftailwind-2.VrlVqiiF.png&#38;w=360&#38;h=189 360w, /.netlify/images?url=_astro%2Ftailwind-2.VrlVqiiF.png&#38;w=520&#38;h=273 520w, /.netlify/images?url=_astro%2Ftailwind-2.VrlVqiiF.png&#38;w=720&#38;h=378 720w" alt="Tailwind - Nowoczesne podejście do stylowania" sizes="(max-width: 900px) 100vw, 320px" loading="lazy" placeholder="blur" decoding="async" fetchpriority="auto" width="1392" height="730" class="h-[185px] w-full rounded-xl border border-black/10 object-cover"> </div> <div> <h3 class="mb-3 text-xl font-semibold leading-snug text-black line-clamp-2"> Tailwind - Nowoczesne podejście do stylowania </h3> <p class="text-sm leading-relaxed text-black/70 line-clamp-3">W dobie cyfryzacji, posiadanie strony internetowej staje się kluczowe zarówno dla dużych firm, jak i małych przedsiębiorstw, freelancerów czy blogerów</p> </div> </a><a class="group flex h-full w-full flex-col rounded-2xl border border-[var(--border)] bg-white px-5 pb-8 pt-6 md:px-6 transition-transform hover:scale-[1.02]" href="https://przemekmiros.pl/artykuly/jak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja/"> <div class="mb-4 flex items-start justify-between"> <span class="flex items-center gap-2 rounded-full border border-black/20 px-3 py-1.5 text-[10px] font-bold uppercase text-black"> <span class="flex h-3 w-3 items-center justify-center rounded-sm bg-[var(--accent)] text-[8px] text-white">II</span> Sztuczna inteligencja </span> <div class="rounded-full border border-black/20 p-2"> <svg class="h-3 w-3 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </div> </div> <div class="mb-6"> <img src="/.netlify/images?url=_astro%2Fjak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja.BOjPRys2.png&#38;w=1536&#38;h=1024" srcset="/.netlify/images?url=_astro%2Fjak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja.BOjPRys2.png&#38;w=360&#38;h=240 360w, /.netlify/images?url=_astro%2Fjak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja.BOjPRys2.png&#38;w=520&#38;h=347 520w, /.netlify/images?url=_astro%2Fjak-wykorzystac-sztuczna-inteligencje-do-tworzenia-tresci-ktore-realnie-sprzedaja.BOjPRys2.png&#38;w=720&#38;h=480 720w" alt="Jak wykorzystać sztuczną inteligencję do tworzenia treści które realnie sprzedają" sizes="(max-width: 900px) 100vw, 320px" loading="lazy" placeholder="blur" decoding="async" fetchpriority="auto" width="1536" height="1024" class="h-[185px] w-full rounded-xl border border-black/10 object-cover"> </div> <div> <h3 class="mb-3 text-xl font-semibold leading-snug text-black line-clamp-2"> Jak wykorzystać sztuczną inteligencję do tworzenia treści które realnie sprzedają </h3> <p class="text-sm leading-relaxed text-black/70 line-clamp-3">Dowiedz się, jak skutecznie wykorzystać sztuczną inteligencję do tworzenia treści marketingowych, które zwiększają widoczność w Google i realnie wpływają na sprzedaż.</p> </div> </a> </div> </section> </article> <script type="module">const l=()=>{const n=Array.from(document.querySelectorAll("[data-toc-link]")),a=n.map(e=>document.getElementById(e.dataset.tocTarget)).filter(Boolean);if(!n.length||!a.length)return;typeof window.__articleTocCleanup=="function"&&window.__articleTocCleanup();const d=new AbortController,{signal:c}=d,u=144,f=e=>{n.forEach(t=>{const o=t.dataset.tocTarget===e;t.classList.toggle("text-[var(--accent)]",o)})},r=(e,t=!0)=>{const o=e.getBoundingClientRect().top+window.scrollY-u;window.scrollTo({top:o,behavior:t?"smooth":"auto"}),f(e.id)},s=()=>{const e=window.scrollY+u+1;let t=a[0];for(const o of a)if(o.offsetTop<=e)t=o;else break;t&&f(t.id)};let i=!1;const m=()=>{i||(i=!0,requestAnimationFrame(()=>{s(),i=!1}))};window.addEventListener("scroll",m,{passive:!0,signal:c}),window.addEventListener("resize",m,{signal:c}),window.addEventListener("hashchange",()=>{const e=decodeURIComponent(window.location.hash.replace(/^#/,"")),t=e?document.getElementById(e):null;t&&r(t,!0)},{signal:c}),n.forEach(e=>{e.addEventListener("click",t=>{t.preventDefault();const o=document.getElementById(e.dataset.tocTarget);o&&(r(o,!0),history.replaceState(null,"",`#${o.id}`),setTimeout(s,0))},{signal:c})});const g=decodeURIComponent(window.location.hash.replace(/^#/,"")),w=g?document.getElementById(g):null;w?requestAnimationFrame(()=>{requestAnimationFrame(()=>r(w,!0))}):s(),window.__articleTocCleanup=()=>d.abort()};document.readyState==="loading"?document.addEventListener("DOMContentLoaded",l,{once:!0}):l();document.addEventListener("astro:page-load",l);</script>  <footer class="bg-black relative text-gray-400 pb-9 pt-18 font-sans"> <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div> <div class="relative max-w-7xl mx-auto"> <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center border-b border-gray-800 pb-12 mb-12 gap-8"> <div class="flex items-center"> <img src="/_astro/logo.B5XILTm-.png" class="w-42" width="280" height="66" alt="Logo Przemek Miros"> </div> <div class="flex flex-wrap sm:flex-row items-center gap-3"> <span class="text-white font-bold">Google</span> <div class="flex text-orange-500 text-lg">★★★★★ </div> <p class="text-[14px]"><span class="text-white font-bold">5/5</span>&nbsp; średnia ocena na podstawie 15+ opinii&nbsp;&nbsp;</p> </div> </div> <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-16"> <div> <h3 class="text-white font-bold mb-6">Kontakt</h3> <div class="text-xs space-y-2 mb-6 leading-relaxed"> <p>Przemek Miros</p> <p>kontakt@przemekmiros.pl</p> <p>+48 788 660 </p> <p>05-660 Warka</p> </div> </div> <div> <h3 class="text-white font-bold mb-6">Nawigacja</h3> <ul class="text-xs space-y-3"> <li><a href="/realizacje/" class="hover:text-white transition-colors" title="Realizacje">Realizacje</a></li> <li><a href="/artykuly/" class="hover:text-white transition-colors" title="Artykuły">Artykuły</a></li> <li><a href="/opinie/" class="hover:text-white transition-colors" title="O mnie">Opinie</a></li> <li><a href="/miasta/" class="hover:text-white transition-colors" title="O mnie">Miasta</a></li> </ul> </div> <div> <h3 class="text-white font-bold mb-6">Social media</h3> <ul class="text-xs space-y-3"> <li><a href="https://www.facebook.com/przemekstronyinternetowe" class="hover:text-white transition-colors" title="Facebook" target="_blank">Facebook</a></li> <li><a href="#https://www.behance.net/przemyslaw" class="hover:text-white transition-colors flex items-center gap-1" title="Behance" target="_blank">Behance <span class="text-[10px]">↗</span></a></li> <li><a href="https://github.com/PrzemekMiros" class="hover:text-white transition-colors flex items-center gap-1" title="Github">Github <span class="text-[10px]">↗</span></a></li> <li><a href="https://codepen.io/przemek-miros/" class="hover:text-white transition-colors" title="Codepen" target="_blank">Codepen <span class="text-[10px]">↗</span></a></li> </ul> </div> <div> <h3 class="text-white font-bold mb-6">Narzędzia</h3> <ul class="text-xs space-y-3"> <li><a href="https://www.senuto.com/pl/" class="hover:text-white transition-colors" title="Senuto">Senuto <span class="text-[10px]">↗</span></a></li> <li><a href="https://ahrefs.com/" class="hover:text-white transition-colors" title="Ahrefs">Ahrefs <span class="text-[10px]">↗</span></a></li> <li><a href="https://gemini.google.com/" class="hover:text-white transition-colors" title="Gemini">Gemini <span class="text-[10px]">↗</span></a></li> <li><a href="https://www.figma.com/" class="hover:text-white transition-colors" title="Figma">Figma <span class="text-[10px]">↗</span></a></li> </ul> </div> </div> <div class="flex flex-col md:flex-row justify-between md:items-center border-t border-gray-800 pt-8 gap-6"> <div class="flex flex-wrap justify-left gap-6 text-[11px]"> <a href="#" class="hover:text-white transition-colors" title="Pliki cookies" data-cookie-open>Pliki cookies</a> </div> </div> </div> </footer> <div class="fixed inset-0 hidden bg-black/10 flex items-center justify-center z-[9999] p-4 font-sans text-left" data-cookie-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cookieconsent-title" tabindex="-1"> <div class="bg-white rounded-lg shadow-2xl max-w-[600px] w-full overflow-hidden border border-gray-200"> <div class="p-6 md:p-8 flex border-b border-gray-300"> <div class="flex flex-col"> <span id="cookieconsent-title" class="text-lg font-semibold text-gray-900 leading-tight">Strona używa plików cookie</span> </div> </div> <div class="px-6 md:px-8 flex border-b border-gray-300" role="tablist" aria-label="Cookie consent"> <button class="flex-1 py-3 text-[var(--accent)] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[var(--accent)] cursor-pointer" type="button" data-cookie-tab="consent" role="tab" id="cookie-tab-consent" aria-controls="cookie-panel-consent" aria-selected="true">
+Zgoda
+</button> <button class="flex-1 py-3 text-[var(--accent)] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[var(--accent)] cursor-pointer text-[#00a3ff]" type="button" data-cookie-tab="details" role="tab" id="cookie-tab-details" aria-controls="cookie-panel-details" aria-selected="false">
+Szczegóły
+</button> <button class="flex-1 py-3 text-[var(--accent)] font-bold text-[11px] uppercase tracking-wider border-b-2 border-[var(--accent)] cursor-pointer text-[#00a3ff]" type="button" data-cookie-tab="about" role="tab" id="cookie-tab-about" aria-controls="cookie-panel-about" aria-selected="true">
+Info
+</button> </div> <div class="p-6 md:p-8" data-cookie-panel="consent" role="tabpanel" id="cookie-panel-consent" aria-labelledby="cookie-tab-consent"> <p class="text-gray-600 text-[12px] leading-[1.6]">
+Strona używa plików cookie, aby personalizować treści, udostępniać funkcje mediów społecznościowych i analizować ruch. Udostępnia również informacje o tym, jak korzystasz z witryny, naszym partnerom społecznościowym, reklamowym i analitycznym.
+</p> </div> <div class="p-6 md:p-8 hidden" data-cookie-panel="details" role="tabpanel" id="cookie-panel-details" aria-labelledby="cookie-tab-details"> <p class="text-gray-600 text-[12px] leading-[1.6] mb-4">
+Wybierz, na jakie kategorie plików cookie wyrażasz zgodę. Niezbędne są zawsze aktywne.
+</p> <div class="space-y-3 text-[12px] text-gray-700"> <label class="flex items-center justify-between rounded border border-gray-200 px-3 py-2"> <span>Niezbędne</span> <span class="flex items-center gap-2"> <span class="text-[10px] uppercase tracking-wider text-gray-400">Zawsze aktywne</span> <input type="checkbox" checked disabled data-cookie-category="necessary" aria-label="Niezbędne" class="h-4 w-4 rounded border-gray-300 text-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-60"> </span> </label> <label class="flex items-center justify-between rounded border border-gray-200 px-3 py-2"> <span>Funkcjonalne</span> <input type="checkbox" data-cookie-category="functional" aria-label="Funkcjonalne" class="h-4 w-4 rounded border-gray-300 text-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]"> </label> <label class="flex items-center justify-between rounded border border-gray-200 px-3 py-2"> <span>Analityczne</span> <input type="checkbox" data-cookie-category="analytics" aria-label="Analityczne" class="h-4 w-4 rounded border-gray-300 text-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]"> </label> <label class="flex items-center justify-between rounded border border-gray-200 px-3 py-2"> <span>Marketingowe</span> <input type="checkbox" data-cookie-category="marketing" aria-label="Marketingowe" class="h-4 w-4 rounded border-gray-300 text-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]"> </label> </div> <div class="mt-5"> <button class="cursor-pointer w-full bg-[var(--accent)] text-white font-bold py-3 px-4 rounded-lg transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-save>
+Zapisz ustawienia
+</button> </div> </div> <div class="p-6 md:p-8 hidden" data-cookie-panel="about" role="tabpanel" id="cookie-panel-about" aria-labelledby="cookie-tab-about"> <p class="text-gray-600 text-[12px] leading-[1.6]">
+Pliki cookie to niewielkie informacje zapisywane w Twojej przeglądarce. Pomagają działać stronie,
+        zapamiętywać ustawienia oraz mierzyć ruch. Możesz zmienić zgodę w każdej chwili w ustawieniach.
+</p> </div> <div class="p-6 md:p-8 pt-0 flex flex-col md:flex-row gap-2"> <button class="cursor-pointer flex-1 bg-[var(--accent)] text-white font-bold py-3 px-4 rounded-lg transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-deny>
+Odmów
+</button> <button class="cursor-pointer flex-1 bg-[var(--accent)] text-white font-bold py-3 px-4 rounded-lg transition-colors text-[11px] uppercase tracking-wide flex items-center justify-center gap-1" type="button" data-cookie-customize>
+Dostosuj
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path> </svg> </button> <button class="cursor-pointer flex-1 bg-[var(--accent)] text-white font-bold py-3 px-4 rounded-lg transition-colors text-[11px] uppercase tracking-wide" type="button" data-cookie-accept>
+Zezwól
+</button> </div> </div> </div> <div class="circle-container hidden md:flex items-center justify-center relative"> <svg class="circle-progress svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"> <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path> </svg> <svg class="h-4 w-4 text-white absolute top-4 left-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path> </svg> </div> <script type="module">document.addEventListener("astro:page-load",function(){const e=document.querySelector(".circle-container");if(!e)return;const r=50,t=document.querySelector(".circle-container path"),o=t.getTotalLength();t.style.transition=t.style.WebkitTransition="none",t.style.strokeDasharray=o,t.style.strokeDashoffset=o,requestAnimationFrame(()=>{requestAnimationFrame(()=>{t.style.transition=t.style.WebkitTransition="stroke-dashoffset 10ms linear"})});const s=()=>{const i=window.scrollY,a=document.documentElement.scrollHeight,l=window.innerHeight,d=Math.max(1,a-l),h=o-i*o/d;t.style.strokeDashoffset=h,i>r?e.classList.add("active"):e.classList.remove("active")};let n=!1;const c=()=>{n||(n=!0,requestAnimationFrame(()=>{s(),n=!1}))};e.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})},window.addEventListener("scroll",c,{passive:!0}),s()});</script> <script src="/_astro/cookie-modal.CVlHGRPJ.js" defer></script> </main> <script>
+      const applyBlurLazy = () => {
+        document.querySelectorAll("main img").forEach((img) => {
+          if (img.dataset.blurLazy === "true") return;
+          img.dataset.blurLazy = "true";
+          if (img.getAttribute("loading") !== "eager") {
+            img.setAttribute("loading", "lazy");
+          }
+          img.setAttribute("decoding", "async");
+          img.classList.add("blur-sm", "transition-[filter]", "duration-500");
+          const clearBlur = () => img.classList.remove("blur-sm");
+          if (img.complete) {
+            clearBlur();
+          } else {
+            img.addEventListener("load", clearBlur, { once: true });
+            img.addEventListener("error", clearBlur, { once: true });
+          }
+        });
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", applyBlurLazy);
+      } else {
+        applyBlurLazy();
+      }
+      document.addEventListener("astro:page-load", applyBlurLazy);
+      document.addEventListener("astro:after-swap", applyBlurLazy);
+    </script> </body> </html>

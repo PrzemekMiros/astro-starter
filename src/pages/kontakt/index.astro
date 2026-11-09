@@ -115,14 +115,21 @@ if (addressParts[1]) {
     </div>
 
     <div class="rounded-xl border border-[var(--border)] bg-[#fbfbff] p-4 md:p-6 lg:sticky lg:top-8">
-      <form class="mt-6 grid gap-4" id="contactForm">
+      <form
+        class="mt-6 grid gap-4"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/wyslano-wiadomosc/"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <div class="grid gap-3 sm:grid-cols-2">
           <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-name">
             &nbsp;&nbsp;&nbsp; Imię i nazwisko
             <input
               id="contact-name"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="form-name"
+              name="name"
               type="text"
               placeholder="Jan Kowalski"
               required
@@ -133,7 +140,7 @@ if (addressParts[1]) {
             <input
               id="contact-email"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="form-mail"
+              name="email"
               type="email"
               placeholder="jan@firma.pl"
               required
@@ -146,7 +153,7 @@ if (addressParts[1]) {
             <input
               id="contact-phone"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="form-phone"
+              name="phone"
               type="tel"
               placeholder="+48 123 456 789"
             />
@@ -156,7 +163,7 @@ if (addressParts[1]) {
             <input
               id="contact-company"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="form-company"
+              name="company"
               type="text"
               placeholder="Nazwa firmy"
             />
@@ -167,7 +174,7 @@ if (addressParts[1]) {
           <input
             id="contact-service"
             class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-            name="form-service"
+            name="service"
             type="text"
             placeholder="Strona internetowa"
           />
@@ -177,7 +184,7 @@ if (addressParts[1]) {
           <textarea
             id="contact-message"
             class="w-full box-border min-h-[110px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-            name="form-message"
+            name="message"
             placeholder="Napisz czego potrzebujesz"
             required
           ></textarea>
@@ -186,7 +193,7 @@ if (addressParts[1]) {
           <input
             id="contact-check"
             class="w-auto mr-2 mt-1"
-            name="form-service"
+            name="privacy-policy"
             type="checkbox"
             required
             checked

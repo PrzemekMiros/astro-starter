@@ -41,7 +41,7 @@ const avatars = Object.values(entries)
         class="size-full object-cover grayscale"
         widths={[520, 780, 1200]}
         sizes="(max-width: 1024px) 100vw, 820px"
-        loading="eager"
+        loading="lazy"
         fetchpriority="high"
         decoding="async"
       />
@@ -88,6 +88,6 @@ const avatars = Object.values(entries)
 <section class="relative py-5 flex flex-row items-center justify-between">
   <div class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black overflow-hidden border-t border-gray-800 -z-1"></div>
      <p class="my-2 text-gray-400 text-sm">Stała komunikacja, jasne etapy i pelna opieka od briefu po wsparcie po wdrożeniu.</p>
-  <a href="/kontakt/" class="flex items-center gap-3 group text-white/90 font-extrabold text-[11px] uppercase tracking-widest hover:text-orange-600 transition-colors  hidden md:block"> Bezpłatna konsultacja <span class="text-orange-600 text-lg -translate-y-0.5 group-hover:translate-x-1 transition-transform">»»»</span>
+  <a href="/kontakt/" title="Bezpłatna konsultacja" class="flex items-center gap-3 group text-white/90 font-extrabold text-[11px] uppercase tracking-widest hover:text-orange-600 transition-colors  hidden md:block"> Bezpłatna konsultacja <span class="text-orange-600 text-lg -translate-y-0.5 group-hover:translate-x-1 transition-transform">»»»</span>
   </a>
 </section>

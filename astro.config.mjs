@@ -18,7 +18,10 @@ export default defineConfig({
       policy: [
         { userAgent: '*', allow: '/' }
       ],
-      sitemap: 'https://przemekmiros.pl/sitemap-index.xml'
+      sitemap: 'https://przemekmiros.pl/sitemap-index.xml',
+      transform(content) {
+        return `${content.trimEnd()}\n\nContent-Signal: search=yes, ai-input=yes, ai-train=yes\n`;
+      }
     })
   ],
   markdown: {

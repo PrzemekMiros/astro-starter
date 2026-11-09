@@ -1,0 +1,20 @@
+# Przemek Miros
+
+> Projektowanie i tworzenie stron internetowych. Portfolio, artykuły i kontakt.
+
+## Strona
+
+- [Portfolio](https://przemekmiros.pl/): Informacje o usługach i realizacjach.
+- [Realizacje](https://przemekmiros.pl/realizacje/): Wybrane projekty stron internetowych.
+- [Artykuły](https://przemekmiros.pl/artykuly/): Artykuły o stronach internetowych, projektowaniu i SEO.
+- [Opinie](https://przemekmiros.pl/opinie/): Opinie klientów.
+- [FAQ](https://przemekmiros.pl/faq/): Odpowiedzi na często zadawane pytania.
+- [Kontakt](https://przemekmiros.pl/kontakt/): Kontakt w sprawie usług i projektów.
+
+## Odkrywanie
+
+- [Mapa witryny](https://przemekmiros.pl/sitemap-index.xml)
+- [Informacje o uwierzytelnianiu](https://przemekmiros.pl/auth.md)
+
+Ta witryna nie udostępnia publicznego API, serwera MCP, agenta A2A ani narzędzi
+WebMCP.

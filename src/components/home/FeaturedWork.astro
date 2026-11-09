@@ -26,7 +26,7 @@ const works = Object.entries(entries)
     const timeB = b.date instanceof Date && !Number.isNaN(b.date.getTime()) ? b.date.getTime() : 0;
     return timeB - timeA;
   })
-  .slice(0, 6);
+  .slice(0, 12);
 
 const { site } = Astro;
 const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
@@ -103,6 +103,7 @@ const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
           <a
             class="absolute inset-0 z-20"
             href={`/realizacje/${work.slug}/`}
+            title={work.title}
             aria-label={`Zobacz realizacje: ${work.title}`}
           ></a>
         </article>

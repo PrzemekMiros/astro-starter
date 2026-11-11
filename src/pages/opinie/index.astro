@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import settings from "../../content/ustawienia.json";
 
 const entries = import.meta.glob("../../content/opinie/*.md", { eager: true });
 const imageEntries = import.meta.glob("/src/content/opinie/img/**/*", { eager: true });
@@ -36,6 +35,7 @@ const testimonials = Object.values(entries)
 
 const ratingValue = 5;
 const ratingCount = 15;
+const organizationId = Astro.site ? new URL("/#organization", Astro.site).toString() : undefined;
 ---
 
 <BaseLayout
@@ -46,8 +46,9 @@ const ratingCount = 15;
     class="relative pb-16 pt-16"
     itemscope
     itemtype="https://schema.org/Organization"
+    itemid={organizationId}
   >
-    <meta itemprop="name" content={settings.siteTitle} />
+    <meta itemprop="name" content="Przemek Miros" />
     <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
       <meta itemprop="ratingValue" content={String(ratingValue)} />
       <meta itemprop="bestRating" content="5" />

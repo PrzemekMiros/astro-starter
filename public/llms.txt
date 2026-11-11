@@ -1,20 +1,34 @@
-# Przemek Miros
+# Przemek Miros — strony internetowe
 
-> Projektowanie i tworzenie stron internetowych. Portfolio, artykuły i kontakt.
+> Przemek Miros projektuje i tworzy strony internetowe: od strategii i projektu, przez wdrożenie, po wsparcie. Działa z Warki w Polsce.
 
-## Strona
+## Najważniejsze informacje
 
-- [Portfolio](https://przemekmiros.pl/): Informacje o usługach i realizacjach.
-- [Realizacje](https://przemekmiros.pl/realizacje/): Wybrane projekty stron internetowych.
-- [Artykuły](https://przemekmiros.pl/artykuly/): Artykuły o stronach internetowych, projektowaniu i SEO.
-- [Opinie](https://przemekmiros.pl/opinie/): Opinie klientów.
-- [FAQ](https://przemekmiros.pl/faq/): Odpowiedzi na często zadawane pytania.
-- [Kontakt](https://przemekmiros.pl/kontakt/): Kontakt w sprawie usług i projektów.
+- Usługi obejmują strategię, projektowanie i tworzenie stron internetowych, optymalizację techniczną oraz wsparcie po wdrożeniu.
+- Podstawowa strona do 5 podstron kosztuje od 2500 zł netto; ostateczna cena zależy od zakresu i funkcjonalności.
+- Orientacyjny czas realizacji podstawowej strony to 2–4 tygodnie; bardziej rozbudowanych projektów 2–4 miesiące.
+- Dane kontaktowe: [kontakt@przemekmiros.pl](mailto:kontakt@przemekmiros.pl), +48 788 660 190.
+- Adres: 05-660 Warka, Polska.
 
-## Odkrywanie
+## Strona i oferta
+
+- [Strona główna](https://przemekmiros.pl/): Przegląd usług, wybranych realizacji, opinii klientów i artykułów.
+- [Realizacje](https://przemekmiros.pl/realizacje/): Portfolio projektów stron internetowych.
+- [Opinie klientów](https://przemekmiros.pl/opinie/): Opinie i doświadczenia klientów.
+- [FAQ](https://przemekmiros.pl/faq/): Informacje o przygotowaniu materiałów, edycji strony, responsywności, widoczności w Google, cenach i czasie realizacji.
+- [Kontakt](https://przemekmiros.pl/kontakt/): Dane kontaktowe i formularz; brief nie jest wymagany.
+
+## Artykuły
+
+- [Jak stworzyć skuteczną stronę internetową dla biznesu](https://przemekmiros.pl/artykuly/jak-stworzyc-skuteczna-strone-internetowa-dla-twojego-biznesu/)
+- [Ile kosztuje wykonanie strony internetowej](https://przemekmiros.pl/artykuly/ile-kosztuje-wykonanie-strony-internetowej/)
+- [Jak zaprojektować szybkie i dostępne strony internetowe](https://przemekmiros.pl/artykuly/jak-zaprojektowac-szybkie-i-dostepne-strony-internetowe-w-2026-roku/)
+- [Nowoczesne strony internetowe oparte na Astro](https://przemekmiros.pl/artykuly/nowoczesne-strony-internetowe-oparte-na-astrojs/)
+- [Artykuły](https://przemekmiros.pl/artykuly/): Pełna lista artykułów o stronach internetowych, projektowaniu, SEO i technologii.
+
+## Indeksowanie i odkrywanie
 
 - [Mapa witryny](https://przemekmiros.pl/sitemap-index.xml)
-- [Informacje o uwierzytelnianiu](https://przemekmiros.pl/auth.md)
+- [Zasady dla robotów](https://przemekmiros.pl/robots.txt)
 
-Ta witryna nie udostępnia publicznego API, serwera MCP, agenta A2A ani narzędzi
-WebMCP.
+Serwis udostępnia publiczne metadane tylko do odczytu pod adresem https://przemekmiros.pl/api/site.json. Opis OpenAPI znajduje się pod adresem https://przemekmiros.pl/openapi.json. Serwis nie udostępnia serwera MCP, agenta A2A ani narzędzi WebMCP.

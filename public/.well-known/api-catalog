@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://przemekmiros.pl/api/site.json",
+      "service-desc": [
+        {
+          "href": "https://przemekmiros.pl/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://przemekmiros.pl/llms.txt",
+          "type": "text/plain"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://przemekmiros.pl/auth.md",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Przemek Miros Site Metadata API",
+    "version": "1.0.0",
+    "description": "Public, read-only metadata about the website, its services and contact channels. No authentication is required."
+  },
+  "servers": [
+    {
+      "url": "https://przemekmiros.pl"
+    }
+  ],
+  "paths": {
+    "/api/site.json": {
+      "get": {
+        "operationId": "getSiteMetadata",
+        "summary": "Get public site metadata",
+        "responses": {
+          "200": {
+            "description": "Public metadata returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteMetadata"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SiteMetadata": {
+        "type": "object",
+        "required": ["name", "description", "url", "language", "contact", "services", "resources"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "language": { "type": "string" },
+          "location": {
+            "type": "object",
+            "properties": {
+              "locality": { "type": "string" },
+              "country": { "type": "string" }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "required": ["email", "telephone", "url"],
+            "properties": {
+              "email": { "type": "string", "format": "email" },
+              "telephone": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "services": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "resources": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    }
+  }
+}

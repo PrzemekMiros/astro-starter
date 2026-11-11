@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticlesHero from "../../layouts/heroes/ArticlesHero.astro";
-import settings from "../../content/ustawienia.json";
 import { slugifyTitle } from "../../lib/slugifyTitle";
+import logo from "../../assets/images/global/logo.png";
 
 export const prerender = true;
 
@@ -116,8 +116,9 @@ const headerImage = resolveArticleImage(artykul?.tileImage ?? artykul?.thumbnail
 const { site } = Astro;
 const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
 const articleUrl = baseUrl ? `${baseUrl}/artykuly/${artykul?.slug ?? ""}/` : `/artykuly/${artykul?.slug ?? ""}/`;
-const siteName = settings.siteTitle ?? "Strona";
-const siteLogo = settings.logo ? (baseUrl ? `${baseUrl}${settings.logo}` : settings.logo) : "";
+const organizationId = baseUrl ? `${baseUrl}/#organization` : undefined;
+const siteName = "Przemek Miros";
+const siteLogo = site ? new URL(logo.src, site).toString() : logo.src;
 const authorName = artykul?.author ?? "Redakcja";
 const datePublished = artykul?.date ? new Date(artykul.date) : null;
 const dateModified = artykul?.updated ? new Date(artykul.updated) : datePublished;
@@ -154,7 +155,7 @@ if (!artykul) {
     <div itemprop="author" itemscope itemtype="https://schema.org/Person">
       <meta itemprop="name" content={authorName} />
     </div>
-    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" itemid={organizationId}>
       <meta itemprop="name" content={siteName} />
       {siteLogo ? <meta itemprop="logo" content={siteLogo} /> : null}
     </div>

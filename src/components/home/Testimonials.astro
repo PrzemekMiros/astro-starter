@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import avatarImage from "../../assets/images/global/avatar.jpg";
-import settings from "../../content/ustawienia.json";
 
 const entries = import.meta.glob("../../content/opinie/*.md", { eager: true });
 const imageEntries = import.meta.glob("/src/content/opinie/img/**/*", { eager: true });
@@ -36,6 +35,7 @@ const testimonials = Object.values(entries)
 
 const ratingValue = 5;
 const ratingCount = 15;
+const organizationId = Astro.site ? new URL("/#organization", Astro.site).toString() : undefined;
 const { limit } = Astro.props;
 const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
 ---
@@ -44,8 +44,9 @@ const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
   class="relative pb-28 pt-20 md:pb-24 md:pt-24"
   itemscope
   itemtype="https://schema.org/Organization"
+  itemid={organizationId}
 >
-  <meta itemprop="name" content={settings.siteTitle} />
+  <meta itemprop="name" content="Przemek Miros" />
   <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
     <meta itemprop="ratingValue" content={String(ratingValue)} />
     <meta itemprop="bestRating" content="5" />

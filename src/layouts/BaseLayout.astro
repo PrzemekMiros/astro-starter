@@ -19,13 +19,62 @@ const resolveAsset = (path) => {
   return entry?.default ?? null;
 };
 
-const { title, description, showHero = true, robots, heroMeta } = Astro.props;
+const { title, description, showHero = true, robots, heroMeta, pageStructuredData } = Astro.props;
 const { site, url } = Astro;
 const pageTitle = title ? ` ${title} - ${settings.siteTitle}` : settings.siteTitle;
 const metaDescription = description ?? settings.metaDescription;
 const logoAsset = resolveAsset(settings.logo);
 const processedOgImage = await getImage({ src: ogImage, format: 'png' });
 const ogImageUrl = site ? new URL(processedOgImage.src, site).toString() : processedOgImage.src;
+const siteUrl = site ? new URL("/", site).toString() : "";
+const organizationId = site ? `${siteUrl}#organization` : "";
+const websiteStructuredData = site
+  ? {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": organizationId,
+          name: "Przemek Miros",
+          url: siteUrl,
+          description: "Projektowanie i tworzenie stron internetowych: strategia, projekt, wdrożenie i wsparcie.",
+          logo: logoAsset?.src ? new URL(logoAsset.src, site).toString() : undefined,
+          image: ogImageUrl,
+          email: "kontakt@przemekmiros.pl",
+          telephone: "+48 788 660 190",
+          address: {
+            "@type": "PostalAddress",
+            postalCode: "05-660",
+            addressLocality: "Warka",
+            addressCountry: "PL",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Polska",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            email: "kontakt@przemekmiros.pl",
+            telephone: "+48 788 660 190",
+            availableLanguage: "Polish",
+          },
+          founder: {
+            "@type": "Person",
+            name: "Przemek Miros",
+          },
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${siteUrl}#website`,
+          url: siteUrl,
+          name: settings.siteTitle,
+          inLanguage: "pl-PL",
+          publisher: { "@id": organizationId },
+        },
+      ],
+    }
+  : null;
 ---
 
 <html lang="pl">
@@ -67,6 +116,8 @@ const ogImageUrl = site ? new URL(processedOgImage.src, site).toString() : proce
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImageUrl} />
+    {websiteStructuredData ? <script type="application/ld+json" set:html={JSON.stringify(websiteStructuredData)} /> : null}
+    {pageStructuredData ? <script type="application/ld+json" set:html={JSON.stringify(pageStructuredData)} /> : null}
     <ClientRouter />
     <ViewTransitions />
     <LoadingIndicator color="var(--accent)" height="3px" animationDuration={400} threshold={200} />

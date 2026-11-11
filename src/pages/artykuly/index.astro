@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { slugifyTitle } from "../../lib/slugifyTitle";
-import settings from "../../content/ustawienia.json";
+import logo from "../../assets/images/global/logo.png";
 
 const imageEntries = import.meta.glob("/src/content/artykuly/img/**/*", { eager: true });
 const resolveArticleImage = (path) => {
@@ -46,8 +46,9 @@ const heroMeta = `${articlesCount} ${articlesLabel}`;
 const { site, url } = Astro;
 const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
 const pageUrl = baseUrl ? new URL(url.pathname, baseUrl).toString() : url.pathname;
-const siteName = settings.siteTitle ?? "Strona";
-const siteLogo = settings.logo ? (baseUrl ? `${baseUrl}${settings.logo}` : settings.logo) : "";
+const organizationId = baseUrl ? `${baseUrl}/#organization` : undefined;
+const siteName = "Przemek Miros";
+const siteLogo = site ? new URL(logo.src, site).toString() : logo.src;
 
 const categories = Array.from(
   items.reduce((set, item) => {
@@ -146,7 +147,7 @@ const categories = Array.from(
                   </div>
                   <span class="text-neutral-500" itemprop="name">{author}</span>
                 </div>
-                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" itemid={organizationId}>
                   <meta itemprop="name" content={siteName} />
                   {siteLogo ? (
                     <meta itemprop="logo" content={siteLogo} />

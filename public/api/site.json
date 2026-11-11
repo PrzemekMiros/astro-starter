@@ -1,0 +1,29 @@
+{
+  "name": "Przemek Miros",
+  "description": "Projektowanie i tworzenie szybkich, dostepnych stron internetowych.",
+  "url": "https://przemekmiros.pl/",
+  "language": "pl-PL",
+  "location": {
+    "locality": "Warka",
+    "country": "PL"
+  },
+  "contact": {
+    "email": "kontakt@przemekmiros.pl",
+    "telephone": "+48 788 660 190",
+    "url": "https://przemekmiros.pl/kontakt/"
+  },
+  "services": [
+    "strategia strony internetowej",
+    "projektowanie stron internetowych",
+    "wdrozenie frontendowe",
+    "optymalizacja techniczna",
+    "wsparcie po wdrozeniu"
+  ],
+  "resources": {
+    "portfolio": "https://przemekmiros.pl/realizacje/",
+    "articles": "https://przemekmiros.pl/artykuly/",
+    "faq": "https://przemekmiros.pl/faq/",
+    "sitemap": "https://przemekmiros.pl/sitemap-index.xml",
+    "llms": "https://przemekmiros.pl/llms.txt"
+  }
+}

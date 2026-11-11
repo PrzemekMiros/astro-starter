@@ -1,0 +1,177 @@
+---
+const benefits = [
+  {
+    label: "Strategia i UX",
+    icon: "target",
+  },
+  {
+    label: "Dopasowany projekt ",
+    icon: "sparkles",
+  },
+  {
+    label: "Szybkie wdrożenie",
+    icon: "bolt",
+  },
+  {
+    label: "SEO i GEO",
+    icon: "chart",
+  },
+];
+
+const months = [
+  { label: "Sty", height: 35 },
+  { label: "Lut", height: 48 },
+  { label: "Mar", height: 43 },
+  { label: "Kwi", height: 61 },
+  { label: "Maj", height: 52 },
+  { label: "Cze", height: 82, active: true },
+];
+---
+
+<section class="relative left-1/2 w-screen -translate-x-1/2 bg-[#050506] py-16 text-white sm:py-24">
+  <div class="px-4 sm:px-10 lg:px-12">
+    <div class="offer-section relative mx-auto max-w-[1360px] overflow-hidden border border-white/25 bg-[#09090b] shadow-[0_30px_90px_rgba(0,0,0,0.35)] rounded-3xl">
+      <div class="offer-grid pointer-events-none absolute inset-0 opacity-50"></div>
+      <div class="pointer-events-none absolute -right-24 -top-40 h-[34rem] w-[34rem] rounded-full bg-[var(--accent)]/15 blur-[110px]"></div>
+      <div class="pointer-events-none absolute -bottom-64 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-indigo-600/15 blur-[110px]"></div>
+
+  <div class="relative grid min-h-[680px] items-center gap-14 px-6 py-16 sm:px-10 lg:grid-cols-[0.88fr_1.32fr] lg:gap-12 lg:px-12 lg:py-20 xl:px-16">
+    <div class="relative z-10 max-w-[35rem]">
+      <p class="mb-7 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#ff7547]">
+        <span class="h-px w-7 bg-[#ff7547]"></span>
+        Strony, które napędzają biznes
+      </p>
+
+      <h2 class="max-w-[34rem] text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
+        Tworzę strony, które
+        <span class="text-[#777780]">pracują na Twój wynik.</span>
+      </h2>
+
+      <p class="mt-8 max-w-[34rem] text-[0.95rem] leading-7 text-white/60 sm:text-base">
+        Od strategii i projektu po szybkie, dopracowane wdrożenie. Otrzymujesz stronę, która dobrze wygląda, budzi zaufanie i pomaga zamieniać odwiedzających w klientów.
+      </p>
+
+      <ul class="mt-8 grid gap-x-5 gap-y-4 text-sm text-white/80 sm:grid-cols-2">
+        {benefits.map((benefit) => (
+          <li class="flex items-center gap-3">
+            <span class="grid size-8 shrink-0 place-items-center rounded-full border border-[#ff4d01]/35 bg-[#ff4d01]/10 text-[#ff5c22]">
+              {benefit.icon === "target" && (
+                <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 8.5 4-4m0 0v3.2m0-3.2h-3.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>
+              )}
+              {benefit.icon === "sparkles" && (
+                <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true"><path d="M12 3.5c.7 4.1 2.4 5.8 6.5 6.5-4.1.7-5.8 2.4-6.5 6.5-.7-4.1-2.4-5.8-6.5-6.5C9.6 9.3 11.3 7.6 12 3.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"/><path d="M18.5 15.5c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3Z" fill="currentColor"/></svg>
+              )}
+              {benefit.icon === "bolt" && (
+                <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true"><path d="M13.3 2.8 5.7 13h5.5l-.5 8.2L18.3 11h-5.5l.5-8.2Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"/></svg>
+              )}
+              {benefit.icon === "chart" && (
+                <svg viewBox="0 0 24 24" class="size-4" aria-hidden="true"><path d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>
+              )}
+            </span>
+            <span>{benefit.label}</span>
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="/kontakt/"
+        title="Porozmawiajmy o projekcie"
+        class="group mt-10 inline-flex h-12 items-center gap-5 rounded-full border border-white/15 bg-[#121216] py-1.5 pl-6 pr-0 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-[#18181d] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff5c22]"
+      >
+        Porozmawiajmy o projekcie
+        <span class="grid size-11 shrink-0 place-items-center rounded-full bg-[var(--accent)] transition-transform duration-300 group-hover:translate-x-0.5">
+          <svg viewBox="0 0 24 24" class="size-5" aria-hidden="true">
+            <path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-[48rem] lg:mx-0">
+      <div class="rounded-[1.6rem] border border-white/10 bg-[#111115]/95 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.42)] sm:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.15em] text-white/35">Efekty dobrej strony</p>
+            <h3 class="mt-2 text-base font-medium text-white/90 sm:text-lg">Skuteczność witryny</h3>
+          </div>
+          <span class="rounded-lg border border-white/10 bg-[#17171d] px-3 py-2 text-[0.62rem] text-white/40">Ostatnie 6 miesięcy</span>
+        </div>
+
+        <div class="mt-7 flex flex-wrap items-end gap-3">
+          <strong class="text-4xl font-semibold tracking-[-0.05em] sm:text-[2.8rem]">+68%</strong>
+          <span class="mb-1.5 rounded-full bg-emerald-400/10 px-2.5 py-1 text-[0.64rem] font-semibold text-emerald-400">↗ więcej zapytań</span>
+        </div>
+
+        <div class="mt-5 grid grid-cols-[2rem_1fr] gap-3">
+          <div class="flex h-48 flex-col justify-between pb-7 text-[0.58rem] text-white/28">
+            <span>80</span><span>60</span><span>40</span><span>20</span><span>0</span>
+          </div>
+          <div class="relative flex h-48 items-end justify-between gap-2 border-b border-white/[0.07] pb-7 sm:gap-4">
+            <div class="pointer-events-none absolute inset-x-0 top-0 grid h-[calc(100%-1.75rem)] grid-rows-4">
+              <i class="border-t border-white/[0.07]"></i><i class="border-t border-white/[0.07]"></i><i class="border-t border-white/[0.07]"></i><i class="border-t border-white/[0.07]"></i>
+            </div>
+            {months.map((month) => (
+              <div class="relative z-10 flex h-full min-w-0 flex-1 items-end justify-center">
+                <div
+                  class:list={[
+                    "w-full max-w-8 rounded-t-lg bg-[#2a2a32] transition-transform duration-300 hover:-translate-y-1",
+                    month.active && "active-bar shadow-[0_0_28px_rgba(255,77,1,0.3)]",
+                  ]}
+                  style={`height: ${month.height}%`}
+                ></div>
+                <span class="absolute -bottom-5 text-[0.55rem] text-white/30">{month.label}</span>
+                {month.active && <span class="absolute -top-2 -translate-y-full whitespace-nowrap rounded-md bg-[#24242d] px-2.5 py-1.5 text-[0.55rem] text-white/75 after:absolute after:left-1/2 after:top-full after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-[#24242d]">Cze +68%</span>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 grid gap-4 sm:grid-cols-3">
+        <article class="relative min-h-12 overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111115]/95 p-5">
+          <p class="text-[0.65rem] text-white/35">Szybkość ładowania</p>
+          <strong class="mt-3 block text-2xl font-semibold tracking-tight">0,4 s</strong>
+        </article>
+
+        <article class="relative min-h-12 overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111115]/95 p-5">
+          <p class="text-[0.65rem] text-white/35">Widoczność w Google</p>
+          <strong class="mt-3 block text-2xl font-semibold tracking-tight">TOP 10</strong>
+        </article>
+
+        <article class="relative min-h-12 overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111115]/95 p-5">
+          <p class="text-[0.65rem] text-white/35">Dopasowanie do urządzeń</p>
+          <strong class="mt-3 block text-2xl font-semibold tracking-tight">100%</strong>
+        </article>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+
+  .active-bar {
+    background: linear-gradient(to top, #7048ec 0%, #cb337d 48%, #ff713e 100%);
+  }
+
+  .progress-ring {
+    background: conic-gradient(var(--accent) 0deg 285deg, rgba(255, 255, 255, 0.1) 285deg 360deg);
+  }
+
+  .progress-ring::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 999px;
+    background: #111115;
+  }
+
+</style>

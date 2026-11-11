@@ -7,6 +7,7 @@ import FeaturedWork from "../../components/home/FeaturedWork.astro";
 import Testimonials from "../../components/home/Testimonials.astro";
 import LatestPosts from "../../components/home/LatestPosts.astro";
 import CallToAction from "../../components/home/CallToAction.astro";
+import ActionButton from "../../components/ActionButton.astro";
 import { slugifyTitle } from "../../lib/slugifyTitle";
 
 export const prerender = true;
@@ -64,9 +65,7 @@ if (!miasto) {
       </p>
 
     <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
-        <a class="inline-flex rounded-full bg-[var(--accent)] px-6 py-3 text-base font-semibold text-white transition hover:brightness-95" href="" title="">
-          Zobacz realizacje
-        </a>
+        <ActionButton href="/realizacje/" title="Zobacz realizacje">Zobacz realizacje</ActionButton>
 
       <div class="flex items-center">
         <div class="flex -space-x-3 mr-4">

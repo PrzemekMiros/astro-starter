@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://przemekmiros.pl/sitemap-index.xml
+
+Agentmap: https://przemekmiros.pl/.well-known/ard.json
+Content-Signal: search=yes, ai-input=yes, ai-train=yes

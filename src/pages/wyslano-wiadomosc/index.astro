@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ActionButton from "../../components/ActionButton.astro";
 ---
 
 <BaseLayout
@@ -26,12 +27,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <p class="mx-auto mb-8 max-w-2xl text-base text-[var(--muted)]">
         Twoja wiadomość została wysłana. Odpowiem w ciagu 24h.
       </p>
-      <a
-        href="/"
-        class="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-95"
-      >
-        Wróć na stronę główną
-      </a>
+      <ActionButton href="/" title="Strona główna">Wróć na stronę główną</ActionButton>
     </div>
   </section>
 </BaseLayout>

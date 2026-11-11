@@ -1,0 +1,25 @@
+---
+import ArrowIcon from "./ArrowIcon.astro";
+
+interface Props {
+  href?: string;
+  title?: string;
+  className?: string;
+  type?: "button" | "submit";
+}
+
+const { href, title, className = "", type = "button" } = Astro.props;
+const buttonClass = `group relative inline-flex h-10 items-center justify-center rounded-md bg-[var(--accent)] px-6 font-semibold text-[14px] tracking-[0.02em] text-white ${className}`;
+---
+
+{href ? (
+  <a href={href} title={title} class={buttonClass}>
+    <span><slot /></span>
+    <ArrowIcon />
+  </a>
+) : (
+  <button type={type} title={title} class={buttonClass}>
+    <span><slot /></span>
+    <ArrowIcon />
+  </button>
+)}

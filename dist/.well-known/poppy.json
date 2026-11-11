@@ -1,0 +1,19 @@
+{
+  "protocol_version": "0.4",
+  "organization": {
+    "name": "Przemek Miros",
+    "domain": "przemekmiros.pl",
+    "logo_uri": "https://przemekmiros.pl/favicon.svg"
+  },
+  "auth": {
+    "disabled": true
+  },
+  "apis": [
+    {
+      "type": "openapi",
+      "url": "https://przemekmiros.pl/openapi.json",
+      "description": "Public, read-only metadata about Przemek Miros and the website. No authentication is required."
+    }
+  ],
+  "web": {}
+}

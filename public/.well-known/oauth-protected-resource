@@ -2,6 +2,8 @@
   "resource": "https://przemekmiros.pl",
   "resource_name": "Przemek Miros public website resources",
   "resource_documentation": "https://przemekmiros.pl/auth.md",
+  "authorization_servers": [],
+  "scopes_supported": [],
   "bearer_methods_supported": [],
   "authorization_required": false
 }

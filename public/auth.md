@@ -1,4 +1,4 @@
-# Authentication
+# Auth.md
 
 This site is a public portfolio. It provides one public, read-only Site
 Metadata API at `https://przemekmiros.pl/api/site.json`. The endpoint does not

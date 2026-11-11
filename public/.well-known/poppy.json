@@ -5,6 +5,9 @@
     "domain": "przemekmiros.pl",
     "logo_uri": "https://przemekmiros.pl/favicon.svg"
   },
+  "auth": {
+    "disabled": true
+  },
   "apis": [
     {
       "type": "openapi",

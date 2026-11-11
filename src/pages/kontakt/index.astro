@@ -5,7 +5,7 @@ import settings from "../../content/ustawienia.json";
 const contact = {
   name: "Przemek Miros",
   title: "Kontakt",
-  lead: "Napisz albo zadzwoń i opowiedz o projekcie. Wrócę z odpowiedzią w 24-48h.",
+  lead: "Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony.",
   email: "kontakt@przemekmiros.pl",
   phone: "+48 788 660 190",
   address: "05-660 Warka",
@@ -37,7 +37,7 @@ if (addressParts[1]) {
 
 <BaseLayout
   title="Kontakt"
-  description="Napisz lub zadzwon, opowiedz o projekcie i otrzymaj odpowiedz w 24-48h."
+  description="Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony. Odpowiem w ciągu 24-48 godzin."
 >
   <section
     class="pb-16 pt-12 md:pb-16 md:pt-16 grid gap-4 lg:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12"
@@ -61,11 +61,10 @@ if (addressParts[1]) {
       </div>
       <div class="space-y-2 -mt-7">
         <h2 class="max-w-xl font-semibold text-black text-2xl md:text-3xl mb-4">
-          Opisz jaki cel ma relizować strona, termin wykonania i budżet
+          Opowiedz o swojej firmie i stronie
         </h2>
         <p class="max-w-xl text-base text-[var(--muted)]">
-          Jeśli masz brief, linki do inspiracji albo obecnej strony,
-          prześlij je w wiadomości. Odezwę się z propozycją dalszych kroków, planem działań i wstępną wyceną.
+          {contact.lead}
         </p>
       </div>
       <div class="space-y-4">
@@ -125,7 +124,7 @@ if (addressParts[1]) {
         <input type="hidden" name="form-name" value="contact" />
         <div class="grid gap-3 sm:grid-cols-2">
           <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-name">
-            &nbsp;&nbsp;&nbsp; Imię i nazwisko
+            Imię i nazwisko
             <input
               id="contact-name"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
@@ -136,7 +135,7 @@ if (addressParts[1]) {
             />
           </label>
           <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-email">
-            &nbsp;&nbsp;&nbsp; Email
+            E-mail
             <input
               id="contact-email"
               class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
@@ -147,45 +146,23 @@ if (addressParts[1]) {
             />
           </label>
         </div>
-        <div class="grid gap-3 sm:grid-cols-2">
-          <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-phone">
-            &nbsp;&nbsp;&nbsp; Telefon
-            <input
-              id="contact-phone"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="phone"
-              type="tel"
-              placeholder="+48 123 456 789"
-            />
-          </label>
-          <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-company">
-            &nbsp;&nbsp;&nbsp; Firma 
-            <input
-              id="contact-company"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="company"
-              type="text"
-              placeholder="Nazwa firmy"
-            />
-          </label>
-        </div>
-        <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-service">
-          &nbsp;&nbsp;&nbsp; Usługa
+        <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-phone">
+          Telefon (opcjonalnie)
           <input
-            id="contact-service"
+            id="contact-phone"
             class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-            name="service"
-            type="text"
-            placeholder="Strona internetowa"
+            name="phone"
+            type="tel"
+            placeholder="+48 123 456 789"
           />
         </label>
         <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-message">
-          &nbsp;&nbsp;&nbsp; Wiadomość
+          Wiadomość
           <textarea
             id="contact-message"
             class="w-full box-border min-h-[110px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
             name="message"
-            placeholder="Napisz czego potrzebujesz"
+            placeholder="Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony."
             required
           ></textarea>
         </label>

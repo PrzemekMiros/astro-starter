@@ -1,0 +1,34 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Przemek Miros",
+    "identifier": "https://przemekmiros.pl",
+    "documentationUrl": "https://przemekmiros.pl/auth.md"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:przemekmiros.pl:api:site-metadata",
+      "displayName": "Przemek Miros Site Metadata API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://przemekmiros.pl/openapi.json",
+      "description": "Publiczne API tylko do odczytu z informacjami o usługach, danych kontaktowych i zasobach witryny."
+    },
+    {
+      "identifier": "urn:air:przemekmiros.pl:webmcp:website-tools",
+      "displayName": "Przemek Miros WebMCP Tools",
+      "type": "text/html",
+      "url": "https://przemekmiros.pl/kontakt/",
+      "description": "Narzędzia WebMCP do odczytu informacji o stronie i przygotowania formularza kontaktowego."
+    }
+  ],
+  "extensions": {
+    "pl.przemekmiros.serviceAvailability": {
+      "mcpServer": false,
+      "a2aAgent": false,
+      "webMcp": true,
+      "webMcpPage": "https://przemekmiros.pl/kontakt/",
+      "authentication": "none",
+      "documentation": "https://przemekmiros.pl/auth.md"
+    }
+  }
+}

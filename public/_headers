@@ -1,5 +1,5 @@
 /*
-  Link: <https://przemekmiros.pl/.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", <https://przemekmiros.pl/sitemap-index.xml>; rel="sitemap", <https://przemekmiros.pl/llms.txt>; rel="alternate"; type="text/plain", <https://przemekmiros.pl/auth.md>; rel="describedby"; type="text/markdown"
+  Link: <https://przemekmiros.pl/.well-known/ard.json>; rel="ard"; type="application/json", <https://przemekmiros.pl/.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", <https://przemekmiros.pl/sitemap-index.xml>; rel="sitemap", <https://przemekmiros.pl/llms.txt>; rel="alternate"; type="text/plain", <https://przemekmiros.pl/auth.md>; rel="describedby"; type="text/markdown"
 
 /.well-known/api-catalog
   Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
@@ -7,10 +7,34 @@
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
 
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/.well-known/poppy.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+
+/.well-known/ai-catalog.json
+  Content-Type: application/ai-catalog+json; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+
+/.well-known/ard.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+
 /api/site.json
   Content-Type: application/json; charset=utf-8
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
+  Access-Control-Allow-Headers: Poppy-Session, Poppy-Version, Accept, Content-Type
 
 /openapi.json
   Content-Type: application/vnd.oai.openapi+json;version=3.1

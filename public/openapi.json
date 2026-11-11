@@ -10,11 +10,14 @@
       "url": "https://przemekmiros.pl"
     }
   ],
+  "security": [],
   "paths": {
     "/api/site.json": {
       "get": {
         "operationId": "getSiteMetadata",
         "summary": "Get public site metadata",
+        "description": "This endpoint is public and does not use OAuth, OpenID Connect, API keys or any other authentication mechanism.",
+        "security": [],
         "responses": {
           "200": {
             "description": "Public metadata returned successfully",
@@ -34,12 +37,21 @@
     "schemas": {
       "SiteMetadata": {
         "type": "object",
-        "required": ["name", "description", "url", "language", "contact", "services", "resources"],
+        "required": ["name", "description", "url", "language", "authentication", "contact", "services", "resources"],
         "properties": {
           "name": { "type": "string" },
           "description": { "type": "string" },
           "url": { "type": "string", "format": "uri" },
           "language": { "type": "string" },
+          "authentication": {
+            "type": "object",
+            "required": ["type", "credentialsAccepted", "documentation"],
+            "properties": {
+              "type": { "type": "string", "const": "none" },
+              "credentialsAccepted": { "type": "boolean", "const": false },
+              "documentation": { "type": "string", "format": "uri" }
+            }
+          },
           "location": {
             "type": "object",
             "properties": {

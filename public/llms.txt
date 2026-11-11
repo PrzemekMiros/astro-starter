@@ -31,4 +31,6 @@
 - [Mapa witryny](https://przemekmiros.pl/sitemap-index.xml)
 - [Zasady dla robotów](https://przemekmiros.pl/robots.txt)
 
-Serwis udostępnia publiczne metadane tylko do odczytu pod adresem https://przemekmiros.pl/api/site.json. Opis OpenAPI znajduje się pod adresem https://przemekmiros.pl/openapi.json. Serwis nie udostępnia serwera MCP, agenta A2A ani narzędzi WebMCP.
+Serwis udostępnia publiczne metadane tylko do odczytu pod adresem https://przemekmiros.pl/api/site.json. Opis OpenAPI znajduje się pod adresem https://przemekmiros.pl/openapi.json. Strony rejestrują narzędzie WebMCP `get_site_information`, a formularz kontaktowy udostępnia deklaratywne narzędzie `prepare_contact_message`, które nie wysyła wiadomości bez potwierdzenia użytkownika. Serwis nie udostępnia serwera MCP ani agenta A2A.
+
+Manifest Personal Agent Protocol (Poppy) 0.4 znajduje się pod adresem https://przemekmiros.pl/.well-known/poppy.json. Serwis działa dla agentów bez logowania i nie ma emitenta OAuth.

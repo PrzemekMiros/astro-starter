@@ -40,37 +40,68 @@ const contactPageStructuredData = siteUrl
         </p>
       </div>
       <div class="space-y-4">
-        <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Email</p>
-          <a
-            class="mt-3 block md:text-base text-[var(--text)]"
-            href={`mailto:${contact.email}`}
-            title="Napisz email"
-          >
-            {contact.email}
-          </a>
-        </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Telefon</p>
-          <a
-            class="mt-3 block md:text-base text-[var(--text)]"
-            href={`tel:${contact.phone.replace(/\s/g, "")}`}
-            title="Zadzwon"
-          >
-            {contact.phone}
-          </a>
-        </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Lokalizacja</p>
-          <div class="mt-3 text-base text-[var(--text)]">
-            {contact.address}
+        <div class="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-[var(--accent)]">
+            <svg class="h-5 w-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16v12H4z" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Email</p>
+            <a
+              class="mt-2 block break-words md:text-base text-[var(--text)] transition-colors hover:text-[var(--accent)]"
+              href={`mailto:${contact.email}`}
+              title="Napisz email"
+            >
+              {contact.email}
+            </a>
           </div>
         </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
-          <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Dostępność</p>
-          <p class="mt-3 text-base text-[var(--text)]">
-            {contact.hours}
-          </p>
+        <div class="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-[var(--accent)]">
+            <svg class="h-5 w-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7.5 4h-2A1.5 1.5 0 0 0 4 5.5C4 13.5 10.5 20 18.5 20a1.5 1.5 0 0 0 1.5-1.5v-2l-4.25-1-1 2.25a13.2 13.2 0 0 1-8.5-8.5l2.25-1L7.5 4Z" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Telefon</p>
+            <a
+              class="mt-2 block md:text-base text-[var(--text)] transition-colors hover:text-[var(--accent)]"
+              href={`tel:${contact.phone.replace(/\s/g, "")}`}
+              title="Zadzwoń"
+            >
+              {contact.phone}
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-[var(--accent)]">
+            <svg class="h-5 w-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Lokalizacja</p>
+            <div class="mt-2 text-base text-[var(--text)]">
+              {contact.address}
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-[#fbfbff] px-5 py-6">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-orange-50 text-[var(--accent)]">
+            <svg class="h-5 w-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs uppercase tracking-[0.1em] text-[var(--accent)]">Dostępność</p>
+            <p class="mt-2 text-base text-[var(--text)]">
+              {contact.hours}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -82,6 +113,8 @@ const contactPageStructuredData = siteUrl
         method="POST"
         data-netlify="true"
         action="/wyslano-wiadomosc/"
+        toolname="prepare_contact_message"
+        tooldescription="Wypełnia formularz kontaktowy w sprawie projektu strony internetowej. Nie wysyła formularza automatycznie — użytkownik musi sprawdzić dane i samodzielnie zatwierdzić wysłanie."
       >
         <input type="hidden" name="form-name" value="contact" />
         <div class="grid gap-3 sm:grid-cols-2">
@@ -93,6 +126,7 @@ const contactPageStructuredData = siteUrl
               name="name"
               type="text"
               placeholder="Jan Kowalski"
+              toolparamdescription="Imię i nazwisko osoby kontaktowej."
               required
             />
           </label>
@@ -104,6 +138,7 @@ const contactPageStructuredData = siteUrl
               name="email"
               type="email"
               placeholder="jan@firma.pl"
+              toolparamdescription="Adres e-mail, na który ma zostać wysłana odpowiedź."
               required
             />
           </label>
@@ -116,6 +151,7 @@ const contactPageStructuredData = siteUrl
             name="phone"
             type="tel"
             placeholder="+48 123 456 789"
+            toolparamdescription="Opcjonalny numer telefonu do kontaktu."
           />
         </label>
         <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-message">
@@ -125,6 +161,7 @@ const contactPageStructuredData = siteUrl
             class="w-full box-border min-h-[110px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
             name="message"
             placeholder="Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony."
+            toolparamdescription="Opis firmy, potrzeb i oczekiwanego zakresu projektu strony internetowej."
             required
           ></textarea>
         </label>
@@ -134,6 +171,7 @@ const contactPageStructuredData = siteUrl
             class="w-auto mr-2 mt-1"
             name="privacy-policy"
             type="checkbox"
+            toolparamdescription="Potwierdzenie akceptacji polityki prywatności i zgody na kontakt."
             required
             checked
           />

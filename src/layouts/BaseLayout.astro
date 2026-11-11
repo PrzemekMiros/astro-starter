@@ -99,6 +99,7 @@ const websiteStructuredData = site
     />
     <link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
     <link rel="icon" type="image/png" href={faviconPng.src} />
+    <link rel="ard" href="/.well-known/ard.json" type="application/json" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content={robots === 'noindex' ? 'noindex' : 'index'} />
@@ -146,6 +147,46 @@ const websiteStructuredData = site
       <Footer/>
     </main>
     <script is:inline>
+      const registerSiteWebMcpTools = () => {
+        const modelContext = document.modelContext ?? navigator.modelContext;
+        if (!modelContext || window.__siteInfoWebMcpRegistered) return;
+
+        window.__siteInfoWebMcpRegistered = true;
+        modelContext.registerTool({
+          name: "get_site_information",
+          title: "Informacje o stronie Przemka Mirosa",
+          description: "Pobiera publiczne informacje o usługach, danych kontaktowych i najważniejszych zasobach witryny przemekmiros.pl.",
+          inputSchema: {
+            type: "object",
+            properties: {},
+            additionalProperties: false,
+          },
+          annotations: {
+            readOnlyHint: true,
+            untrustedContentHint: false,
+            consequentialHint: false,
+          },
+          async execute(_input, options) {
+            const response = await fetch("/api/site.json", {
+              headers: { Accept: "application/json" },
+              signal: options?.signal,
+            });
+
+            if (!response.ok) {
+              throw new Error(`Nie udało się pobrać informacji o stronie (${response.status}).`);
+            }
+
+            return response.json();
+          },
+        }).catch((error) => {
+          window.__siteInfoWebMcpRegistered = false;
+          console.warn("Nie udało się zarejestrować narzędzia WebMCP.", error);
+        });
+      };
+
+      registerSiteWebMcpTools();
+      document.addEventListener("astro:page-load", registerSiteWebMcpTools);
+
       const applyBlurLazy = () => {
         document.querySelectorAll("main img").forEach((img) => {
           if (img.dataset.blurLazy === "true") return;

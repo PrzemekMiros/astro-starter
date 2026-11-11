@@ -18,6 +18,10 @@
         {
           "href": "https://przemekmiros.pl/auth.md",
           "type": "text/markdown"
+        },
+        {
+          "href": "https://przemekmiros.pl/.well-known/oauth-protected-resource",
+          "type": "application/json"
         }
       ]
     }

@@ -3,6 +3,11 @@
   "description": "Projektowanie i tworzenie szybkich, dostepnych stron internetowych.",
   "url": "https://przemekmiros.pl/",
   "language": "pl-PL",
+  "authentication": {
+    "type": "none",
+    "credentialsAccepted": false,
+    "documentation": "https://przemekmiros.pl/auth.md"
+  },
   "location": {
     "locality": "Warka",
     "country": "PL"

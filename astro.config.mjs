@@ -20,7 +20,7 @@ export default defineConfig({
       ],
       sitemap: 'https://przemekmiros.pl/sitemap-index.xml',
       transform(content) {
-        return `${content.trimEnd()}\n\nContent-Signal: search=yes, ai-input=yes, ai-train=yes\n`;
+        return `${content.trimEnd()}\n\nAgentmap: https://przemekmiros.pl/.well-known/ard.json\nContent-Signal: search=yes, ai-input=yes, ai-train=yes\n`;
       }
     })
   ],

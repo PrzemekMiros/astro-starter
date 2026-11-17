@@ -79,6 +79,24 @@ const websiteStructuredData = site
 
 <html lang="pl">
   <head>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      if (!window.__googleTagInitialized) {
+        window.__googleTagInitialized = true;
+        let consent = null;
+        try { consent = JSON.parse(localStorage.getItem('cookie-consent-v1') || 'null'); } catch {}
+        const marketing = consent?.marketing === true ? 'granted' : 'denied';
+        window.gtag('consent', 'default', {
+          ad_storage: marketing,
+          ad_user_data: marketing,
+          ad_personalization: marketing,
+          analytics_storage: consent?.analytics === true ? 'granted' : 'denied',
+        });
+        window.gtag('js', new Date());
+      }
+    </script>
+    <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-THGT723D" transition:persist="google-tag-manager"></script>
     <script>
       import '../scripts/google-ads.js';
     </script>

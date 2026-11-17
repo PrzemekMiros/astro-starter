@@ -28,3 +28,7 @@ pnpm-debug.log*
 # TinaCMS
 .tina/
 tina/__generated__/
+
+# Local browser verification artifacts
+.local-verification/
+build-local.log

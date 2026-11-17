@@ -1,13 +1,13 @@
 ---
 import logo from "../assets/images/global/logo.png";
-import cookieModalUrl from "../scripts/cookie-modal.js?url";
+const { localLanding = false } = Astro.props;
 ---
 
 <footer class="bg-black relative text-gray-400 pb-9 pt-18 font-sans">
   <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black"></div>
   <div class="relative max-w-7xl mx-auto">
     
-    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center border-b border-gray-800 pb-12 mb-12 gap-8">
+    {!localLanding && <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center border-b border-gray-800 pb-12 mb-12 gap-8">
       <div class="flex items-center">
       <img src={logo.src} class="w-42" width="280" height="66" alt="Logo Przemek Miros">
       </div>
@@ -19,7 +19,8 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
         </div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-16">
+    }
+    <div class:list={['grid gap-10 mb-16', localLanding ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4']}>
       <div>
         <h3 class="text-white font-bold mb-6">Kontakt</h3>
         <div class="text-xs space-y-2 mb-6 leading-relaxed">
@@ -41,7 +42,7 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
         <h3 class="text-white font-bold mb-6">Nawigacja</h3>
         <ul class="text-xs space-y-3">
           <li><a href="/realizacje/" class="hover:text-white transition-colors" title="Realizacje">Realizacje</a></li>
-          <li><a href="/artykuly/" class="hover:text-white transition-colors" title="Artykuły">Artykuły</a></li>
+          {!localLanding && <li><a href="/artykuly/" class="hover:text-white transition-colors" title="Artykuły">Artykuły</a></li>}
           <li><a href="/opinie/" class="hover:text-white transition-colors" title="O mnie">Opinie klientów</a></li>
           <li><a href="/miasta/" class="hover:text-white transition-colors" title="O mnie">Obszar działalności</a></li>
         </ul>
@@ -57,7 +58,7 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
         </ul>
       </div>
  
-      <div>
+      {!localLanding && <div>
         <h3 class="text-white font-bold mb-6">Narzędzia</h3>
         <ul class="text-xs space-y-3">
           <li><a href="https://www.senuto.com/pl/" class="hover:text-white transition-colors" title="Senuto">Senuto <span class="text-[10px]">↗</span></a></li>
@@ -65,11 +66,12 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
           <li><a href="https://gemini.google.com/" class="hover:text-white transition-colors" title="Gemini">Gemini <span class="text-[10px]">↗</span></a></li>
           <li><a href="https://www.figma.com/" class="hover:text-white transition-colors" title="Figma">Figma <span class="text-[10px]">↗</span></a></li>
         </ul>
-      </div>
+      </div>}
     </div>
 
     <div class="flex flex-col md:flex-row justify-between md:items-center border-t border-gray-800 pt-8 gap-6">
       <div class="flex flex-wrap justify-left gap-6 text-[11px]">
+        <a href="/polityka/" class="hover:text-white transition-colors">Polityka prywatności</a>
         <a href="#" class="hover:text-white transition-colors" title="Pliki cookies" data-cookie-open>Pliki cookies</a>
       </div>
     </div>
@@ -85,7 +87,7 @@ import cookieModalUrl from "../scripts/cookie-modal.js?url";
   aria-labelledby="cookieconsent-title"
   tabindex="-1"
 >
-  <div class="bg-white rounded-lg shadow-2xl max-w-[600px] w-full overflow-hidden border border-gray-200">
+  <div class="bg-white rounded-lg shadow-2xl max-w-[600px] max-h-[90dvh] overflow-y-auto w-full border border-gray-200">
     <div class="p-6 md:p-8 flex border-b border-gray-300">
       <div class="flex flex-col">
         <span id="cookieconsent-title" class="text-lg font-semibold text-gray-900 leading-tight">Strona używa plików cookie</span>
@@ -228,4 +230,6 @@ document.addEventListener("astro:page-load", function () {
 });
 </script>
 
-<script src={cookieModalUrl} defer></script>
+<script>
+  import '../scripts/cookie-modal.js';
+</script>

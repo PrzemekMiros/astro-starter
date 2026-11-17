@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+const { localLanding = false } = Astro.props;
 
 const logoEntries = import.meta.glob("/src/content/klienci/img/*", { eager: true });
 const logos = Object.entries(logoEntries)
@@ -20,9 +21,9 @@ const logos = Object.entries(logoEntries)
         <span class="h-px w-7 bg-[#ff7547]"></span>
         Poznaj moich klientów
       </p>
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-black">Pomogłem już ponad 40 firmom zbudować silną obecność w sieci <span class="text-black/50"> realnie zwiększyć ich zasięgi i zrealizowac cele</span></h2>
+      <h2 class="clients-heading text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-black">{localLanding ? 'Firmy, z którymi współpracowałem' : <>Pomogłem już ponad 40 firmom zbudować silną obecność w sieci <span class="text-black/50"> realnie zwiększyć ich zasięgi i zrealizowac cele</span></>}</h2>
     </div>
-        <div class="text-left">
+        {!localLanding && <div class="text-left">
           <div class="mb-1 flex text-[var(--accent)]">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
@@ -30,6 +31,7 @@ const logos = Object.entries(logoEntries)
             5/5 Ocena <span class="ml-2 font-normal text-gray-600">15+ Opinii</span>
           </p>
         </div>
+        }
   </div>
   <div
     class="mt-10 grid gap-2 md:gap-4 text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
@@ -38,8 +40,8 @@ const logos = Object.entries(logoEntries)
   >
     <meta itemprop="name" content="Klienci" />
     <meta itemprop="itemListOrder" content="https://schema.org/ItemListOrderAscending" />
-    <meta itemprop="numberOfItems" content={String(logos.length)} />
-    {logos.map((logo, index) => (
+    <meta itemprop="numberOfItems" content={String(localLanding ? Math.min(6, logos.length) : logos.length)} />
+    {(localLanding ? logos.slice(0, 6) : logos).map((logo, index) => (
       <div
         class="flex items-center justify-center border border-gray-300 rounded-md px-6 py-5"
         itemprop="itemListElement"

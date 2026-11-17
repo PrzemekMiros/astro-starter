@@ -48,7 +48,10 @@ export const collections = {
       town: z.string(),
       title: z.string(),
       description: z.string(),
-      maplink: z.string(),
+      maplink: z.string().optional(),
+      lead: z.string().optional(),
+      projects: z.array(z.string()).default([]),
+      faq: z.array(z.object({ title: z.string(), answer: z.string() })).default([]),
     }),
   }),
   faq: defineCollection({

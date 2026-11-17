@@ -18,15 +18,18 @@
     const openers = Array.from(document.querySelectorAll("[data-cookie-open]"));
 
     const readConsent = () => {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : null;
+      try {
+        const raw = window.localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch { return null; }
     };
 
     const writeConsent = (consent) => {
       const payload = Object.assign({}, consent, {
         timestamp: new Date().toISOString(),
       });
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch {}
+      window.dispatchEvent(new CustomEvent("site:consent", { detail: payload }));
       const cookieValue = encodeURIComponent(JSON.stringify(payload));
       document.cookie = `${COOKIE_NAME}=${cookieValue}; Max-Age=31536000; Path=/; SameSite=Lax`;
     };

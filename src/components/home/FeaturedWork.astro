@@ -3,13 +3,15 @@ import { Image } from "astro:assets";
 import { resolveContentImage } from '../../utils/resolveContentImage';
 
 const entries = import.meta.glob("../../content/realizacje/*.md", { eager: true });
-const works = Object.entries(entries)
+const { limit = 12, selectedSlugs = [], localLanding = false } = Astro.props;
+const allWorks = Object.entries(entries)
   .map(([file, entry]) => {
     const slug = file.split("/").pop().replace(".md", "");
     const data = entry.frontmatter ?? {};
     return {
       slug,
       title: data.title ?? slug,
+      description: data.description,
       tag: Array.isArray(data.category) ? data.category[0] : data.category,
       date: data.date ? new Date(data.date) : null,
       order: data.order,
@@ -25,14 +27,15 @@ const works = Object.entries(entries)
     const timeA = a.date instanceof Date && !Number.isNaN(a.date.getTime()) ? a.date.getTime() : 0;
     const timeB = b.date instanceof Date && !Number.isNaN(b.date.getTime()) ? b.date.getTime() : 0;
     return timeB - timeA;
-  })
-  .slice(0, 12);
+  });
+const selected = Array.isArray(selectedSlugs) ? selectedSlugs.map((slug) => allWorks.find((work) => work.slug === slug)).filter(Boolean) : [];
+const works = [...selected, ...allWorks.filter((work) => !selected.includes(work))].slice(0, limit);
 
 const { site } = Astro;
 const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
 ---
 
-<section class="relative bg-white pt-20 pb-20 md:pb-24">
+<section id={localLanding ? 'realizacje' : undefined} class="relative bg-white pt-20 pb-20 md:pb-24">
   <div class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-white"></div>
   <div class="relative flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
     <div class="max-w-3xl">
@@ -40,7 +43,8 @@ const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
         <span class="h-px w-7 bg-[#ff7547]"></span>
         Wybrane realizacje
       </p>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-black">Od stron wizytówek po zaawansowane portale i systemy ecommerce <span class="text-black/50">łączące estetykę z funkcjonalnością</span></h2>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-black">{localLanding ? 'Zobacz, jak mogą wyglądać strony dla firm' : <>Od stron wizytówek po zaawansowane portale i systemy ecommerce <span class="text-black/50">łączące estetykę z funkcjonalnością</span></>}</h2>
+      {localLanding && <p class="mt-4 text-[var(--muted)]">Wybrane projekty z mojego portfolio — przykłady zakresu i sposobu wykonania.</p>}
     </div>
               <a href="/realizacje/" title="Wszystkie realizacje" class="group relative hidden md:inline-flex h-11 items-center justify-center rounded-md bg-[var(--accent)] px-6 font-semibold text-[14px] tracking-[0.02em] text-white"><span>Wszystkie realizacje</span><div class="relative ml-1 h-5 w-5 overflow-hidden"><div class="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -translate-x-4"><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></div></a>
   </div>
@@ -95,6 +99,7 @@ const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
                 <h3 class="text-xl font-semibold leading-tight tracking-tight text-gray-900">
                   {work.title}
                 </h3>
+                {localLanding && work.description && <p class="text-sm leading-relaxed text-gray-700">{work.description}</p>}
               </div>
               <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-gray-900 shadow-sm transition-colors duration-300 group-hover:bg-[var(--accent)] group-hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

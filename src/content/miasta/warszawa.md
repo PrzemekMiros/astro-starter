@@ -43,17 +43,13 @@ Podczas **stworzenie strony internetowej** jest kluczowym krokiem w rozwoju bizn
 
 ### Cennik strony internetowej: jakie są koszty wykonania strony?
 
-**Koszt wykonania** wdrożenia strony internetowej może się różnić w zależności od wielu czynników, takich jak złożoność projektu, ilość treści czy technologie użyte do jej stworzenia. Przykładowy **cennik strony internetowej** może wyglądać następująco:
+**Koszt wykonania** wdrożenia strony internetowej może się różnić w zależności od wielu czynników, takich jak złożoność projektu, ilość treści czy technologie użyte do jej stworzenia. Aktualną wycenę przygotowuję indywidualnie po ustaleniu zakresu strony i potrzebnych funkcji.
 
-* **Strona wizytówka:** od 1000 zł
-* **Strona firmowa:** od 2000 zł
-* **Sklep internetowy:** od 3000 zł
-
-Warto jednak pamiętać, że to tylko przykładowe ceny, a **cena za stworzenie strony internetowej** może się różnić w zależności od indywidualnych potrzeb i wymagań. Sklepy internetowe, takie jak te tworzone na platformach WooCommerce i PrestaShop, mogą wymagać dodatkowych kosztów związanych z dostosowaniem rozwiązań do specyficznych potrzeb klienta, co może wpłynąć na ostateczną cenę i pozycjonowanie na rynku.
+**Cena za stworzenie strony internetowej** zależy od indywidualnych potrzeb i wymagań. Sklepy internetowe, takie jak te tworzone na platformach WooCommerce i PrestaShop, mogą wymagać dodatkowych prac związanych z płatnościami, dostawami i obsługą produktów. Uwzględniam je w uzgodnionym zakresie wyceny.
 
 ### Czas trwania stworzenia strony: ile czasu zajmuje proces?
 
-**Trwa stworzenie strony internetowej** - zazwyczaj od kilku tygodni do nawet kilku miesięcy, w zależności od złożoności projektu, ilości treści czy dostępności zasobów. Czas realizacji może się również wydłużyć, jeśli strona wymaga opracowania specjalistycznych funkcji czy integracji z innymi systemami.
+**Czas wykonania strony internetowej** zależy od złożoności projektu, ilości treści, dostępności materiałów i uzgodnień. Specjalistyczne funkcje lub integracje z innymi systemami wymagają dodatkowej pracy. Termin ustalamy przed rozpoczęciem projektu, razem z zakresem i wyceną.
 
 ## Pozycjonowanie stron internetowych w Warszawie: klucz do sukcesu
 

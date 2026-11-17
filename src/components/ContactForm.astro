@@ -1,0 +1,39 @@
+---
+import ActionButton from './ActionButton.astro';
+const { city = '', sourcePage = Astro.url.pathname } = Astro.props;
+---
+<form class="contact-form grid gap-5" name="contact" method="POST" data-netlify="true"
+  netlify-honeypot="bot-field" action="/wyslano-wiadomosc/" data-contact-form data-astro-reload
+  toolname="prepare_contact_message"
+  tooldescription="Wypełnia formularz wyceny. Użytkownik sprawdza dane i samodzielnie zatwierdza wysłanie.">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="hidden" name="source-page" value={sourcePage} />
+  <input type="hidden" name="city" value={city} />
+  <input type="hidden" name="submission-id" value="" />
+  <p hidden><label>Nie wypełniaj tego pola <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+  <div class="grid gap-5 sm:grid-cols-2">
+    <label for="contact-name">Imię (wymagane)<input id="contact-name" name="name" autocomplete="given-name" maxlength="100" required /></label>
+    <label for="contact-email">E-mail (wymagany)<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required /></label>
+  </div>
+  <label for="contact-phone">Telefon (opcjonalnie)<input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" /></label>
+  <label for="contact-message">Wiadomość (wymagana)<textarea id="contact-message" name="message" rows="5" maxlength="10000" placeholder="Czym zajmuje się Twoja firma? Jakiej strony potrzebujesz?" required></textarea></label>
+  <label for="contact-check" class="privacy-label">
+    <input id="contact-check" name="privacy-policy" type="checkbox" required />
+    <span>Akceptuję <a href="/polityka/">politykę prywatności</a> i wyrażam zgodę na kontakt w celu przygotowania oferty lub odpowiedzi na moją wiadomość.</span>
+  </label>
+  <ActionButton type="submit" className="w-full cursor-pointer">Wyślij zapytanie o wycenę</ActionButton>
+  <p data-form-status role="status" aria-live="polite" tabindex="-1" class="text-sm leading-relaxed"></p>
+</form>
+<style>
+  label { display: grid; gap: .5rem; font-size: .875rem; color: var(--text); }
+  input:not([type=checkbox]), textarea { width: 100%; min-width: 0; border: 1px solid var(--border); border-radius: .75rem; background: white; padding: .85rem 1rem; font: inherit; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .privacy-label { display: flex; align-items: flex-start; line-height: 1.6; }
+  .privacy-label input { flex-shrink: 0; margin-top: .35rem; width: 1rem; height: 1rem; }
+  a { text-decoration: underline; }
+  :global(.contact-form button:disabled) { opacity: .65; cursor: wait; }
+  :global(.contact-form button[type=submit]) { height: auto; min-height: 3rem; padding: .75rem; }
+</style>
+<script>
+  import '../scripts/contact-form.js';
+</script>

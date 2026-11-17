@@ -36,7 +36,7 @@ const testimonials = Object.values(entries)
 const ratingValue = 5;
 const ratingCount = 15;
 const organizationId = Astro.site ? new URL("/#organization", Astro.site).toString() : undefined;
-const { limit } = Astro.props;
+const { limit, localLanding = false } = Astro.props;
 const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
 ---
 
@@ -47,11 +47,11 @@ const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
   itemid={organizationId}
 >
   <meta itemprop="name" content="Przemek Miros" />
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+  {!localLanding && <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
     <meta itemprop="ratingValue" content={String(ratingValue)} />
     <meta itemprop="bestRating" content="5" />
     <meta itemprop="ratingCount" content={String(ratingCount)} />
-  </div>
+  </div>}
   <div class="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 rounded-2xl bg-black"></div>
   <div class="relative text-white"> 
     <div class="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
@@ -60,9 +60,9 @@ const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
           <span class="h-px w-7 bg-[#ff7547]"></span>
           Co mówią klienci?
         </p>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">Historie firm, dla których strona internetowa stała się <span class="text-white/50"> kluczowym narzędziem do pozyskiwania klientów</span></h2>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">{localLanding ? 'Współpraca oczami moich klientów' : <>Historie firm, dla których strona internetowa stała się <span class="text-white/50"> kluczowym narzędziem do pozyskiwania klientów</span></>}</h2>
       </div>
-      <div class="flex items-center space-x-4">
+      {!localLanding && <div class="flex items-center space-x-4">
         <div class="text-left">
           <div class="mb-1 flex text-[var(--accent)]">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -71,6 +71,7 @@ const maxItems = typeof limit === "number" ? Math.max(limit, 0) : null;
           </p>
         </div>
       </div>
+      }
     </div>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">

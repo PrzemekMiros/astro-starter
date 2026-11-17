@@ -65,10 +65,16 @@ export default defineConfig({
         path: "src/content/miasta",
         format: "md",
         fields: [
-          { type: "string", name: "town", label: "Miasto", required: true },
+          { type: "string", name: "town", label: "Miasto — dopełniacz (np. Pruszkowa)", required: true },
           { type: "string", name: "title", label: "Tytuł", required: true },
           { type: "string", name: "description", label: "Opis", ui: { component: "textarea" } },
           { type: "string", name: "maplink", label: "Map link", ui: { component: "textarea" } },
+          { type: "string", name: "lead", label: "Dodatkowe wprowadzenie lokalne", ui: { component: "textarea" } },
+          { type: "string", name: "projects", label: "Realizacje — nazwy plików bez .md (puste: zestaw domyślny)", list: true },
+          { type: "object", name: "faq", label: "Dodatkowe lokalne FAQ", list: true, fields: [
+            { type: "string", name: "title", label: "Pytanie", required: true },
+            { type: "string", name: "answer", label: "Odpowiedź", required: true, ui: { component: "textarea" } },
+          ] },
           { type: "rich-text", name: "body", label: "Treść", isBody: true },
         ],
       },

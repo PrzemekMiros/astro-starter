@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ActionButton from "../../components/ActionButton.astro";
+import ContactForm from "../../components/ContactForm.astro";
 
 const contact = {
   lead: "Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony.",
@@ -108,80 +108,7 @@ const contactPageStructuredData = siteUrl
     </div>
 
     <div class="rounded-xl border border-[var(--border)] bg-[#fbfbff] p-4 md:p-6 lg:sticky lg:top-8">
-      <form
-        class="mt-6 grid gap-4"
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        action="/wyslano-wiadomosc/"
-        toolname="prepare_contact_message"
-        tooldescription="Wypełnia formularz kontaktowy w sprawie projektu strony internetowej. Nie wysyła formularza automatycznie — użytkownik musi sprawdzić dane i samodzielnie zatwierdzić wysłanie."
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <div class="grid gap-3 sm:grid-cols-2">
-          <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-name">
-            Imię i nazwisko
-            <input
-              id="contact-name"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="name"
-              type="text"
-              placeholder="Jan Kowalski"
-              toolparamdescription="Imię i nazwisko osoby kontaktowej."
-              required
-            />
-          </label>
-          <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-email">
-            E-mail
-            <input
-              id="contact-email"
-              class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-              name="email"
-              type="email"
-              placeholder="jan@firma.pl"
-              toolparamdescription="Adres e-mail, na który ma zostać wysłana odpowiedź."
-              required
-            />
-          </label>
-        </div>
-        <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-phone">
-          Telefon (opcjonalnie)
-          <input
-            id="contact-phone"
-            class="w-full box-border rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-            name="phone"
-            type="tel"
-            placeholder="+48 123 456 789"
-            toolparamdescription="Opcjonalny numer telefonu do kontaktu."
-          />
-        </label>
-        <label class="grid gap-2 text-sm font-medium text-[var(--muted)]" for="contact-message">
-          Wiadomość
-          <textarea
-            id="contact-message"
-            class="w-full box-border min-h-[110px] rounded-xl font-normal border border-[var(--border)] bg-[#fff] px-4 py-3 text-md text-[var(--muted)] focus:border-orange-600 focus:outline focus:outline-orange-600"
-            name="message"
-            placeholder="Napisz, czym zajmuje się Twoja firma. Pomogę ustalić zakres strony."
-            toolparamdescription="Opis firmy, potrzeb i oczekiwanego zakresu projektu strony internetowej."
-            required
-          ></textarea>
-        </label>
-        <label class="flex flex-row items-start text-sm font-medium text-[var(--muted)]" for="contact-check">
-          <input
-            id="contact-check"
-            class="w-auto mr-2 mt-1"
-            name="privacy-policy"
-            type="checkbox"
-            toolparamdescription="Potwierdzenie akceptacji polityki prywatności i zgody na kontakt."
-            required
-            checked
-          />
-          <span class="text-[var(--muted)]">
-            Akceptuję <a href="/polityka/" title="Polityka prywatności" class="text-[var(--accent)]"> politykę prywatności</a> i wyrażam zgodę na kontakt w celu przygotowania oferty lub odpowiedzi na moją wiadomość.
-          </span>
-        </label>
-        <ActionButton type="submit" className="mt-2 w-full cursor-pointer">Wyślij wiadomość</ActionButton>
-      </form>
+      <ContactForm />
     </div>
   </section>
 </BaseLayout>

@@ -1,0 +1,37 @@
+---
+const services = [
+  ['Indywidualny projekt', 'Wygląd i układ dopasowane do Twojej firmy, oferty oraz odbiorców.'],
+  ['Telefon i komputer', 'Czytelna treść i wygodna nawigacja na małym i dużym ekranie.'],
+  ['Wdrożenie strony', 'Przeniesienie zaakceptowanego projektu do działającej witryny i przygotowanie do publikacji.'],
+  ['Formularz kontaktowy', 'Prosty sposób, aby odwiedzający mogli zapytać o Twoją ofertę.'],
+  ['Przygotowanie do indeksowania', 'Uporządkowane nagłówki, opisy stron i podstawy techniczne ułatwiające wyszukiwarkom odczytanie treści.'],
+  ['Wsparcie po publikacji', 'Pomoc w zmianach i rozwoju strony. Zakres dalszej opieki ustalamy indywidualnie.'],
+];
+const steps = [
+  ['Ustalamy potrzeby', 'Rozmawiamy o firmie, odbiorcach i zadaniach strony.'],
+  ['Uzgadniamy zakres i koszt', 'Otrzymujesz wycenę. Ustalamy zakres prac, materiały i termin.'],
+  ['Projektuję i wdrażam', 'Omawiamy projekt, wprowadzamy uzgodnione uwagi i przygotowuję działającą stronę.'],
+  ['Publikujemy i przekazuję stronę', 'Sprawdzam działanie witryny, publikuję ją i przekazuję informacje potrzebne do jej obsługi.'],
+];
+---
+<section class="service-section py-16 md:py-20" aria-labelledby="zakres">
+  <p class="local-eyebrow">Od pomysłu do publikacji</p>
+  <h2 id="zakres" class="text-3xl font-semibold md:text-4xl">Co obejmuje wykonanie strony?</h2>
+  <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {services.map(([title, text], index) => <article class="rounded-2xl border border-[var(--border)] bg-[#fbfbff] p-6"><span class="service-number" aria-hidden="true">0{index + 1}</span><h3 class="text-xl font-semibold">{title}</h3><p class="mt-3 leading-relaxed text-[var(--muted)]">{text}</p></article>)}
+  </div>
+</section>
+<section class="process-section pb-16 md:pb-20" aria-labelledby="wspolpraca">
+  <p class="local-eyebrow">Jasne kroki, bez niedomówień</p>
+  <h2 id="wspolpraca" class="text-3xl font-semibold md:text-4xl">Od pierwszej rozmowy do gotowej strony</h2>
+  <ol class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {steps.map(([title, text], index) => <li class="border-t border-[var(--border)] pt-5"><span class="text-sm font-semibold text-[var(--accent)]">0{index + 1}</span><h3 class="mt-3 text-xl font-semibold">{title}</h3><p class="mt-3 leading-relaxed text-[var(--muted)]">{text}</p></li>)}
+  </ol>
+</section>
+<section class="price-section mb-16 rounded-2xl bg-[#f5f5f7] p-6 md:p-10" aria-labelledby="koszt">
+  <p class="local-eyebrow">Zakres dopasowany do potrzeb</p>
+  <h2 id="koszt" class="text-3xl font-semibold">Ile kosztuje Twoja strona?</h2>
+  <p class="mt-5 max-w-3xl leading-relaxed text-[var(--muted)]">Cena zależy od liczby podstron, potrzebnych funkcji, materiałów i zakresu projektu. Wycenę przygotuję po poznaniu Twoich potrzeb — bez zobowiązań.</p>
+  <p class="mt-4 max-w-3xl leading-relaxed">Nie potrzebujesz gotowego briefu ani wiedzy technicznej. Napisz, czym zajmuje się firma, a pomogę ustalić zakres.</p>
+  <a href="#wycena" class="mt-6 inline-block font-semibold underline underline-offset-4">Opowiedz o swoim pomyśle →</a>
+</section>

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "website-information",
+      "type": "skill-md",
+      "description": "Read public information about Przemek Miros, his website services, portfolio, availability, and contact options.",
+      "url": "https://przemekmiros.pl/.well-known/agent-skills/website-information/SKILL.md",
+      "digest": "sha256:0c61d2bdf516548309e6899ddb759e0997c64b03957a484800b5eb626b9f2b1e"
+    }
+  ]
+}

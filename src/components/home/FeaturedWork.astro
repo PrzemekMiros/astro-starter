@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { resolveContentImage } from '../../utils/resolveContentImage';
 
 const entries = import.meta.glob("../../content/realizacje/*.md", { eager: true });
-const { limit = 12, selectedSlugs = [], localLanding = false } = Astro.props;
+const { limit = 12, selectedSlugs = [], localLanding = false, id } = Astro.props;
 const allWorks = Object.entries(entries)
   .map(([file, entry]) => {
     const slug = file.split("/").pop().replace(".md", "");
@@ -35,7 +35,7 @@ const { site } = Astro;
 const baseUrl = site ? site.toString().replace(/\/$/, "") : "";
 ---
 
-<section id={localLanding ? 'realizacje' : undefined} class="relative bg-white pt-20 pb-20 md:pb-24">
+<section id={id ?? (localLanding ? 'realizacje' : undefined)} class="home-section relative bg-white pt-20 pb-20 md:pb-24">
   <div class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-white"></div>
   <div class="relative flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
     <div class="max-w-3xl">

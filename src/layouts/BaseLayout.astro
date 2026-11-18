@@ -155,10 +155,10 @@ const websiteStructuredData = site
   </head>
   <body class="min-h-screen bg-[var(--bg)] font-sans text-[var(--text)]">
     <main data-local-landing={localLanding ? '' : undefined} class="mx-auto flex min-h-screen w-full max-w-[1320px] flex-col px-4 sm:px-10 lg:px-12">
-      <Header settings={settings} logoAsset={logoAsset} localLanding={localLanding} />
+      <Header settings={settings} logoAsset={logoAsset} />
       {showHero && title ? <PageHero title={title} lead={description} meta={heroMeta} /> : null}
       <slot />
-      <Footer localLanding={localLanding} />
+      <Footer />
     </main>
     <script is:inline>
       const registerSiteWebMcpTools = () => {

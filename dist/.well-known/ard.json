@@ -1,0 +1,38 @@
+{
+  "specVersion": "0.91",
+  "entries": [
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:przemekmiros.pl:api:site-metadata",
+      "displayName": "Przemek Miros Site Metadata API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://przemekmiros.pl/openapi.json",
+      "description": "Publiczne API tylko do odczytu z informacjami o usługach, danych kontaktowych i zasobach witryny.",
+      "capabilities": ["SiteMetadata", "ServiceDiscovery", "ContactInformation"],
+      "representativeQueries": [
+        "jakie usługi tworzenia stron oferuje Przemek Miros",
+        "jak skontaktować się z Przemkiem Mirosem",
+        "gdzie znaleźć portfolio i artykuły Przemka Mirosa"
+      ]
+    },
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:przemekmiros.pl:webmcp:website-tools",
+      "displayName": "Przemek Miros WebMCP Tools",
+      "type": "text/html",
+      "url": "https://przemekmiros.pl/kontakt/",
+      "description": "Narzędzia WebMCP działające w przeglądarce: odczyt informacji o stronie oraz przygotowanie formularza kontaktowego z obowiązkowym zatwierdzeniem przez użytkownika.",
+      "capabilities": ["get_site_information", "prepare_contact_message"],
+      "representativeQueries": [
+        "pokaż informacje o usługach dostępnych na tej stronie",
+        "przygotuj wiadomość w sprawie wykonania strony internetowej",
+        "wypełnij formularz kontaktowy bez wysyłania go automatycznie"
+      ],
+      "metadata": {
+        "protocol": "WebMCP",
+        "authentication": "none",
+        "requiresUserConfirmation": true
+      }
+    }
+  ]
+}

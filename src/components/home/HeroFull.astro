@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "../../assets/images/sections/hero.png";
+import HeroBackdrop from "./HeroBackdrop.astro";
 import ActionButton from "../ActionButton.astro";
 const ctaPrimary = { label: "Zobacz realizacje", href: "/realizacje/" };
 
@@ -23,34 +23,7 @@ const avatars = Object.values(entries)
 ---
 
 <section class="relative">
-  <div class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 bg-black overflow-hidden z-0" style="perspective: 1000px;">
-    <div class="hidden md:block absolute inset-0 opacity-80" style="
-         background-image: linear-gradient(rgb(255 255 255 / 11%) 1px,transparent 1px),linear-gradient(90deg,rgb(255 255 255 / 11%) 1px,transparent 1px);
-         background-size: 28px 28px;
-         transform: rotateX(0deg) translateY(-5%) scale(2);
-         transform-origin: top;
-         /* Maska: biały (widoczne) do przezroczystego (niewidoczne) */
-         -webkit-mask-image: linear-gradient(to bottom,#000,transparent 86%);
-         mask-image: linear-gradient(to bottom,#000,transparent 86%);
-       ">
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-    <div class="hidden md:block absolute inset-0 left-4/7 group">
-      <Image
-        src={ heroImage }
-        alt="Proces projektowy"
-        class="size-full object-cover grayscale"
-        widths={[520, 780, 1200]}
-        sizes="(max-width: 1024px) 100vw, 820px"
-        loading="lazy"
-        fetchpriority="high"
-        decoding="async"
-      />
-      <div class="lg:hidden absolute left-[21vw] top-0 w-18 h-18 bg-[var(--accent)] z-20"></div>
-      <div class="hidden lg:block absolute left-0 bottom-30 w-30 h-30 bg-[var(--accent)] z-20"></div>
-      <div class="hidden lg:block absolute -left-30 bottom-0 w-30 h-30 bg-white z-20"></div>
-    </div>
-  </div>
+  <HeroBackdrop />
   <div class="relative grid grid-cols-1 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] pb-8 pt-38 md:pb-34 md:pt-50">
       <div class="space-y-6 max-w-xl">
         <div class="flex items-center space-x-3 mb-6">

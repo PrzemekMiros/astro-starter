@@ -4,11 +4,10 @@ import MiastaHero from "../../layouts/heroes/MiastaHero.astro";
 import ClientsLogos from "../../components/home/ClientsLogos.astro";
 import FeaturedWork from "../../components/home/FeaturedWork.astro";
 import Testimonials from "../../components/home/Testimonials.astro";
-import ActionButton from "../../components/ActionButton.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import LocalServiceDetails from "../../components/LocalServiceDetails.astro";
 import FaqList from "../../components/FaqList.astro";
-import { landingProjects, landingQuestions } from "../../data/local-landing.js";
+import { landingQuestions } from "../../data/local-landing.js";
 import { slugifyTitle } from "../../lib/slugifyTitle";
 import '../../styles/local-landings.css';
 
@@ -30,16 +29,14 @@ export function getStaticPaths() {
 
 const { miasto, Content } = Astro.props;
 if (!miasto) return Astro.redirect("/miasta");
-const projects = landingProjects(miasto.projects);
 const questions = landingQuestions(miasto.faq);
 ---
 
 <BaseLayout title={miasto.title ?? miasto.slug} description={miasto.description} showHero={false} robots={miasto.robots} localLanding>
   <MiastaHero town={miasto.town} lead={miasto.lead} />
   <ClientsLogos />
-  <Testimonials limit={2} localLanding />
-  <FeaturedWork limit={3} selectedSlugs={projects} localLanding />
-  <div class="portfolio-cta"><p>Masz pomysł na swoją stronę?<span>Ustalmy, czego potrzebuje Twoja firma.</span></p><ActionButton href="#wycena" className="min-h-12">Otrzymaj bezpłatną wycenę</ActionButton></div>
+  <Testimonials limit={8} />
+  <FeaturedWork id="realizacje" />
   <LocalServiceDetails />
   {Content && <section class="local-context pb-16" aria-labelledby="lokalnie">
     <div><p class="local-eyebrow">Twoja firma w internecie</p><h2 id="lokalnie" class="mb-6 text-3xl font-semibold">Strony WWW dla firm z {miasto.town}</h2></div>

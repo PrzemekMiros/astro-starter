@@ -1,39 +1,10 @@
 /* Only the shared city template opts in; other pages keep their visual style. */
 [data-local-landing] { --local-ink: #171719; --local-soft: #f7f7f8; }
-[data-local-landing] h2:not(.clients-heading) { color: var(--local-ink); letter-spacing: -.035em; line-height: 1.18; text-wrap: balance; }
-[data-local-landing] h3 { letter-spacing: -.025em; }
+[data-local-landing] h2:not(.clients-heading):not(:where(.home-section *)) { color: var(--local-ink); letter-spacing: -.035em; line-height: 1.18; text-wrap: balance; }
+[data-local-landing] h3:not(:where(.home-section *)) { letter-spacing: -.025em; }
 [data-local-landing] a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 [data-local-landing] .local-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; color: #b93600; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 [data-local-landing] .local-eyebrow::before { content: ''; width: 26px; height: 1px; background: currentColor; flex-shrink: 0; }
-[data-local-landing] .local-hero { padding-top: 76px; padding-bottom: 90px; }
-[data-local-landing] .local-hero > .absolute { background: radial-gradient(ellipse at 87% 20%, #24150f 0, #090909 40%, #050505 75%); }
-[data-local-landing] .local-hero h1 { font-size: clamp(2.1rem, 4.1vw, 3.75rem); line-height: 1.09; letter-spacing: -.045em; text-wrap: balance; }
-[data-local-landing] .hero-location { color: #a7a4a2; }
-[data-local-landing] .local-hero h1 + p { max-width: 53ch; font-size: 16px; line-height: 1.85; color: #bdbbbb; }
-[data-local-landing] .local-hero > .relative > div:first-child > p:first-child { display: flex; align-items: center; gap: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: #ff8554; }
-[data-local-landing] .local-hero > .relative > div:first-child > p:first-child::before { content: ''; width: 24px; height: 1px; background: #ff8554; }
-[data-local-landing] .hero-contact { position: relative; background: linear-gradient(145deg, #20201e99, #101011); border-color: #ffffff20; border-radius: 24px; padding: 32px; box-shadow: 0 24px 70px #0003; }
-[data-local-landing] .hero-person { display: flex; align-items: center; gap: 16px; padding-bottom: 26px; margin-bottom: 26px; border-bottom: 1px solid #ffffff14; }
-[data-local-landing] .hero-person img { border: 3px solid #ffffff15; }
-[data-local-landing] .hero-contact h2 { color: white; font-size: 26px; }
-[data-local-landing] .hero-contact > p { font-size: 14px; line-height: 1.85; color: #bdbbbb; }
-[data-local-landing] .hero-contact > a { font-size: clamp(20px, 2.1vw, 28px); letter-spacing: -.03em; }
-[data-local-landing] .hero-scope { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
-[data-local-landing] .hero-scope span { border: 1px solid #ffffff1c; border-radius: 6px; padding: 6px 10px; color: #d2cfcd; font-size: 10px; }
-[data-local-landing] section[itemtype='https://schema.org/Organization'] { padding: 56px 0; }
-[data-local-landing] section[itemtype='https://schema.org/Organization'] > .absolute { background: #111112; border-radius: 0; }
-[data-local-landing] section[itemtype='https://schema.org/Organization'] h2 { color: white; font-size: clamp(26px, 3vw, 36px); }
-[data-local-landing] section[itemtype='https://schema.org/Organization'] .mb-12 { margin-bottom: 26px; }
-[data-local-landing] [itemprop=review] { min-height: 280px; padding: 28px; border-radius: 16px; }
-[data-local-landing] [itemprop=review] blockquote { font-size: 18px; line-height: 1.65; letter-spacing: -.02em; }
-[data-local-landing] [itemprop=review] .mt-12 { margin-top: 28px; }
-[data-local-landing] #realizacje { padding-bottom: 36px; }
-[data-local-landing] #realizacje h2 { max-width: 650px; }
-[data-local-landing] #realizacje article { border-color: #e8e8ea; border-radius: 20px; }
-[data-local-landing] #realizacje article > .aspect-\[4\/4\] { border-radius: 19px; }
-[data-local-landing] .portfolio-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid #e9e9eb; padding-bottom: 44px; }
-[data-local-landing] .portfolio-cta p { font-size: 17px; font-weight: 600; color: #1c1c20; }
-[data-local-landing] .portfolio-cta p span { display: block; margin-top: 6px; font-size: 13px; font-weight: 400; color: #62626a; }
 [data-local-landing] .service-section article { background: #fafafa; border-color: #e8e8eb; padding: 28px; border-radius: 18px; }
 [data-local-landing] .service-number { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #ff4d0126; background: #fff2eb; border-radius: 12px; margin-bottom: 28px; font-size: 12px; font-weight: 600; color: #b93600; }
 [data-local-landing] .service-section h3 { font-size: 19px; color: #18181b; }
@@ -102,18 +73,10 @@
 [data-local-landing] .local-context { padding-top: clamp(56px, 6vw, 80px); }
 [data-local-landing] #wycena { margin-top: clamp(56px, 6vw, 80px); }
 @media (max-width: 1023px) {
-  [data-local-landing] .local-hero { padding-top: 42px; padding-bottom: 54px; }
-  [data-local-landing] .hero-contact { max-width: none; }
   [data-local-landing] .local-context { grid-template-columns: 1fr; gap: 24px; }
   [data-local-landing] .local-context h2 { max-width: 650px; }
 }
 @media (max-width: 639px) {
-  [data-local-landing] .hero-contact { padding: 24px; border-radius: 18px; }
-  [data-local-landing] .hero-contact h2 { font-size: 24px; }
-  [data-local-landing] .hero-person { padding-bottom: 20px; margin-bottom: 22px; }
-  [data-local-landing] .hero-person img { width: 64px; height: 64px; }
-  [data-local-landing] .hero-person p { font-size: 13px; }
-  [data-local-landing] .portfolio-cta { align-items: flex-start; flex-direction: column; }
   [data-local-landing] .service-section article { padding: 24px; }
   [data-local-landing] .service-number { margin-bottom: 20px; }
   [data-local-landing] .price-section { padding: 26px 22px; }

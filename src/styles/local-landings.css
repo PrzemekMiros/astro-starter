@@ -6,7 +6,8 @@
 [data-local-landing] .local-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; color: #b93600; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 [data-local-landing] .local-eyebrow::before { content: ''; width: 26px; height: 1px; background: currentColor; flex-shrink: 0; }
 [data-local-landing] .service-section article { background: #fafafa; border-color: #e8e8eb; padding: 28px; border-radius: 18px; }
-[data-local-landing] .service-number { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #ff4d0126; background: #fff2eb; border-radius: 12px; margin-bottom: 28px; font-size: 12px; font-weight: 600; color: #b93600; }
+[data-local-landing] .service-number { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #ff4d0126; background: #fff2eb; border-radius: 12px; margin-bottom: 28px; color: #b93600; }
+[data-local-landing] .service-number svg { width: 22px; height: 22px; }
 [data-local-landing] .service-section h3 { font-size: 19px; color: #18181b; }
 [data-local-landing] .service-section article p, [data-local-landing] .process-section li p { font-size: 14px; line-height: 1.85; }
 [data-local-landing] .process-section { padding-top: 10px; }

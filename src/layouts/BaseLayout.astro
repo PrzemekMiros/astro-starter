@@ -94,9 +94,11 @@ const websiteStructuredData = site
           analytics_storage: consent?.analytics === true ? 'granted' : 'denied',
         });
         window.gtag('js', new Date());
+        // Start GTM after consent defaults, once per document (including Astro navigation).
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
       }
     </script>
-    <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-THGT723D" transition:persist="google-tag-manager"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-PDBFRF9Q" transition:persist="google-tag-manager"></script>
     <script>
       import '../scripts/google-ads.js';
     </script>
